@@ -6,7 +6,6 @@
 html, body {
   height: 100%;
   width: 100%;
-
   margin: 0;
   padding: 0;
 }
@@ -28,8 +27,12 @@ h1, h2, h3, h4 {
   padding: 0;
 }
 
+.navbar-form {
+  padding-top: 8px;
+}
+
 .navbar-form .form-group {
-  width: 50%;
+  width: 45%;
 }
 
 .form-control {
@@ -40,11 +43,21 @@ h1, h2, h3, h4 {
 .btn {
   font-size: 18px;
   color: #fefefe;
-  font-weight: bold;
+  font-weight: 600;
   background-color: #3dbbcb;
   border-radius: 0;
   border: none;
   padding: 4.5px 18px;
+  margin-left: 10px;
+}
+
+/* ============================================= */
+/*                       ICONS                   */
+/* ============================================= */
+.fa-pencil-square {
+  color: #3dbbcb;
+  font-size: 0.9em;
+  margin-left: 2px;
 }
 
 /* ============================================= */
@@ -56,37 +69,76 @@ h1, h2, h3, h4 {
   background-color: #f8f8f8;
   padding: 0;
   margin: 0;
+  height: 100px;
   font-family: ralewaySemiBold;
 }
 
-.navbar-header {
-  height: 100%;
+.container-fluid {
+  padding: 0 30px;
 }
 
 .navbar-brand {
-  height: 100%;
+  margin-top: -10px;
 }
 
+.container-fluid,
+.navbar-header,
+.navbar-brand,
 .navbar-brand img {
   height: 100%;
 }
 
-.navbar:before {
-  display: block;
-  content: " ";
-  width: 100%;
-  padding-bottom: 7.32%;
+.navbar-brand p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #3dbbcb;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: -8px;
 }
 
-.navbar .container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right:0;
-  bottom: 0;
+.navbar-heading,
+.navbar-collapse {
+  background-color: #f8f8f8;
+  padding: 0;
 }
 
-.navbar-nav li a {
+.navbar-collapse {
+
+}
+
+.navbar-nav.navbar-main li a {
   font-size: 18px;
   color: #3E3A39;
+  padding: 10px 15px;
 }
+
+.navbar-nav.navbar-second li a {
+  font-size: 18px;
+  color: #3dbbcb;
+  font-weight: bold;
+}
+
+.navbar-nav.navbar-second li:first-of-type a,
+.navbar-nav.navbar-second li:last-of-type a {
+  color: #3e3a39;
+}
+
+@media only screen and (max-width: 1105px) {
+  .navbar-collapse {
+    background-color: yellow !important;
+  }
+}
+
+@media only screen and (max-width:767px) {
+
+  .navbar-collapse {
+    background-color: red !important;
+  }
+
+  .navbar-collapse ul li a {
+    padding: 15px 0 !important;
+  }
+}
+
