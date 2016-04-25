@@ -1,0 +1,92 @@
+@font-face {
+  src: url(../fonts/Raleway-SemiBold.ttf);
+  font-family: ralewaySemiBold;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+#home-wrapper {
+  background: url(../imgs/bg-img-min.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* ============================================= */
+/*                    GLOBALS                    */
+/* ============================================= */
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-form .form-group {
+  width: 50%;
+}
+
+.form-control {
+  border-radius: 0;
+  width: 100% !important;
+}
+
+.btn {
+  font-size: 18px;
+  color: #fefefe;
+  font-weight: bold;
+  background-color: #3dbbcb;
+  border-radius: 0;
+  border: none;
+  padding: 4.5px 18px;
+}
+
+/* ============================================= */
+/*                  NAVIGATION                   */
+/* ============================================= */
+
+.navbar {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 0;
+  margin: 0;
+  font-family: ralewaySemiBold;
+}
+
+.navbar-header {
+  height: 100%;
+}
+
+.navbar-brand {
+  height: 100%;
+}
+
+.navbar-brand img {
+  height: 100%;
+}
+
+.navbar:before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-bottom: 7.32%;
+}
+
+.navbar .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+}
+
+.navbar-nav li a {
+  font-size: 18px;
+  color: #3E3A39;
+}
