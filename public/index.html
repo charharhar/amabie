@@ -11,68 +11,106 @@
 </head>
 <body>
 
-  <header class="site-header" role="banner">
-    <div class="navbar-wrapper">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
+  <div id="wrapper"> <!-- Media Query Fix -->
 
-          <div class="navbar-header navbar-left">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="">
-              <img src="imgs/LOGO2.jpg" alt="Amabie" />
-              <p>Your Beauty Community &trade;</p>
-            </a>
-          </div>
+    <header class="site-header" role="banner">
+      <div class="navbar-wrapper">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
 
-          <div class="navbar-collapse navbar-left collapse">
-            <form class="navbar-form " role="search">
-              <div class="form-group">
-                <input type="text" class="form-control">
+            <div class="navbar-header navbar-left">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="">
+                <img src="imgs/LOGO2.jpg" alt="Amabie" />
+                <p>Your Beauty Community &trade;</p>
+              </a>
+            </div>
+
+            <div class="navbar-collapse navbar-left collapse navbar-main">
+              <form class="navbar-form " role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-default">SEARCH</button>
+              </form>
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">SKINCARE <i class="caret"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">HAIR <i class="caret"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">MAKEUP <i class="caret"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">BODY <i class="caret"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">NAILS <i class="caret"></i></a></li>
+                <li><a href="#">WRITE A REVIEW <i class="fa fa-pencil-square" aria-hidden="true"></i></a></li>
+                <li><a href="#">FORUM</a></li>
+              </ul>
+            </div>
+
+            <div class="nav-right-wrapper">
+              <div class="navbar pull-right navbar-second">
+                <ul class="nav navbar-nav">
+                  <li><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                  <li><a href="">LOGIN</a></li>
+                  <li><a href="">REGISTER</a></li>
+                  <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i> ENG <i class="caret"></i></a></li>
+                </ul>
               </div>
-              <button type="submit" class="btn btn-default">SEARCH</button>
-            </form>
-            <ul class="nav navbar-nav navbar-main">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">SKINCARE <i class="caret"></i></a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">HAIR <i class="caret"></i></a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">MAKEUP <i class="caret"></i></a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">BODY <i class="caret"></i></a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">NAILS <i class="caret"></i></a></li>
-              <li><a href="#">WRITE A REVIEW <i class="fa fa-pencil-square" aria-hidden="true"></i></a></li>
-              <li><a href="#">FORUM</a></li>
-            </ul>
+
+              <div class="navbar pull-right navbar-social">
+                <ul class="nav navbar-nav">
+                  <li><a href=""><i class="sm-sprite fb-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite ig-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite pin-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite tumb-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite twit-grey"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
           </div>
-
-<!--           <div class="navbar navbar-right navbar-collapse">
-            <ul class="nav navbar-nav navbar-second">
-              <li><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
-              <li><a href="">LOGIN</a></li>
-              <li><a href="">REGISTER</a></li>
-              <li><a href=""><i class="fa fa-globe" aria-hidden="true"></i> ENG <i class="caret"></i></a></li>
-            </ul>
-          </div> -->
-
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <section id="home-wrapper">
+    <section id="home-wrapper">
+      <div class="container">
 
-  </section>
+        <div class="row">
+          <article class="col-md-3">
+            <div class="content-box small">
+              <h3>hi</h3>
+            </div>
+          </article>
+
+          <article class="col-md-4 col-md-offset-1">
+            <div class="content-box small">
+              <h3>hi</h3>
+            </div>
+          </article>
+
+          <article class="col-md-3 col-md-offset-1">
+            <div class="content-box small">
+              <h3>hi</h3>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
 
   <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
