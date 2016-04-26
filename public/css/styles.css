@@ -66,7 +66,7 @@ h1, h2, h3, h4 {
   width: 100% !important;
 }
 
-.btn {
+.btn-green {
   font-size: 18px;
   color: #fefefe;
   font-weight: 600;
@@ -77,11 +77,21 @@ h1, h2, h3, h4 {
   margin-left: 10px;
 }
 
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+.row-spacing {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 div.content-box {
   background-color: white;
   box-shadow: 3px 3px 6px #222;
   font-family: ntailu;
-  height: 280px;
+  // height: 280px;
 }
 
 .content-box.small {
@@ -210,9 +220,35 @@ i.sm-sprite {
 /*                  HOME PAGE                    */
 /* ============================================= */
 
-// #home-wrapper .container {
-//   width: 1300px;
-// }
+#home-wrapper .container {
+  // width: 1500px;
+  // max-width: 96%;
+}
+
+// .md-3-adj { width: 28%; }
+// .md-4-adj { width: 38%; }
+// .md-os-1-adj { margin-left: 3%; }
+
+.intro-box {
+  padding: 20px;
+  text-align: center;
+}
+
+.intro-box h1 {
+  font-size: 36px;
+  color: #3e3a39;
+  font-family: ntailub;
+}
+
+.intro-box p {
+  font-size: 18px;
+  color: #3e3a39;
+  font-weight: normal;
+  line-height: 2em;
+  padding: 7px 35px;
+}
+
+.intro-box {}
 
 /* ============================================= */
 /*                RESPONSIVE QUERIES             */
