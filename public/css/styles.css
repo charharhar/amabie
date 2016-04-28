@@ -40,7 +40,7 @@ html, body {
   background: url(../imgs/bg-img-min.jpg);
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -76,13 +76,16 @@ h1, h2, h3, h4 {
 
 div.content-box {
   background-color: white;
-  box-shadow: 3px 3px 6px #222;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
   font-family: ntailu;
-  /*// height: 280px;*/
+  height: 280px;
 }
 
-.content-box.small {
-
+.content-box.small { }
+.content-box.medium { }
+.content-box.large { }
+.content-box.content-footer {
+  height: 170px;
 }
 
 /* ============================================= */
@@ -235,6 +238,10 @@ i.sm-sprite {
 /*                  DROP DOWN                    */
 /* ============================================= */
 
+.navbar-default .navbar-nav > li > a:hover  {
+  color: #3dbbcb;
+}
+
 .dropdown-menu {
   padding: 15px;
   border-radius: 0;
@@ -246,15 +253,11 @@ i.sm-sprite {
 .dropdown-container {
   border-radius: 0;
   border: transparent;
+  height: auto;
+}
 
-  -webkit-column-gap: 15px;
-  -moz-column-gap: 15px;
-  -ms-column-gap: 15px;
-  -o-column-gap: 15px;
-  column-gap: 15px;
-
-  height: 400px;
-  width: 700px;
+.dropdown-container ul li {
+  margin-right: 50px;
 }
 
 .dropdown-container.three {
@@ -264,6 +267,8 @@ i.sm-sprite {
   -o-column-count: 3;
   column-count: 3;
   columns: 3;
+
+  min-width: 650px;
 }
 
 .dropdown-container.two {
@@ -273,14 +278,23 @@ i.sm-sprite {
   -o-column-count: 2;
   column-count: 2;
   columns: 2;
+
+  min-width: 450px;
 }
 
 .dropdown-container h3 {
   font-size: 18px;
   color: #3e3a39;
   font-family: ralewayBold;
+  line-height: 2em;
+}
+
+.dropdown-container h3.dropdown-title {
   text-decoration: underline;
-  margin: 6px 0;
+}
+
+.dropdown-contiainer h3 {
+  text-decoration: none;
 }
 
 .dropdown-container ul {
@@ -313,9 +327,10 @@ i.sm-sprite {
   max-width: 96%;*/
 }
 
-/*.md-3-adj { width: 28%; }
+.md-3-adj { width: 28%; }
 .md-4-adj { width: 38%; }
-.md-os-1-adj { margin-left: 3%; }*/
+.md-os-1-adj { margin-left: 3%; }
+.md-8-adj { width: 69%; }
 
 .box-container {
   width: 20%;
@@ -341,13 +356,28 @@ i.sm-sprite {
 }
 
 .content-box h2 {
-  display: inline-block;
   font-size: 18px;
   color: #3e3a39;
   font-weight: normal;
   text-transform: uppercase;
-  text-align: center;
   border-bottom: 2px solid #3dbbcb;
+}
+
+.content-box {
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.content-header {
+
+}
+
+.content-box h2 {
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 1px 2px 1px;
 }
 
 
