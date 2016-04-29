@@ -28,20 +28,31 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 #wrapper {
-  overflow: auto;
+  // overflow: auto;
   height: 100%;
 }
 
 #home-wrapper {
-  background: url(../imgs/bg-img-min.jpg);
-  background-size: cover;
-  background-position: center;
+  position: relative;
   height: auto;
   width: 100%;
+}
+
+#home-wrapper::before {
+  height: 100%;
+  width: 100%;
+  background: url(../imgs/bg-img-min.jpg);
+  background-size: cover;
+  content: ' ';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  will-change: transform;
 }
 
 /* ============================================= */
@@ -123,6 +134,7 @@ i.sm-sprite {
   height: 100px;
   border: none;
   font-family: ralewaySemiBold;
+  z-index: 10;
 }
 
 .container-fluid {
@@ -325,6 +337,7 @@ i.sm-sprite {
 #home-wrapper .container {
 /*  width: 1500px;
   max-width: 96%;*/
+  overflow:hidden;
 }
 
 .md-3-adj { width: 28%; }
@@ -367,10 +380,6 @@ i.sm-sprite {
   height: auto;
   width: 100%;
   text-align: center;
-}
-
-.content-header {
-
 }
 
 .content-box h2 {
