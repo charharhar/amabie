@@ -59,9 +59,14 @@ html, body {
 /*                    GLOBALS                    */
 /* ============================================= */
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
 
 .btn-green {
@@ -83,6 +88,15 @@ h1, h2, h3, h4 {
 .row-spacing {
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
 div.content-box {
@@ -109,6 +123,10 @@ div.content-box {
   margin-left: 2px;
 }
 
+.fa-caret-right {
+  color: #3dbbcb;
+}
+
 i.sm-sprite {
   display: inline-block;
   height: 50px;
@@ -116,11 +134,24 @@ i.sm-sprite {
   background: url('../imgs/social-sprites-grey.png') no-repeat;
 }
 
+i.sm-sprite-color {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: url('../imgs/social-sprites-color.png') no-repeat;
+}
+
 .sm-sprite.fb-grey    { background-position: 0 0; }
 .sm-sprite.ig-grey    { background-position: -50px 0; }
 .sm-sprite.pin-grey   { background-position: -100px 0; }
 .sm-sprite.tumb-grey  { background-position: -150px 0; }
 .sm-sprite.twit-grey  { background-position: -200px 0; }
+
+.sm-sprite-color.fb-color    { background-position: 0 0; }
+.sm-sprite-color.ig-color    { background-position: -50px 0; }
+.sm-sprite-color.pin-color   { background-position: -100px 0; }
+.sm-sprite-color.tumb-color  { background-position: -150px 0; }
+.sm-sprite-color.twit-color  { background-position: -200px 0; }
 
 /* ============================================= */
 /*                  NAVIGATION                   */
@@ -330,6 +361,18 @@ i.sm-sprite {
   color: #3dbbcb;
 }
 
+.dropdown-container figure img {
+  width: 100%;
+}
+
+.dropdown-container figure figcaption {
+  margin-top: 10px;
+}
+
+.dropdown-container figure figcaption a {
+  font-size: 13px;
+}
+
 /* ============================================= */
 /*                  HOME PAGE                    */
 /* ============================================= */
@@ -374,6 +417,10 @@ i.sm-sprite {
   font-weight: normal;
   text-transform: uppercase;
   border-bottom: 2px solid #3dbbcb;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 1px 2px 1px;
 }
 
 .content-box {
@@ -382,13 +429,289 @@ i.sm-sprite {
   text-align: center;
 }
 
-.content-box h2 {
-  margin: 0 auto;
-  text-align: center;
-  display: inline-block;
-  padding: 10px 1px 2px 1px;
+/* CAROUSEL */
+
+.carousel-content {
+  padding: 10px;
+  margin: 10px;
 }
 
+.carousel-photo {
+  width: 50%;
+}
+
+.fa.fa-chevron-left,
+.fa.fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  display: block;
+  font-size: 1.5em;
+  color: #3dbbcb;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.fa.fa-chevron-left {
+  left: -0;
+}
+
+.fa.fa-chevron-right {
+  right: 0;
+}
+
+.product-styles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-styles ul li {
+  font-size: 14px;
+  color: #3e3a39;
+}
+
+.product-styles ul li:nth-of-type(2) {
+  color: #3dbbcb;
+}
+
+/* BEST MAKEUP PRODUCTS */
+
+.best-highlight {
+  width: 100%;
+  height: auto;
+}
+
+.best-highlight figure {
+  width: 40%;
+  float: left;
+  margin: 10px 20px;
+}
+
+.best-highlight figure img {
+  width: 90%;
+}
+
+.best-highlight ul {
+  float: left;
+  margin: 20px 10px;
+  padding-right: 15px;
+  width: 40%;
+}
+
+.best-showcase {
+  clear: both;
+  list-style: none;
+  width: 80%;
+  padding: 10px 0 0;
+  margin: 0 auto;
+}
+
+.best-showcase li {
+  display: block;
+  float: left;
+  width: 22%;
+  margin: 1.5%;
+}
+
+.best-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.best-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.daily-photo {
+  width: 33%;
+  margin: 20px auto 10px;
+}
+
+.daily-photo img {
+  width: 100%;
+}
+
+.fa.fa-heart {
+  color: #bbb;
+}
+
+.fa.fa-heart.liked {
+  color: blue;
+}
+
+.reviewed-container {
+  width: 100%;
+}
+
+.reviewed-wrapper {
+  width: 25%;
+  float: left;
+}
+
+.reviewed-photo {
+  width: 50%;
+  margin: 20px auto 10px;
+}
+
+.reviewed-photo img {
+  width: 100%;
+}
+
+/* TOP REVIEWERS */
+
+.reviewers-container {
+  width: 100%;
+}
+
+.reviewers-wrapper {
+  width: 50%;
+  float: left;
+}
+
+.reviewers-style {
+  text-align: left;
+}
+
+.reviewers-style figcaption {
+  text-align: center;
+}
+
+.reviewers-style figcaption span {
+  color: #3dbbcb;
+  font-size: 18px;
+}
+
+.reviewers-style ul li p {
+  font-size: 14px;
+}
+
+.reviewers-style ul {
+  margin: 20px 0;
+  padding: 0;
+}
+
+/* INSTAGRAM */
+
+.insta-container {
+  padding: 20px 20px 10px;
+}
+
+.insta-showcase {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.insta-showcase li {
+  display: block;
+  float: left;
+  width: 30%;
+  margin: 1.25%;
+}
+
+.insta-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.insta-photo img {
+  width: 100%;
+  height: auto;
+}
+
+/* BEST PRODUCTS */
+
+.best-products ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.best-products ul li a {
+  font-size: 18px;
+  color: #3e3a39;
+  font-family: ntailub;
+  line-height: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* TRENDING PRODUCTS */
+
+.trending-products ul {
+  padding: 5px 30px;
+}
+
+.trending-products ul li {
+  text-align: left;
+  line-height: 2em;
+  padding: 15px 0;
+}
+
+.trending-products ul li h4 {
+  font-size: 14px;
+  color: #3dbbcb;
+  font-weight: bold;
+}
+
+.trending-products > p {
+  text-align: right;
+  padding-right: 10px;
+  color: #3dbbcb;
+}
+
+/* FOOTER */
+
+.footer-social {
+  height: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 1px 2px;
+}
+
+.footer-social li {
+  float: left;
+  padding: 0 25px;
+  width: 20%;
+}
+
+.footer-nav {
+  width: 100%;
+  height: 50px;
+}
+
+.footer-nav ul {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.footer-nav li {
+  float: left;
+  padding: 15px;
+}
+
+.footer-nav li a {
+  font-size: 18px;
+  color: #3e3a39;
+}
+
+.copyright p {
+  text-align: center;
+  font-size: 12px;
+  color: #3e3a39;
+  padding-top: 10px;
+}
 
 /* ============================================= */
 /*                RESPONSIVE QUERIES             */
