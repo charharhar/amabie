@@ -69,6 +69,10 @@ ul {
   list-style: none;
 }
 
+ol {
+  padding: 0;
+}
+
 .btn-green {
   font-size: 18px;
   color: #fefefe;
@@ -78,6 +82,11 @@ ul {
   border: none;
   padding: 4.5px 18px;
   margin-left: 10px;
+}
+
+.btn-green.full-width {
+  width: 100%;
+  margin: 10px auto;
 }
 
 .no-gutter > [class*='col-'] {
@@ -99,6 +108,22 @@ ul {
   visibility: hidden;
 }
 
+.heading-left {
+  text-align: left;
+  border-bottom: 2px solid #aaa;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+
+hr {
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  margin: 20px auto;
+}
+
 div.content-box {
   background-color: white;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
@@ -113,6 +138,18 @@ div.content-box {
   height: 170px;
 }
 
+.content-box.misc-pages {
+  height: auto;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  font-size: 16px;
+}
+
+.content-box .misc-content {
+  padding: 40px 20px;
+  line-height: 2em;
+}
+
 /* ============================================= */
 /*               ICONS & SPRITES                 */
 /* ============================================= */
@@ -125,6 +162,19 @@ div.content-box {
 
 .fa-caret-right {
   color: #3dbbcb;
+}
+
+.fa.fa-heart {
+  color: #bbb;
+  font-size: 1.5em;
+}
+
+.fa.fa-heart.liked {
+  color: blue;
+}
+
+.fa.fa-pencil {
+  font-size: 1.4em;
 }
 
 i.sm-sprite {
@@ -380,7 +430,6 @@ i.sm-sprite-color {
 #home-wrapper .container {
 /*  width: 1500px;
   max-width: 96%;*/
-  overflow:hidden;
 }
 
 .md-3-adj { width: 28%; }
@@ -429,7 +478,9 @@ i.sm-sprite-color {
   text-align: center;
 }
 
-/* CAROUSEL */
+  /*
+   * CAROUSEL
+   */
 
 .carousel-content {
   padding: 10px;
@@ -480,7 +531,9 @@ i.sm-sprite-color {
   color: #3dbbcb;
 }
 
-/* BEST MAKEUP PRODUCTS */
+  /*
+   * BEST MAKEUP PRODUCTS
+   */
 
 .best-highlight {
   width: 100%;
@@ -540,14 +593,6 @@ i.sm-sprite-color {
   width: 100%;
 }
 
-.fa.fa-heart {
-  color: #bbb;
-}
-
-.fa.fa-heart.liked {
-  color: blue;
-}
-
 .reviewed-container {
   width: 100%;
 }
@@ -566,7 +611,9 @@ i.sm-sprite-color {
   width: 100%;
 }
 
-/* TOP REVIEWERS */
+  /*
+   * TOP REVIEWERS
+   */
 
 .reviewers-container {
   width: 100%;
@@ -599,7 +646,9 @@ i.sm-sprite-color {
   padding: 0;
 }
 
-/* INSTAGRAM */
+  /*
+   * INSTAGRAM
+   */
 
 .insta-container {
   padding: 20px 20px 10px;
@@ -630,7 +679,9 @@ i.sm-sprite-color {
   height: auto;
 }
 
-/* BEST PRODUCTS */
+  /*
+   * BEST PRODUCTS
+   */
 
 .best-products ul {
   list-style: none;
@@ -647,7 +698,9 @@ i.sm-sprite-color {
   letter-spacing: 1px;
 }
 
-/* TRENDING PRODUCTS */
+  /*
+   * TRENDING PRODUCTS
+   */
 
 .trending-products ul {
   padding: 5px 30px;
@@ -671,19 +724,25 @@ i.sm-sprite-color {
   color: #3dbbcb;
 }
 
-/* FOOTER */
+  /*
+   * FOOTER
+   */
 
 .footer-social {
   height: 50px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  padding: 15px 1px 2px;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.footer-social li {
-  float: left;
-  padding: 0 25px;
-  width: 20%;
+.footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social ul li {
+  display: inline-block;
+  padding: 0 15px;
 }
 
 .footer-nav {
@@ -693,15 +752,15 @@ i.sm-sprite-color {
 
 .footer-nav ul {
   margin: 0 auto;
-  display: inline-block;
+  width: 100%;
 }
 
-.footer-nav li {
-  float: left;
+.footer-nav ul li {
+  display: inline-block;
   padding: 15px;
 }
 
-.footer-nav li a {
+.footer-nav ul li a {
   font-size: 18px;
   color: #3e3a39;
 }
@@ -710,8 +769,142 @@ i.sm-sprite-color {
   text-align: center;
   font-size: 12px;
   color: #3e3a39;
-  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
+@media only screen and (max-width: 1199px) {
+  /*
+   * RESPONSIVE FOOTER
+   */
+  .content-box.content-footer {
+    height: auto;
+  }
+
+  .footer-nav {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .footer-nav ul {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .footer-nav ul li {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+
+/* ============================================= */
+/*                      MISC                     */
+/* ============================================= */
+
+  /*
+   * WISHLIST
+   */
+
+.btn-wishlist {
+  margin: 20px;
+  font-weight: 300;
+  padding: 20px;
+  font-size: .9em;
+}
+
+.wishlist-wrapper ol li {
+  border-bottom: 2px solid #aaa;
+  padding: 20px 0;
+  margin-left: 20px;
+}
+
+.wishlist-wrapper ol li:last-of-type {
+  border: none;
+}
+
+.wishlist a {
+  color: #3dbbcb;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.wishlist-form input[type="text"] {
+  height: 2em;
+}
+
+  /*
+   * ALERT OPTIONS & WISHLIST
+   */
+
+.my-alerts-img,
+.wishlist-img {
+  width: 200px;
+  height: auto;
+}
+
+.my-alerts-img figure img,
+.wishlist-img figure img {
+  width: 100%;
+}
+
+.my-alerts-img,
+.my-alerts-content,
+.wishlist-img,
+.wishlist-content {
+  display: inline-block;
+}
+
+.my-alerts-content,
+.wishlist-content {
+  margin-left: 40px;
+}
+
+.my-alerts-content a {
+  color: #3dbbcb;
+  font-family: ntailub;
+  font-size: 1.2em;
+}
+
+.my-alerts-remove {
+  position: absolute;
+  color: #3dbbcb;
+  display: inline-block;
+  bottom: 60px;
+  right: 20px;
+}
+
+  /*
+   * ALERT OPTIONS
+   */
+
+.alert-options-table th,
+.alert-options-table td {
+  padding: 0 15px;
+}
+
+.alert-options-table tr td:first-of-type {
+  padding-right: 70px;
+}
+
+  /*
+   * EMAIL
+   */
+
+.email-form {
+  text-align: left;
+  line-height: 2em;
+  padding: 40px 20px;
+}
+
+.email-form ul li {
+  padding: 5px;
+}
+
+.email-form ul li input[type="text"] {
+  height: 2em;
+}
+
 
 /* ============================================= */
 /*                RESPONSIVE QUERIES             */
