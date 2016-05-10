@@ -73,6 +73,10 @@ ol {
   padding: 0;
 }
 
+.clear-both {
+  clear: both;
+}
+
 .btn-green,
 .btn-clear {
   font-size: 18px;
@@ -817,6 +821,65 @@ i.sm-sprite-color {
   /*
    * EDIT MY PROFILE
    */
+
+.register-form {
+  width: 100%;
+  line-height: 2em;
+  padding: 30px 0;
+}
+
+.register-form .form-column {
+  width: 49%; /* 100% for smaller screens */
+  float: left;
+  margin-bottom: 20px;
+}
+
+.register-form .form-column:first-of-type {
+  margin-right: 2%
+}
+
+.register-form input,
+.register-form select {
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  line-height: 1.5em;
+}
+
+.register-form #days,
+.register-form #months,
+.register-form #years {
+  width: auto;
+}
+
+.register-form label {
+  margin: 0;
+}
+
+.register-form .btn-green {
+  margin: 0;
+  border-radius: 5px;
+  padding: 6px 20px;
+  margin: 10px 0 28px;
+  line-height: 1.5em;
+}
+
+.top-form,
+.bottom-form {
+  height: auto;
+  width: 100%;
+}
+
+.ending-form label {
+  font-size: .9em;
+  font-weight: 400;
+}
+
+  /*
+   * EDIT MY PROFILE
+   */
 .heading-box {
   padding-bottom: 40px;
 }
@@ -1022,12 +1085,14 @@ i.sm-sprite-color {
    * ALERT OPTIONS & WISHLIST
    */
 
+.register-img,
 .my-alerts-img,
 .wishlist-img {
   width: 200px;
   height: auto;
 }
 
+.register-img figure img,
 .my-alerts-img figure img,
 .wishlist-img figure img {
   width: 100%;
@@ -1047,6 +1112,7 @@ i.sm-sprite-color {
   margin-left: 40px;
 }
 
+.register-form a,
 .login-form a,
 .my-alerts-content a {
   color: #3dbbcb;

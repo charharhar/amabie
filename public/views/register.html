@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Amabie</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/slick.css">
+  <link rel="stylesheet" href="../css/slick-theme.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <div id="wrapper"> <!-- Media Query Fix -->
+
+    <section class="home-wrapper" id="home-wrapper" data-type="background" data-speed="7">
+      <div class="container">
+
+        <div class="row no-gutter row-spacing">
+          <article class="col-md-12">
+
+            <div class="content-box misc-pages register">
+              <h1 class="heading-left">Register</h1>
+
+              <div class="register-content misc-content">
+                <form class="register-form" action="">
+                  <p><strong>All required fields will have an asterisk(&#42;).</strong></p>
+
+                  <div class="top-form"> <!-- TOP FORM -->
+
+                    <div class="form-column"> <!-- START COLUMN -->
+                      <label for="first-name">First Name &#42;</label>
+                      <input type="text" id="first-name" placeholder="Enter your First Name" />
+
+                      <label for="last-name">Last Name &#42;</label>
+                      <input type="text" id="last-name" placeholder="Enter your Last Name" />
+
+                      <label for="email-address">Email Address &#42;</label>
+                      <input type="text" id="email-address" placeholder="Enter your Email Address" />
+
+                      <label for="username">Username &#42;</label>
+                      <input type="email" id="username" placeholder="Enter your Username" />
+
+                      <label for="password">Password &#42;</label>
+                      <input type="password" id="password" placeholder="Enter your Password" />
+                      <p>Must have a minimum of 6 characters</p>
+
+                      <label for="birthdate">Birthdate &#42;</label>
+                      <br />
+                      <select id="days"></select>
+                      <select id="months">
+                        <option value="">Month</option>
+                      </select>
+                      <select id="years">
+                        <option value="">Year</option>
+                      </select>
+                      <br />
+                    </div> <!-- END COLUMN -->
+
+                    <div class="form-column"> <!-- START COLUMN -->
+                      <div class="register-img">
+                        <figure>
+                          <figcaption><strong>Upload profile picture</strong></figcaption>
+                          <img src="../imgs/SheSilhouette-min.jpg" alt="">
+                        </figure>
+                      </div>
+                      <button class="btn-green">&plus; Upload</button>
+
+                      <br/>
+
+                      <label for="confirm-pass">Confirm Password &#42;</label>
+                      <input type="confirm-pass" id="confirm-pass" placeholder="Confirm your Password" />
+                    </div> <!-- END COLUMN -->
+
+                  </div> <!-- END TOP FORM -->
+
+                  <div class="bottom-form"> <!-- BOTTOM FORM -->
+
+                    <div class="form-column"> <!-- START COLUMN -->
+                      <label for="pronoun-pref">Pronoun Preference &#42;</label>
+                      <select name="pronoun-pref">
+                        <option value="">Select one</option>
+                        <option value="pronoun-one">Pronoun 1</option>
+                        <option value="pronoun-two">Pronoun 2</option>
+                        <option value="pronoun-three">Pronoun 3</option>
+                      </select>
+
+                      <label for="beauty-interest">Beauty Interest &#42;</label>
+                      <select name="beauty-interest">
+                        <option value="">Select One</option>
+                        <option value="interest-one">Beauty Interest 1</option>
+                        <option value="interest-two">Beauty Interest 1</option>
+                        <option value="interest-three">Beauty Interest 1</option>
+                      </select>
+                    </div> <!-- END COLUMN -->
+
+                    <div class="form-column"> <!-- START COLUMN -->
+                      <label for="blank">Country &#42;</label>
+                      <select id="countries">
+                        <option value="">Select One</option>
+                      </select>
+
+                      <label for="find-out">How did you find out about Amabi&eacute;? &#42;</label>
+                      <select id="find-out">
+                        <option value="">Select One</option>
+                      </select>
+                    </div> <!-- END COLUMN -->
+
+                    <label for="product-suggestion"><input type="checkbox" name="product-suggestion" value="product-sugestion">
+                      Click here to join our personalized product suggestions by email
+                    </label>
+                    <label for="term-agreement"><input type="checkbox" name="term-agreement" value="term-agreement">
+                      By clicking this box, I've read and agreed to <a href="">Terms and service</a> &amp; <a href="">Privacy Policy</a>
+                    </label>
+                  </div> <!-- END BOTTOM FORM -->
+
+
+                  <hr class="thinner">
+                  <input type="submit" class="btn-green full-width" value="Register" />
+                </form>
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+
+        <!-- footer -->
+        <footer class="row no-gutter row-spacing">
+          <article class="col-md-12">
+            <div class="content-box content-footer">
+              <h2>Follow Us On</h2>
+              <div class="footer-social">
+                <ul>
+                  <li><a href=""><i class="sm-sprite-color fb-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color ig-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color pin-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color tumb-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color twit-color"></i></a></li>
+                </ul>
+              </div>
+
+              <div class="footer-nav">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Review Tips</a></li>
+                  <li><a href="#">Community Guideline</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                </ul>
+              </div>
+
+              <div class="copyright">
+                <p>&copy;Amabi&eacute; 2016 All Rights Reserved</p>
+              </div>
+            </div>
+          </article>
+        </footer>
+
+      </div>
+    </section>
+
+
+
+  </div>
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/slick.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
