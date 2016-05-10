@@ -28,11 +28,11 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 #wrapper {
-  // overflow: auto;
+  overflow: auto;
   height: 100%;
 }
 
@@ -69,15 +69,35 @@ ul {
   list-style: none;
 }
 
-.btn-green {
+ol {
+  padding: 0;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.btn-green,
+.btn-clear {
   font-size: 18px;
   color: #fefefe;
-  font-weight: 600;
+  font-weight: 400;
   background-color: #3dbbcb;
   border-radius: 0;
-  border: none;
-  padding: 4.5px 18px;
+  border: 1px solid #3dbbcb;
+  padding: 3px 18px;
   margin-left: 10px;
+}
+
+.btn-clear {
+  color: #3e3a39;
+  background-color: #fefefe;
+  border: 1px solid #3e3a39;
+}
+
+.btn-green.full-width {
+  width: 100%;
+  margin: 20px auto;
 }
 
 .no-gutter > [class*='col-'] {
@@ -99,6 +119,28 @@ ul {
   visibility: hidden;
 }
 
+.heading-left {
+  text-align: left;
+  border-bottom: 2px solid #aaa;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+
+hr,
+hr.thinner {
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  margin: 20px auto 10px;
+}
+
+hr.thinner {
+  height: 0;
+  border: 1px solid rgba(238, 238, 238, 0.7);
+}
+
 div.content-box {
   background-color: white;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
@@ -113,6 +155,18 @@ div.content-box {
   height: 170px;
 }
 
+.content-box.misc-pages {
+  height: auto;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  font-size: 16px;
+}
+
+.content-box .misc-content {
+  padding: 25px 20px;
+  line-height: 2em;
+}
+
 /* ============================================= */
 /*               ICONS & SPRITES                 */
 /* ============================================= */
@@ -125,6 +179,19 @@ div.content-box {
 
 .fa-caret-right {
   color: #3dbbcb;
+}
+
+.fa.fa-heart {
+  color: #bbb;
+  font-size: 1.5em;
+}
+
+.fa.fa-heart.liked {
+  color: blue;
+}
+
+.fa.fa-pencil {
+  font-size: 1.4em;
 }
 
 i.sm-sprite {
@@ -380,7 +447,6 @@ i.sm-sprite-color {
 #home-wrapper .container {
 /*  width: 1500px;
   max-width: 96%;*/
-  overflow:hidden;
 }
 
 .md-3-adj { width: 28%; }
@@ -429,7 +495,9 @@ i.sm-sprite-color {
   text-align: center;
 }
 
-/* CAROUSEL */
+  /*
+   * CAROUSEL
+   */
 
 .carousel-content {
   padding: 10px;
@@ -480,7 +548,9 @@ i.sm-sprite-color {
   color: #3dbbcb;
 }
 
-/* BEST MAKEUP PRODUCTS */
+  /*
+   * BEST MAKEUP PRODUCTS
+   */
 
 .best-highlight {
   width: 100%;
@@ -540,14 +610,6 @@ i.sm-sprite-color {
   width: 100%;
 }
 
-.fa.fa-heart {
-  color: #bbb;
-}
-
-.fa.fa-heart.liked {
-  color: blue;
-}
-
 .reviewed-container {
   width: 100%;
 }
@@ -566,7 +628,9 @@ i.sm-sprite-color {
   width: 100%;
 }
 
-/* TOP REVIEWERS */
+  /*
+   * TOP REVIEWERS
+   */
 
 .reviewers-container {
   width: 100%;
@@ -599,7 +663,9 @@ i.sm-sprite-color {
   padding: 0;
 }
 
-/* INSTAGRAM */
+  /*
+   * INSTAGRAM
+   */
 
 .insta-container {
   padding: 20px 20px 10px;
@@ -630,7 +696,9 @@ i.sm-sprite-color {
   height: auto;
 }
 
-/* BEST PRODUCTS */
+  /*
+   * BEST PRODUCTS
+   */
 
 .best-products ul {
   list-style: none;
@@ -647,7 +715,9 @@ i.sm-sprite-color {
   letter-spacing: 1px;
 }
 
-/* TRENDING PRODUCTS */
+  /*
+   * TRENDING PRODUCTS
+   */
 
 .trending-products ul {
   padding: 5px 30px;
@@ -671,19 +741,25 @@ i.sm-sprite-color {
   color: #3dbbcb;
 }
 
-/* FOOTER */
+  /*
+   * FOOTER
+   */
 
 .footer-social {
-  height: 50px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  padding: 15px 1px 2px;
+  height: auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.footer-social li {
-  float: left;
-  padding: 0 25px;
-  width: 20%;
+.footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social ul li {
+  display: inline-block;
+  padding: 0 15px;
 }
 
 .footer-nav {
@@ -693,15 +769,15 @@ i.sm-sprite-color {
 
 .footer-nav ul {
   margin: 0 auto;
-  display: inline-block;
+  width: 100%;
 }
 
-.footer-nav li {
-  float: left;
+.footer-nav ul li {
+  display: inline-block;
   padding: 15px;
 }
 
-.footer-nav li a {
+.footer-nav ul li a {
   font-size: 18px;
   color: #3e3a39;
 }
@@ -710,7 +786,400 @@ i.sm-sprite-color {
   text-align: center;
   font-size: 12px;
   color: #3e3a39;
-  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+  /*
+   * RESPONSIVE FOOTER
+   */
+
+@media only screen and (max-width: 1199px) {
+
+  .content-box.content-footer {
+    height: auto;
+  }
+
+  .footer-nav {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .footer-nav ul {
+    text-align: center;
+  }
+
+  .footer-nav ul li {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* ============================================= */
+/*                      MISC                     */
+/* ============================================= */
+
+  /*
+   * EDIT MY PROFILE
+   */
+
+.register-form {
+  width: 100%;
+  line-height: 2em;
+  padding: 30px 0;
+}
+
+.register-form .form-column {
+  width: 49%; /* 100% for smaller screens */
+  float: left;
+  margin-bottom: 20px;
+}
+
+.register-form .form-column:first-of-type {
+  margin-right: 2%
+}
+
+.register-form input,
+.register-form select {
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  line-height: 1.5em;
+}
+
+.register-form #days,
+.register-form #months,
+.register-form #years {
+  width: auto;
+}
+
+.register-form label {
+  margin: 0;
+}
+
+.register-form .btn-green {
+  margin: 0;
+  border-radius: 5px;
+  padding: 6px 20px;
+  margin: 10px 0 28px;
+  line-height: 1.5em;
+}
+
+.top-form,
+.bottom-form {
+  height: auto;
+  width: 100%;
+}
+
+.ending-form label {
+  font-size: .9em;
+  font-weight: 400;
+}
+
+  /*
+   * EDIT MY PROFILE
+   */
+.heading-box {
+  padding-bottom: 40px;
+}
+
+.edit-profile-sidebar {
+  padding: 20px 0;
+}
+
+.edit-profile-img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.edit-profile-img img {
+  width: 100%;
+}
+
+.edit-profile-sidebar-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.edit-profile-sidebar-content .btn-green {
+  margin: 0;
+  border-radius: 5px;
+  padding: 6px 20px;
+  margin: 10px 0 15px;
+}
+
+.edit-profile-sidebar-content table {
+  margin: 15px 0;
+  border-collapse;
+  width: 100%;
+}
+
+.edit-profile-sidebar-content table tr {
+  border: none;
+}
+
+.edit-profile-sidebar-content table tr td {
+  text-align: center;
+}
+
+.edit-profile-sidebar-content table tr td a {
+  color: #3dbbcb;
+}
+
+.edit-profile-sidebar-content table tr td:first-of-type{
+  border-right: 1px solid #3E3A39;
+}
+
+.edit-profile-perIntro {
+  margin: 10px 0;
+}
+
+.perIntro-textarea-wrapper {
+  width: 100%;
+  padding: 10px 1px 20px;
+  height: auto;
+  background: rgba(238, 238, 238, 0.9);
+  border: 1px solid #fefefe;
+  border-radius: 2px;
+}
+
+#perIntro-textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: .9em;
+}
+
+  /* COL-MD-8 */
+.content-box.edit-profile h1 {
+  border: none;
+  padding: 0;
+}
+
+.content-box.edit-profile .intro-long {
+  padding: 20px;
+}
+
+.content-box.edit-profile p {
+  font-size: .9em;
+}
+
+.edit-profile-form ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.edit-profile-form ul li {
+  line-height: 1.5em;
+}
+
+.ethnic-skin-list label,
+.ingredient-pref-list label {
+  font-weight: 400;
+}
+
+.edit-profile-form select {
+  margin: 0 0 10px 0;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.edit-profile-form label {
+  margin: 0 !important;
+}
+
+  /*
+   * PRIVACY OPTIONS
+   */
+
+.privacy-all-options {
+  width: 100%;
+}
+
+.privacy-options-form table {
+  width: 100%;
+}
+
+.privacy-options-form table .major-rows {
+  // border-bottom: 1px solid #ccc;
+  // border-top: 1px solid #ccc;
+}
+
+.privacy-options-form table .major-rows .major-cells{
+  vertical-align: top;
+  padding: 20px 0;
+}
+
+.privacy-options-form table .major-rows td {
+  width: 50%;
+}
+
+.table-border {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(238, 238, 238, 0.7);
+  width: 95%;
+}
+
+  /*
+   * WISHLIST
+   */
+
+.wishlist-wrapper.misc-content {
+  padding-top: 0;
+}
+
+.btn-wishlist {
+  margin: 10px 20px 0;
+  font-weight: 300;
+  padding: 15px 20px;
+  font-size: .9em;
+}
+
+.wishlist-wrapper ol li {
+  border-bottom: 2px solid #aaa;
+  padding: 20px 0;
+  margin-left: 20px;
+}
+
+.wishlist-wrapper ol li:last-of-type {
+  border: none;
+}
+
+.wishlist a {
+  color: #3dbbcb;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.email-form ul li input[type="text"],
+.wishlist-content input[type="text"] {
+  height: 1.5em;
+  vertical-align: middle;
+  line-height: 1.3em;
+  border: 1px solid #ccc;
+}
+
+.wishlist-content p {
+  clear: both;
+}
+
+.wishlist-buttons {
+  padding: 20px;
+}
+
+.wishlist-buttons button {
+  min-width: 120px;
+  margin: 5px auto;
+  display: block;
+  padding: 0;
+}
+
+  /*
+   * ALERT OPTIONS & WISHLIST
+   */
+
+.register-img,
+.my-alerts-img,
+.wishlist-img {
+  width: 200px;
+  height: auto;
+}
+
+.register-img figure img,
+.my-alerts-img figure img,
+.wishlist-img figure img {
+  width: 100%;
+}
+
+.my-alerts-img,
+.my-alerts-content,
+.wishlist-img,
+.wishlist-content,
+.wishlist-buttons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.my-alerts-content,
+.wishlist-content {
+  margin-left: 40px;
+}
+
+.register-form a,
+.login-form a,
+.my-alerts-content a {
+  color: #3dbbcb;
+  font-size: 1.2em;
+}
+
+.my-alerts-remove {
+  position: absolute;
+  color: #3dbbcb;
+  display: inline-block;
+  bottom: 60px;
+  right: 20px;
+}
+
+  /*
+   * ALERT OPTIONS
+   */
+
+.alert-options-table th,
+.alert-options-table td {
+  padding: 0 15px;
+}
+
+.alert-options-table tr td:first-of-type {
+  padding-right: 70px;
+}
+
+  /*
+   * EMAIL, LOGIN
+   */
+
+.login {
+  padding: 40px;
+}
+
+.edit-profile-form,
+.login-form,
+.change-password-form,
+.email-form {
+  text-align: left;
+  line-height: 2em;
+  padding: 30px 20px;
+}
+
+.change-password-form {
+  padding: 30px 40px;
+}
+
+.change-password-form input,
+.login-form input {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.change-password-form input {
+  margin: 5px 0;
+}
+
+.change-password-form label {
+  margin: 10px 0 0 0;
+}
+
+.email-form ul li {
+  padding: 5px;
 }
 
 /* ============================================= */
