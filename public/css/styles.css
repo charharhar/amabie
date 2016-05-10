@@ -838,7 +838,9 @@ i.sm-sprite-color {
   margin-right: 2%
 }
 
-.register-form input,
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
 .register-form select {
   width: 98%;
   border: 1px solid #ccc;
