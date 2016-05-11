@@ -77,6 +77,9 @@ ol {
   clear: both;
 }
 
+.btn-yellow,
+.btn-red,
+.btn-blue,
 .btn-green,
 .btn-clear {
   font-size: 18px;
@@ -87,12 +90,51 @@ ol {
   border: 1px solid #3dbbcb;
   padding: 3px 18px;
   margin-left: 10px;
+  transition: .3s all;
+}
+
+.btn-green:hover {
+  background-color: #31a6b5;
+  border: 1px solid #31a6b5;
 }
 
 .btn-clear {
   color: #3e3a39;
   background-color: #fefefe;
   border: 1px solid #3e3a39;
+}
+
+.btn-blue {
+  background-color: #044F67;
+  border: 1px solid #044F67;
+  border-radius: 5px;
+}
+
+.btn-blue:hover {
+  background-color: #033646;
+  border: 1px solid #033646;
+}
+
+.btn-yellow {
+  background-color: #FFA400;
+  border: 1px solid #FFA400;
+  border-radius: 5px;
+}
+
+.btn-yellow:hover {
+  background-color: #dd8e00;
+  border: 1px solid #dd8e00;
+}
+
+.btn-red {
+  background-color: #CF000F;
+  border: 1px solid #CF000F;
+  border-radius: 5px;
+}
+
+.btn-red:hover {
+  background-color: #ad000d;
+  border: 1px solid #ad000d;
 }
 
 .btn-green.full-width {
@@ -119,9 +161,13 @@ ol {
   visibility: hidden;
 }
 
+.inlinefix {
+  display: inline-block;
+}
+
 .heading-left {
   text-align: left;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 1px solid #ccc;
   padding: 20px 0;
   margin: 0 20px;
 }
@@ -164,7 +210,18 @@ div.content-box {
 
 .content-box .misc-content {
   padding: 25px 20px;
-  line-height: 2em;
+  line-height: 1.5em;
+}
+
+/*
+  Hide that stupid little P in the bottom-left corner of the tinymce box
+*/
+.mce-path-item.mce-last {
+  opacity: 0;
+}
+
+#mceu_charCount {
+  float: right;
 }
 
 /* ============================================= */
@@ -184,10 +241,15 @@ div.content-box {
 .fa.fa-heart {
   color: #bbb;
   font-size: 1.5em;
+  transition: .3s all;
+}
+
+.fa.fa-heart:hover {
+  color: #044F67;
 }
 
 .fa.fa-heart.liked {
-  color: blue;
+  color: #044F67;
 }
 
 .fa.fa-pencil {
@@ -819,29 +881,120 @@ i.sm-sprite-color {
 /* ============================================= */
 
   /*
-   * EDIT MY PROFILE
+   * ABOUT US
    */
 
-.register-form {
+.about-us-content div {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.about-us-content h3 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.about-us-content h3.blueHead {
+  color: #3dbbcb;
+}
+
+.about-us-content ul {
+  list-style: disc;
+  padding-left: 45px;
+}
+
+.about-us-content ol {
+  padding: 10px 10px 0 45px;
+  margin: 0;
+}
+
+.about-us-middle p,
+.about-us-bottom p {
+  margin: 10px 0;
+  line-height: 1.3em;
+}
+
+.about-us-content ol li,
+.about-us-content p {
+  font-size: .9em;
+}
+
+  /*
+   * REGISTER, CONTACT US, WRITE REVIEW
+   */
+
+.two-column-form {
   width: 100%;
-  line-height: 2em;
   padding: 30px 0;
 }
 
-.register-form .form-column {
+.write-review-form.three-column-form,
+.contact-us-form.two-column-form {
+  line-height: 1.5em;
+  padding: 0 15px 0;
+}
+
+.write-review-form p,
+.contact-us-form p {
+  margin: 10px 0;
+}
+
+.register-form .register-img {
+  margin: 0 auto;
+}
+
+.register-form .btn-green.btn-center {
+  margin-top: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.register-form .register-img figcaption {
+  text-align: center;
+}
+
+.register-form.two-column-form {
+  line-height: 2em;
+}
+
+.two-column-form .form-column {
   width: 49%; /* 100% for smaller screens */
   float: left;
   margin-bottom: 20px;
 }
 
-.register-form .form-column:first-of-type {
-  margin-right: 2%
+.two-column-form .form-column:first-of-type,
+.three-column-form .form-column:first-of-type,
+.three-column-form .form-column:nth-of-type(2) {
+  margin-right: 2%;
 }
 
-.register-form input[type="text"],
-.register-form input[type="email"],
-.register-form input[type="password"],
-.register-form select {
+.three-column-form .form-column {
+  width: 32%; /* 100% for smaller screens */
+  float: left;
+  margin-bottom: 20px;
+}
+
+.write-review-form .top-form .form-column {
+  margin-bottom: 0;
+}
+
+.three-column-form input[type="text"] {
+  width: 50%; /* 75% for smaller screens */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  line-height: 1.5em;
+}
+
+.three-column-form select,
+.two-column-form input[type="text"],
+.two-column-form input[type="email"],
+.two-column-form input[type="password"],
+.two-column-form select {
   width: 98%;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -850,22 +1003,31 @@ i.sm-sprite-color {
   line-height: 1.5em;
 }
 
-.register-form #days,
-.register-form #months,
-.register-form #years {
+.two-column-form #days,
+.two-column-form #months,
+.two-column-form #years {
   width: auto;
 }
 
-.register-form label {
+.three-column-form label,
+.two-column-form label {
   margin: 0;
 }
 
-.register-form .btn-green {
-  margin: 0;
+.three-column-form .btn-green {
+  border-radius: 5px;
+  margin-left: 0;
+}
+
+.two-column-form .btn-green {
   border-radius: 5px;
   padding: 6px 20px;
-  margin: 10px 0 28px;
+  margin: 0 auto;
   line-height: 1.5em;
+}
+
+.contact-us-form .top-form {
+  margin: 20px 0;
 }
 
 .top-form,
@@ -874,9 +1036,33 @@ i.sm-sprite-color {
   width: 100%;
 }
 
-.ending-form label {
+.bottom-form label {
   font-size: .9em;
-  font-weight: 400;
+  font-weight: 700;
+}
+
+.contact-us-form p#character_count {
+  float: right;
+  margin-right: 10px;
+}
+
+.contact-us-form .bottom-form p#char-lim {
+  float: right;
+}
+
+.contact-us-form .btn-green  {
+  margin-bottom: 0;
+}
+
+table.write-review {
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+
+table.write-review th,
+table.write-review td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
 }
 
   /*
@@ -939,11 +1125,7 @@ i.sm-sprite-color {
 
 .perIntro-textarea-wrapper {
   width: 100%;
-  padding: 10px 1px 20px;
   height: auto;
-  background: rgba(238, 238, 238, 0.9);
-  border: 1px solid #fefefe;
-  border-radius: 2px;
 }
 
 #perIntro-textarea {
@@ -1114,11 +1296,13 @@ i.sm-sprite-color {
   margin-left: 40px;
 }
 
-.register-form a,
+.about-us-content a,
+.two-column-form a,
 .login-form a,
 .my-alerts-content a {
   color: #3dbbcb;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  letter-spacing: 1px;
 }
 
 .my-alerts-remove {
@@ -1208,12 +1392,31 @@ i.sm-sprite-color {
     font-size: 14px;
   }
 
+  // .two-column-form .btn-green {
+  //   margin: 10px 0 34px;
+  // }
+
   .form-control {
     height: 28px;
   }
 
   .navbar-form .form-group {
     width: 35%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  // need better solution for multi column bootstrap grid
+  // .no-gutter > [class*='col-'] {
+  //   margin-bottom: 80px;
+  // }
+
+  .edit-profile-img {
+    width: 25%;
+  }
+
+  .edit-profile-sidebar-content {
+    text-align: center;
   }
 }
 
@@ -1276,3 +1479,10 @@ i.sm-sprite-color {
   }
 }
 
+
+@media only screen and (max-width: 631px) {
+  .two-column-form .form-column,
+  .three-column-form .form-column {
+    width: 100%; /* 100% for smaller screens */
+  }
+}

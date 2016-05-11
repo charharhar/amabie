@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Amabie</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/slick.css">
+  <link rel="stylesheet" href="../css/slick-theme.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <div id="wrapper"> <!-- Media Query Fix -->
+
+    <section class="home-wrapper" id="home-wrapper" data-type="background" data-speed="7">
+      <div class="container">
+
+        <div class="row no-gutter row-spacing">
+          <article class="col-md-12">
+
+            <div class="content-box misc-pages write-review">
+              <h1 class="heading-left">Write a Review</h1>
+
+              <div class="write-review-content misc-content">
+                <form class="write-review-form three-column-form" method="post">
+                  <p>All of your written reviews will be translated into Mandarin Chinese</p>
+                  <p>Please check Review Guidelines before writing your review and/or if you need help writing your review</p>
+                  <p><strong>Find your product</strong></p>
+
+                  <div class="top-form"> <!-- TOP FORM -->
+
+                    <div class="form-column"> <!-- START COLUMN -->
+                      <label for="review-brand">Brand</label>
+                      <br />
+                      <select id="review-brand">
+                        <option value="">Select Brand</option>
+                        <option value="reviews">Reviews</option>
+                        <option value="payment">Payment</option>
+                        <option value="shipment">Shipment</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div> <!-- END COLUMN -->
+
+                    <div class="form-column"> <!-- START COLUMN -->
+                      <label for="review-category">Category</label>
+                      <br />
+                      <select id="review-category">
+                        <option value="">Select Category</option>
+                        <option value="reviews">Reviews</option>
+                        <option value="payment">Payment</option>
+                        <option value="shipment">Shipment</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div> <!-- END COLUMN -->
+
+                    <div class="form-column"> <!-- START COLUMN -->
+                      <label for="review-type">Product Type</label>
+                      <br />
+                      <select id="review-type">
+                        <option value="">Select Type</option>
+                        <option value="reviews">Reviews</option>
+                        <option value="payment">Payment</option>
+                        <option value="shipment">Shipment</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div> <!-- END COLUMN -->
+
+                    <div class="clearfix"></div>
+
+                    <p class="inlinefix"><strong>Can't find your product?</strong></p>
+                    <button class="btn-blue">Add a product</button>
+                  </div> <!-- END TOP FORM -->
+
+                  <div class="bottom-form"> <!-- BOTTOM FORM -->
+                    <p><strong>Your Review</strong></p>
+                    <p>Please keep your review honest and based on personal experience. You may check our content guidelines for more detailed guidance. The review should be a minimum of 10 words. Please note that your review will be translated into Chinese to assist our international readers.</p>
+                    <textarea id="write-review-textarea"></textarea>
+                    <div class="clearfix"></div>
+
+                    <p><strong>Rating</strong></p>
+                    <ul>
+                      <li>
+                        <a href=""><i class="fa fa-heart liked" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                      </li>
+                    </ul>
+
+                    <p class="inlinefix"><strong>Keyword</strong></p><input type="text" placeholder="Please enter after each keyword to add the tag">
+
+                    <p><strong>Upload Photos (You can add up to 3 photos)</strong></p>
+                    <p>Please feel free to upload images including the product itself, ingredients, packaging, and anything else related!</p>
+
+                    <button class="btn-green">&plus; Add File</button>
+                    <button class="btn-yellow"><i class="fa fa-ban" aria-hidden="true"></i> Cancel Upload</button>
+                    <button class="btn-red"><i class="fa fa-trash" aria-hidden="true"></i> Delete All</button>
+
+                    <table class="write-review">
+                      <tr>
+                        <th>Preview</th>
+                        <th>Filename</th>
+                        <th>Filesize</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                      </tr>
+                      <tr>
+                        <td>Image Preview</td>
+                        <td>awesomeproduct.jpg</td>
+                        <td>1000KB</td>
+                        <td>5/01/2016</td>
+                        <td>Uploaded</td>
+                      </tr>
+                      <tr>
+                        <td>Image Preview</td>
+                        <td>awesomeproduct.jpg</td>
+                        <td>1000KB</td>
+                        <td>5/01/2016</td>
+                        <td>Uploaded</td>
+                      </tr>
+                      <tr>
+                        <td>Image Preview</td>
+                        <td>awesomeproduct.jpg</td>
+                        <td>1000KB</td>
+                        <td>5/01/2016</td>
+                        <td>Uploaded</td>
+                      </tr>
+                    </table>
+
+                  </div> <!-- END BOTTOM FORM -->
+
+                <input type="submit" class="btn-green full-width" value="Submit your Review" />
+
+                </form>
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+
+        <!-- footer -->
+        <footer class="row no-gutter row-spacing">
+          <article class="col-md-12">
+            <div class="content-box content-footer">
+              <h2>Follow Us On</h2>
+              <div class="footer-social">
+                <ul>
+                  <li><a href=""><i class="sm-sprite-color fb-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color ig-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color pin-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color tumb-color"></i></a></li>
+                  <li><a href=""><i class="sm-sprite-color twit-color"></i></a></li>
+                </ul>
+              </div>
+
+              <div class="footer-nav">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Review Tips</a></li>
+                  <li><a href="#">Community Guideline</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                </ul>
+              </div>
+
+              <div class="copyright">
+                <p>&copy;Amabi&eacute; 2016 All Rights Reserved</p>
+              </div>
+            </div>
+          </article>
+        </footer>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/slick.min.js"></script>
+  <script src='../js/tinymce.min.js'></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

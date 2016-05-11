@@ -27,7 +27,7 @@
               <h1 class="heading-left">Register</h1>
 
               <div class="register-content misc-content">
-                <form class="register-form" action="">
+                <form class="register-form two-column-form" method="post">
                   <p><strong>All required fields will have an asterisk(&#42;).</strong></p>
 
                   <div class="top-form"> <!-- TOP FORM -->
@@ -49,8 +49,11 @@
                       <input type="password" id="password" placeholder="Enter your Password" />
                       <p>Must have a minimum of 6 characters</p>
 
+                      <label for="confirm-pass">Confirm Password &#42;</label>
+                      <input type="password" id="confirm-pass" placeholder="Confirm your Password" />
+
                       <label for="birthdate">Birthdate &#42;</label>
-                      <br />
+                      <br>
                       <select id="days"></select>
                       <select id="months">
                         <option value="">Month</option>
@@ -58,7 +61,7 @@
                       <select id="years">
                         <option value="">Year</option>
                       </select>
-                      <br />
+                      <br>
                     </div> <!-- END COLUMN -->
 
                     <div class="form-column"> <!-- START COLUMN -->
@@ -68,12 +71,10 @@
                           <img src="../imgs/SheSilhouette-min.jpg" alt="">
                         </figure>
                       </div>
-                      <button class="btn-green">&plus; Upload</button>
+                      <button class="btn-green btn-center">&plus; Upload</button>
 
-                      <br/>
+                      <br>
 
-                      <label for="confirm-pass">Confirm Password &#42;</label>
-                      <input type="password" id="confirm-pass" placeholder="Confirm your Password" />
                     </div> <!-- END COLUMN -->
 
                     <div class="clearfix"></div>
