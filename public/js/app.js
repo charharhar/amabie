@@ -23,6 +23,7 @@ $(function(){
   // ==========================
   var $selectAll = $('#select-all');
   var $selectBox = $('.select-box');
+  var i;
 
   // populate FIND-OUT select box
   var findout_options = ['Word of mouth','Radio','TV','Print','Outdoor','Social Media','From a Friend','Advertisement'];
@@ -56,9 +57,25 @@ $(function(){
     changeSelected($selectBox, $selectAll);
   })
 
-  // IMPORTANT populate a mceu_charCount div inside tinymce status bar on load
+  // IMPORTANT populate the Character Count div (mceu_charCount) div inside tinymce status bar
   $(window).on('load', function() {
     $("#mceu_2-body").append('<div id="mceu_charCount"></div>');
+  })
+
+  // Tab handler in my-community.js
+  $('a[data-tabName').on('click', function() {
+    var tabId = '#' + $(this).attr('data-tabName');
+
+    $('.community').css('display', 'none');
+    $('.tablink').removeClass('tabActive');
+
+    $(tabId).css('display', 'block');
+    $(this).addClass('tabActive');
+  })
+
+  $('.accordion').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).next().toggleClass('show');
   })
 
   // INITIALIZING JAVASCRIPT PACKAGES
@@ -74,24 +91,28 @@ $(function(){
   });
 
   // Used in multiple pages -> contact-us.html, write-review.html, edit-profile.html
-  tinymce.init({
-    selector: 'textarea',
-    toolbar: false,
-    menubar: false,
-    theme: 'modern',
-    browser_spellcheck: true,
+  // So therefore, do a check first if tinymce.js is loaded into that page
+  // not necessary if gulped into one js file
+  if (window.tinymce && window.tinyMCE) {
+    tinymce.init({
+      selector: 'textarea',
+      toolbar: false,
+      menubar: false,
+      theme: 'modern',
+      browser_spellcheck: true,
 
-    setup: function (ed) {
-      ed.on('keyup', function (e) {
-        var count = CountCharacters();
-        $("#mceu_charCount").html(
-          "<p id='character_count'>Characters: "
-          + count
-          + "</p><div class='clearfix'></div>"
-        );
-      });
-    },
-  });
+      setup: function (ed) {
+        ed.on('keyup', function (e) {
+          var count = CountCharacters();
+          $("#mceu_charCount").html(
+            "<p id='character_count'>Characters: "
+            + count
+            + "</p><div class='clearfix'></div>"
+          );
+        });
+      },
+    });
+  }
 
 });
 
