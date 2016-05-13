@@ -19,36 +19,44 @@
 // })
 
 $(function(){
-  // VARIABLES DECLARED
-  // ==========================
+
+  // --------------------------------------------
+  //              VARIABLES DECLARED
+  // --------------------------------------------
+
   var $selectAll = $('#select-all');
   var $selectBox = $('.select-box');
   var i;
-
-  // populate FIND-OUT select box
   var findout_options = ['Word of mouth','Radio','TV','Print','Outdoor','Social Media','From a Friend','Advertisement'];
-  populateSelectNode($('#find-out'), findout_options);
-
-  // populate COUNTRIES select box
   var country_list = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
-  populateSelectNode($('#countries'), country_list);
-
-  // populate BIRTHDATE select box
   var month_names = ['January','February','March','April','May','June','July','August','September','October','November','December', ];
 
-  // populate years select box
+  // --------------------------------------------
+  //              DOM MANIPULATION
+  // --------------------------------------------
+
+  // populate FIND-OUT <select> node
+  populateSelectNode($('#find-out'), findout_options);
+
+  // populate COUNTRIES <select> node
+  populateSelectNode($('#countries'), country_list);
+
+  // populate BIRTHDATE <select> node
+  // years <select> node
   for (i = new Date().getFullYear(); i > 1900; i--){
     $('#years').append($('<option />').val(i).html(i));
   }
-  // populate months select box
+  // months <select> node
   for (i = 1; i < 13; i++){
     $('#months').append($('<option />').val(i).html(month_names[i-1]));
   }
-  // populate Days select box
+  // Days <select> node
   updateNumberOfDays();
 
-  // EVENT LISTENERS
-  // ==========================
+  // --------------------------------------------
+  //              EVENT LISTENERS
+  // --------------------------------------------
+
   $('#years, #months').on('change', function(){
     updateNumberOfDays();
   });
@@ -73,13 +81,36 @@ $(function(){
     $(this).addClass('tabActive');
   })
 
+  // Accordion search refiner handler
   $('.accordion').on('click', function() {
+    // restrict only ONE tab open, remove this f(n) to allow multiple tabs open
+    $('.accordion').not(this).each(function() {
+      $(this).removeClass('active');
+      $(this).next().removeClass('show');
+    })
+
     $(this).toggleClass('active');
     $(this).next().toggleClass('show');
   })
 
-  // INITIALIZING JAVASCRIPT PACKAGES
-  // ==========================
+  // Rating hearts handler, properly displays the # of hearts that should light up
+  $('.fa.fa-heart').on('click', function() {
+    var self = $(this);
+    self.toggleClass('liked');
+
+    if ( self.next().hasClass('liked') ) {
+      self.nextAll().removeClass('liked');
+      self.addClass('liked');
+    } else {
+      $(this).prevAll().each(function() {
+        self.hasClass('liked') ? $(this).addClass('liked') : $(this).removeClass('liked');
+      })
+    }
+  })
+
+  // --------------------------------------------
+  //      INITIALIZING JAVASCRIPT PACKAGES
+  // --------------------------------------------
   // 1. Slick.js
   // 2. TinyMCE
 
@@ -91,7 +122,7 @@ $(function(){
   });
 
   // Used in multiple pages -> contact-us.html, write-review.html, edit-profile.html
-  // So therefore, do a check first if tinymce.js is loaded into that page
+  // Not loaded on every page, do check tinymce.js is loaded into that page
   // not necessary if gulped into one js file
   if (window.tinymce && window.tinyMCE) {
     tinymce.init({
@@ -116,9 +147,9 @@ $(function(){
 
 });
 
-
-// UTILITY FUNCTIONS
-// ==========================
+// --------------------------------------------
+//               UTILITY FUNCTIONS
+// --------------------------------------------
 
 // Changes all PRIVACY OPTIONS to the selected value from the dropdown menu
 function changeSelected(target, value) {
