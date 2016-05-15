@@ -198,6 +198,11 @@ hr.thinner {
   border: 1px solid rgba(238, 238, 238, 0.7);
 }
 
+hr.blue {
+  height: 0;
+  border: 1px solid #3dbbcb;
+}
+
 div.content-box {
   background-color: #fefefe;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
