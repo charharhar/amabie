@@ -1,6 +1,7 @@
 // // Causes parallax scrolling to be more dramatic and noticable
-// // Need to readjust CSS properties (html/body overflow: hidden and overflow: auto values)
-// // NOT AN IDEAL SOLUTION
+// // Need to readjust CSS properties =>
+// (remove html/body overflow: hidden and #wrapper overflow: auto)
+// // NOT AN IDEAL SOLUTION WOULD NOT RECOMMEND
 // $(function() {
 
 //   var $window = $(window);
@@ -108,6 +109,12 @@ $(function(){
     }
   })
 
+  // Only 1 checkbox with similar value allowed to be checked
+  $('.product-filter input[type="checkbox"]').on('change', function() {
+    $('.product-filter input[type="checkbox"][value=' + $(this).val() + ']').not(this).prop('checked', false);
+  });
+
+
   // --------------------------------------------
   //      INITIALIZING JAVASCRIPT PACKAGES
   // --------------------------------------------
@@ -134,7 +141,7 @@ $(function(){
 
       setup: function (ed) {
         ed.on('keyup', function (e) {
-          var count = CountCharacters();
+          var count = countCharacters();
           $("#mceu_charCount").html(
             "<p id='character_count'>Characters: "
             + count
@@ -181,16 +188,16 @@ function populateSelectNode($domObj, arrayData) {
 }
 
 // Get value of textarea, trims white space, return the length
-function CountCharacters() {
+function countCharacters() {
   var body = tinymce.get("contact-us-textarea").getBody();
   var content = tinymce.trim(body.innerText || body.textContent);
   return content.length;
 };
 
-function ValidateCharacterLength() {
+function validateCharacterLength() {
   var min = 20;
   var max = 1000;
-  var count = CountCharacters();
+  var count = countCharacters();
   if (count > max) {
     alert("Maximum " + max + " characters allowed.")
     return false;
