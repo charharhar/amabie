@@ -296,6 +296,15 @@ div.content-box {
   opacity: .7;
 }
 
+.mobile-advert {
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #3dbbcb;
+  opacity: .7;
+  display: none;
+}
+
 /*
   Hide that stupid little P in the bottom-left corner of the tinymce box
 */
@@ -613,6 +622,55 @@ i.sm-sprite-color {
   .col-sm-offset-onehalf {
     margin-left: 12.499999999%
   }
+
+  .hidden-phone {
+    display: none;
+  }
+
+  .mobile-home-buttons,
+  .mobile-advert {
+    display: block !important;
+  }
+}
+
+@media only screen and ( min-width: 768px ) {
+  .flexBox .a { order: 1; }
+  .flexBox .b { order: 2; }
+  .flexBox .c { order: 3; }
+  .flexBox .d { order: 4; }
+  .flexBox .e { order: 5; }
+  .flexBox .f { order: 6; }
+  .flexBox .g { order: 7; }
+  .flexBox .h { order: 8; }
+  .flexBox .i { order: 9; }
+}
+
+@media only screen and ( min-width: 1200px ) {
+  .flexBox .a { order: 1; }
+  .flexBox .b { order: 2; }
+  .flexBox .c { order: 3; }
+  .flexBox .d { order: 4; }
+  .flexBox .e { order: 5; }
+  .flexBox .f { order: 6; }
+  .flexBox .h { order: 7; }
+  .flexBox .g { order: 8; }
+  .flexBox .i { order: 9; }
+
+  .flexBox > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1420px) {
+  .insta-image img {
+    height: 75px !important;
+  }
+}
+
+.flexBox {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #home-wrapper .container {
@@ -665,10 +723,30 @@ i.sm-sprite-color {
   vertical-align: top;
 }
 
-.instagram-posts,
-.best-products,
-.trending-topics {
-  display: table;
+.mobile-home-buttons {
+  display: none;
+}
+
+.home-button-wrapper button {
+  width: 49%;
+  border-radius: 0;
+  border: 0px;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 0;
+  float: left;
+  font-size: 1em;
+
+  /* breaks at max-width: 360px */
+}
+
+.home-button-wrapper button:nth-child(2n) {
+  margin-left: 2%;
+}
+
+.home-button-wrapper button:hover {
+  border: 0px;
 }
 
   /*
@@ -731,21 +809,22 @@ i.sm-sprite-color {
 .best-highlight {
   width: 100%;
   height: auto;
+  padding: 10px;
 }
 
 .best-highlight figure {
   width: 40%;
   float: left;
-  margin: 10px 20px;
+  margin: 10px 5%;
 }
 
 .best-highlight figure img {
-  width: 90%;
+  height: 120px;
 }
 
 .best-highlight ul {
   float: left;
-  margin: 20px 10px;
+  margin: 20px 5%;
   padding-right: 15px;
   width: 40%;
 }
@@ -768,12 +847,10 @@ i.sm-sprite-color {
 .best-photo {
   width: 100%;
   margin: 0;
-  overflow: hidden;
-  background-color: #000;
 }
 
 .best-photo img {
-  width: 100%;
+  width: 65px;
   height: auto;
 }
 
@@ -848,35 +925,29 @@ i.sm-sprite-color {
    * INSTAGRAM
    */
 
+.instagram-posts {
+  position: relative;
+}
+
 .insta-container {
   padding: 10px;
-  margin-top: 20px;
 }
 
 .insta-showcase {
-  list-style: none;
-  width: 100%;
-  padding: 0;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.insta-showcase li {
-  display: block;
-  float: left;
+.insta-image {
   width: 30%;
-  margin: 1.25%;
 }
 
-.insta-photo {
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
-  background-color: #000;
+.insta-image img {
+  height: 100px;
 }
 
-.insta-photo img {
-  width: 100%;
-  height: auto;
-}
+
 
   /*
    * BEST PRODUCTS
@@ -901,6 +972,8 @@ i.sm-sprite-color {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+
 
   /*
    * TRENDING topics
@@ -2209,11 +2282,6 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media only screen and (max-width: 991px) {
-  // need better solution for multi column bootstrap grid
-  // .no-gutter > [class*='col-'] {
-  //   margin-bottom: 80px;
-  // }
-
   .product-left .edit-profile-img {
     width: 50%;
   }
@@ -2263,7 +2331,7 @@ input[type='checkbox']:checked + label:before {
 }
 
 /* TABLET */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
@@ -2278,9 +2346,7 @@ input[type='checkbox']:checked + label:before {
   .product-styles > .reviewed-wrapper:nth-of-type(4n) {
     display:none;
   }
-}
 
-@media only screen and (max-width: 767px) {
   .navbar-collapse {
 
   }
