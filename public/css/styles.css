@@ -1644,10 +1644,12 @@ table.write-review td {
 
 .email-form ul li input[type="text"],
 .wishlist-content input[type="text"] {
-  height: 1.5em;
+  height: 2em;
   vertical-align: middle;
-  line-height: 1.3em;
+  line-height: 1.5em;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .wishlist-content p {
@@ -1664,7 +1666,6 @@ table.write-review td {
   margin: 5px auto;
   display: block;
   padding: 5px 10px;
-  border-radius: 0;
 }
 
   /*
@@ -2427,10 +2428,14 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media only screen and (max-width: 991px) {
+
+  .profile-page-header .edit-profile-img,
   .product-left .edit-profile-img {
     width: 50%;
   }
 
+  .small-ad-wrapper,
+  .long-advert,
   .product-page div.long-advert,
   .product-left .product-gallery {
     display: none;
@@ -2486,12 +2491,15 @@ input[type='checkbox']:checked + label:before {
   .navbar-main .navbar-nav {
     height: auto;
     width: 100%;
+    border: 1px solid #3E3A39;
+    border-top: none;
   }
 
   .collapse.in,
   .collapsing {
+    position: absolute;
+    right: 5%;
     width: 50%;
-    float: right;
   }
 
   .navbar-nav {
