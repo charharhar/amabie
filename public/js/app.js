@@ -114,6 +114,37 @@ $(function(){
     $('.product-filter input[type="checkbox"][value=' + $(this).val() + ']').not(this).prop('checked', false);
   });
 
+  // Shop option button listener
+  $('#shop-option-button').on('click', function() {
+    $('.product-shop-options').toggleClass('shop-show');
+  })
+
+  $('#shop-close').on('click', function() {
+    $('.product-shop-options').removeClass('shop-show');
+  })
+
+  // Mobile Navigation Menu listener
+  $('.dropdown-menu li a').on('click', function(e) {
+    if (!$(this).parent().hasClass('dropdown-submenu')) {
+      console.log('true');
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    $(this).next().toggleClass('dropdown-submenu-show');
+
+    if ($(this).children().hasClass('fa-chevron-down')) {
+      $(this).children().removeClass('fa-chevron-down');
+      $(this).children().addClass('fa-chevron-up')
+    } else {
+      $(this).children().removeClass('fa-chevron-up');
+      $(this).children().addClass('fa-chevron-down')
+    }
+
+    $(this).toggleClass('dropdownActive');
+
+  })
+
 
   // --------------------------------------------
   //      INITIALIZING JAVASCRIPT PACKAGES
