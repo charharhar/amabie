@@ -126,7 +126,6 @@ $(function(){
   // Mobile Navigation Menu listener
   $('.dropdown-menu li a').on('click', function(e) {
     if (!$(this).parent().hasClass('dropdown-submenu')) {
-      console.log('true');
       e.preventDefault();
       e.stopPropagation();
     }
@@ -143,6 +142,18 @@ $(function(){
 
     $(this).toggleClass('dropdownActive');
 
+  })
+
+  $('.dropdown-toggle').on('click', function(e) {
+    if ($(this).children().hasClass('fa-chevron-down')) {
+      $(this).children().removeClass('fa-chevron-down');
+      $(this).children().addClass('fa-chevron-up')
+    } else {
+      $(this).children().removeClass('fa-chevron-up');
+      $(this).children().addClass('fa-chevron-down')
+    }
+
+    $(this).toggleClass('dropdownActive');
   })
 
 
