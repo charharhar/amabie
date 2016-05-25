@@ -2896,8 +2896,32 @@ only screen and (max-width: 760px),
 
 }
 
+@media only screen and (max-width: 590px) {
+  .mobile-navbar-search {
+    width: 200px;
+  }
+}
+
 @media only screen and (max-width: 510px) {
   .mobile-navbar-search {
+    left: 152px;
+    width: 125px;
+  }
+
+  .mobile-navbar-search input[type="text"] {
+    font-size: .9em;
+  }
+
+  .navbar-brand {
+    width: 152px;
+    margin-top: 0;
+  }
+
+  .navbar-brand img {
+    width: 100%;
+  }
+
+  .navbar-brand p {
     display: none;
   }
 
@@ -2916,15 +2940,14 @@ only screen and (max-width: 760px),
   .navbar-default .navbar-nav>li>a:first-of-type {
     border-top: 2px solid #3e3a39;
   }
+}
+
+@media only screen and (max-width: 350px) {
+  .mobile-navbar-search {
+    display: none;
+  }
 
   .mobile-menu-search {
     display: block;
-  }
-}
-
-
-@media only screen and (max-width: 590px) {
-  .mobile-navbar-search {
-    width: 200px;
   }
 }
