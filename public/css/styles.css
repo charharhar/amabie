@@ -678,16 +678,16 @@ li.mobile-loggedIn {
 
 
 @media only screen and (min-width: 768px) and (max-width: 1075px) {
-  .dropdown:nth-of-type(6) .dropdown-menu,
-  .dropdown:nth-of-type(7) .dropdown-menu {
+  .dropdown:nth-of-type(5) .dropdown-menu,
+  .dropdown:nth-of-type(6) .dropdown-menu {
     left: 25%;
     -webkit-transform: translateX(-25%);
             transform: translateX(-25%);
   }
 
+  .dropdown:nth-of-type(7) .dropdown-menu,
   .dropdown:nth-of-type(8) .dropdown-menu,
-  .dropdown:nth-of-type(9) .dropdown-menu,
-  .dropdown:nth-of-type(10) .dropdown-menu {
+  .dropdown:nth-of-type(9) .dropdown-menu {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -2670,14 +2670,13 @@ input[type='checkbox']:checked + label:before {
     width: 300px;
   }
 
-  .mobile-menu-search {
-    position: relative;
-    width: 80%;
-    margin: 20px auto;
-    display: none;
-  }
+  // .mobile-menu-search {
+  //   position: relative;
+  //   width: 80%;
+  //   margin: 20px auto;
+  //   display: none;
+  // }
 
-  .mobile-menu-search input[type="text"],
   .mobile-navbar-search input[type="text"]{
     border-radius: 20px;
     border: 1px solid #ccc;
@@ -2685,12 +2684,10 @@ input[type='checkbox']:checked + label:before {
     width: 100%;
   }
 
-  .mobile-menu-search input[type="text"]:focus,
   .mobile-navbar-search input[type="text"]:focus {
     outline: none;
   }
 
-  .mobile-menu-search .fa-search,
   .mobile-navbar-search .fa-search {
     position: absolute;
     right: 10px;
@@ -3018,13 +3015,6 @@ only screen and (max-width: 760px),
 }
 
 @media only screen and (max-width: 350px) {
-  // .mobile-navbar-search {
-  //   display: none;
-  // }
-
-  // .mobile-menu-search {
-  //   display: block;
-  // }
 
   .mobile-navbar-search {
     left: 145px;
