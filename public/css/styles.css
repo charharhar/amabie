@@ -3018,12 +3018,17 @@ only screen and (max-width: 760px),
 }
 
 @media only screen and (max-width: 350px) {
-  .mobile-navbar-search {
-    display: none;
-  }
+  // .mobile-navbar-search {
+  //   display: none;
+  // }
 
-  .mobile-menu-search {
-    display: block;
+  // .mobile-menu-search {
+  //   display: block;
+  // }
+
+  .mobile-navbar-search {
+    left: 145px;
+    width: 100px;
   }
 
   .trending-topics ul {
