@@ -367,11 +367,11 @@ div.content-box {
 }
 
 .fa.fa-heart:hover {
-  color: #044F67;
+  color: #3dbbcb;
 }
 
 .fa.fa-heart.liked {
-  color: #044F67;
+  color: #3dbbcb;
 }
 
 .fa.fa-pencil {
@@ -411,6 +411,14 @@ i.sm-sprite-color {
 .sm-sprite-color.tumb-color  { background-position: -150px 0; }
 .sm-sprite-color.twit-color  { background-position: -200px 0; }
 
+.sm-sprite-color.fb-color,
+.sm-sprite-color.ig-color,
+.sm-sprite-color.pin-color,
+.sm-sprite-color.tumb-color,
+.sm-sprite-color.twit-color {
+  background-size: 500%;
+}
+
 .sm-sprite-white.fb-white    { background-position: 0 0; }
 .sm-sprite-white.pin-white   { background-position: -50px 0; }
 .sm-sprite-white.tumb-white  { background-position: -100px 0; }
@@ -428,7 +436,6 @@ i.sm-sprite-color {
   height: 100px;
   border: none;
   font-family: ralewaySemiBold;
-  z-index: 10;
 }
 
 .container-fluid {
@@ -671,16 +678,16 @@ li.mobile-loggedIn {
 
 
 @media only screen and (min-width: 768px) and (max-width: 1075px) {
-  .dropdown:nth-of-type(5) .dropdown-menu,
-  .dropdown:nth-of-type(6) .dropdown-menu {
+  .dropdown:nth-of-type(6) .dropdown-menu,
+  .dropdown:nth-of-type(7) .dropdown-menu {
     left: 25%;
     -webkit-transform: translateX(-25%);
             transform: translateX(-25%);
   }
 
-  .dropdown:nth-of-type(7) .dropdown-menu,
   .dropdown:nth-of-type(8) .dropdown-menu,
-  .dropdown:nth-of-type(9) .dropdown-menu {
+  .dropdown:nth-of-type(9) .dropdown-menu,
+  .dropdown:nth-of-type(10) .dropdown-menu {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -2546,6 +2553,10 @@ input[type='checkbox']:checked + label:before {
     padding: 0 20px;
   }
 
+  .navbar {
+    z-index: 10;
+  }
+
   .navbar-main .navbar-nav {
     height: auto;
     width: 100%;
@@ -2815,7 +2826,7 @@ only screen and (max-width: 760px),
   }
 
   .reviewers-style ul li p {
-    font-size: 10px;
+    font-size: .85em;
   }
 
   .reviewed-wrapper {
@@ -2896,9 +2907,26 @@ only screen and (max-width: 760px),
 
 }
 
-@media only screen and (max-width: 590px) {
+@media only screen and (max-width: 605px) {
   .mobile-navbar-search {
     width: 200px;
+  }
+}
+
+@media only screen and (max-width: 585px) {
+  i.sm-sprite-color {
+    height: 30px;
+    width: 30px;
+  }
+
+  .sm-sprite-color.fb-color    { background-position: 0 0; }
+  .sm-sprite-color.ig-color    { background-position: -30px 0; }
+  .sm-sprite-color.pin-color   { background-position: -60px 0; }
+  .sm-sprite-color.tumb-color  { background-position: -90px 0; }
+  .sm-sprite-color.twit-color  { background-position: -120px 0; }
+
+  .footer-social ul li {
+    padding: 0 2px;
   }
 }
 
@@ -2940,6 +2968,53 @@ only screen and (max-width: 760px),
   .navbar-default .navbar-nav>li>a:first-of-type {
     border-top: 2px solid #3e3a39;
   }
+
+  .mobile-navbar-search .fa-search {
+    top: 6px;
+  }
+
+  .content-box.small .reviewers-container {
+    padding: 10px 0 0 0;
+  }
+
+  .intro-box .btn-green {
+    font-size: .9em;
+  }
+
+  .content-box h2 {
+    font-size: 1.3em;
+  }
+
+  .daily-container {
+    padding-bottom: 10px;
+  }
+
+  .fa.fa-heart {
+    font-size: 1em;
+  }
+
+
+  .best-products ul li a {
+    font-size: 1.5em;
+  }
+
+  .best-highlight ul {
+    margin: 20px 0;
+    width: 50%;
+  }
+
+  .footer-nav ul li {
+    line-height: 1.1em;
+  }
+
+  .copyright p {
+    font-weight: 700;
+  }
+
+  .copyright span {
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 350px) {
@@ -2949,5 +3024,9 @@ only screen and (max-width: 760px),
 
   .mobile-menu-search {
     display: block;
+  }
+
+  .trending-topics ul {
+    padding: 0 20px;
   }
 }
