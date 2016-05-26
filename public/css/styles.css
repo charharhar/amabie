@@ -579,6 +579,10 @@ i.sm-sprite-color {
   min-width: 0;
 }
 
+.navbar-nav>li>.dropdown-menu.dropdown-language {
+  margin-top: -15px;
+}
+
 .dropdown-language > li {
   display: inline-block!important;
 }
@@ -2928,6 +2932,14 @@ only screen and (max-width: 760px),
 }
 
 @media only screen and (max-width: 510px) {
+  .navbar {
+    height: 75px;
+  }
+
+  button.navbar-toggle {
+    top: 12px;
+  }
+
   .mobile-navbar-search {
     left: 152px;
     width: 125px;
@@ -2960,10 +2972,6 @@ only screen and (max-width: 760px),
 
   .footer-nav ul li a {
     font-size: .9em;
-  }
-
-  .navbar-default .navbar-nav>li>a:first-of-type {
-    border-top: 2px solid #3e3a39;
   }
 
   .mobile-navbar-search .fa-search {
