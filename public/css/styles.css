@@ -450,6 +450,10 @@ i.sm-sprite-color {
   width: 222px;
 }
 
+.navbar-header {
+  position: relative;
+}
+
 .container-fluid,
 .navbar-header,
 .navbar-brand,
@@ -2941,8 +2945,8 @@ only screen and (max-width: 760px),
   }
 
   .mobile-navbar-search {
-    left: 152px;
-    width: 125px;
+    left: 147px;
+    width: 130px;
   }
 
   .mobile-navbar-search input[type="text"] {
@@ -2950,7 +2954,7 @@ only screen and (max-width: 760px),
   }
 
   .navbar-brand {
-    width: 152px;
+    width: 147px;
     margin-top: 0;
   }
 
