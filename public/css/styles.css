@@ -32,7 +32,8 @@ html, body {
 }
 
 #wrapper {
-  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
 }
 
@@ -2969,11 +2970,15 @@ only screen and (max-width: 760px),
 
 @media only screen and (max-width: 510px) {
   .navbar {
-    height: 75px;
+    height: 50px;
+  }
+
+  .row-spacing-top {
+    margin-top: 25px;
   }
 
   button.navbar-toggle {
-    top: 12px;
+    top: 0;
   }
 
   .mobile-navbar-search {
@@ -2982,12 +2987,13 @@ only screen and (max-width: 760px),
   }
 
   .mobile-navbar-search input[type="text"] {
-    font-size: .9em;
+    font-size: .8em;
   }
 
   .navbar-brand {
     width: 147px;
     margin-top: 0;
+    padding: 10px 0;
   }
 
   .navbar-brand img {
