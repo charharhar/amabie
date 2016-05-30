@@ -17,6 +17,661 @@
 
   <div id="wrapper"> <!-- Media Query Fix -->
 
+    <header class="site-header" role="banner" data-type="background" data-speed="7">
+      <div class="navbar-wrapper" >
+        <div class="navbar navbar-default" role="navigation" id="site-header">
+          <div class="container-fluid">
+
+            <div class="navbar-header navbar-left">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="">
+                <img src="imgs/LOGO2.jpg" alt="Amabie" />
+                <p>Your Beauty Community &trade;</p>
+              </a>
+
+              <div class="mobile-navbar-search">
+                <span class="fa fa-search"></span>
+                <input type="text">
+              </div>
+            </div>
+
+            <div class="navbar-collapse navbar-left collapse navbar-main">
+              <form class="navbar-form " role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-default btn-green">SEARCH</button>
+              </form>
+              <ul class="nav navbar-nav">
+
+              <!-- LOGGED IN -->
+                <li class="mobile-guest"><a href="">Login</a></li>
+                <li class="mobile-guest"><a href="">Register</a></li>
+                <li class="mobile-loggedIn"><a href=""><i class="fa fa-user" aria-hidden="true"></i> My Profile / Reviews</a></li>
+                <li class="mobile-loggedIn"><a href=""><i class="fa fa-bell" aria-hidden="true"></i> My Alerts</a></li>
+                <li class="mobile-loggedIn"><a href=""><i class="fa fa-users" aria-hidden="true"></i> My Community</a></li>
+                <li class="mobile-loggedIn dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-wrench" aria-hidden="true"></i> Account Info <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownAccount">
+                    <li>
+                      <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Edit My Profile</a>
+                      <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> Change Password</a>
+                      <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Manage My Email</a>
+                      <a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i> Privacy Options</a>
+                      <a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Alert Options</a>
+                      <a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Wishlist</a>
+                      <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-loggedIn dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">English <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                    <li>
+                      <a href="">English</a>
+                      <a href="">Mandarin</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-loggedIn dropdown"><a href="#">WRITE A REVIEW <i class="fa fa-pencil-square" aria-hidden="true"></i></a></li>
+
+              <!-- LOGGED IN -->
+
+                <li class="dropdown">
+
+                  <a href="#" class="dropdown-toggle" id="dropdownSkincare" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">SKINCARE <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownSkincare">
+                    <li>
+                      <a href="">Cleansers <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Cleansers &amp; Face Wash</li></a>
+                        <a href="#"><li>Exfoliants &amp; Peeling</li></a>
+                        <a href="#"><li>Makeup Removers</li></a>
+                        <a href="#"><li>Whitening &amp; Brightening</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Moisturizers <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Whitening &amp; Brightening</li></a>
+                        <a href="#"><li>Anti-aging &amp; Firming</li></a>
+                        <a href="#"><li>Hydrating</li></a>
+                        <a href="#"><li>Eye</li></a>
+                        <a href="#"><li>Lip</li></a>
+                        <a href="#"><li>Neck</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Serums &amp; Treatments <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Whitening &amp; Brightening</li></a>
+                        <a href="#"><li>Anti-aging &amp; Firming</li></a>
+                        <a href="#"><li>Acne &amp; Blemish</li></a>
+                        <a href="#"><li>Sensitive Skin</li></a>
+                        <a href="#"><li>Eye Treatment</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Masks <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Whitening &amp; Brightening</li></a>
+                        <a href="#"><li>Sheet Masks</li></a>
+                        <a href="#"><li>Eye Masks</li></a>
+                        <a href="#"><li>Wash-off Masks</li></a>
+                        <a href="#"><li>Overnight Masks</li></a>
+                        <a href="#"><li>Nose Strips</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Suncare <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Sunscreen</li></a>
+                        <a href="#"><li>After-Sun Care</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Shaving Products <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Shaving</li></a>
+                        <a href="#"><li>Shaving Tools</li></a>
+                        <a href="#"><li>After Shave</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Beauty Tools <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Cleansing</li></a>
+                        <a href="#"><li>Face Slimming</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Special Needs <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Oil Control &amp; Blot</li></a>
+                        <a href="#"><li>Teeth Whitening</li></a>
+                        <a href="#"><li>Other</li></a>
+                      </ul>
+                    </li>
+
+                    <div class="dropdown-container three"> <!-- desktop nav -->
+                      <ul>
+                        <li>
+                          <h3 class="dropdown-title">Cleansers</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Cleansers &amp; Face Wash</a></li>
+                            <li><a href="#">Exfoliants &amp; Peeling</a></li>
+                            <li><a href="#">Makeup Removers</a></li>
+                            <li><a href="#">Whitening &amp; Brightening</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Moisturizers</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Whitening &amp; Brightening</a></li>
+                            <li><a href="#">Anti-aging &amp; Firming</a></li>
+                            <li><a href="#">Hydrating</a></li>
+                            <li><a href="#">Eye</a></li>
+                            <li><a href="#">Lip</a></li>
+                            <li><a href="#">Neck</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Serums &amp; Treatments</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Whitening &amp; Brightening</a></li>
+                            <li><a href="#">Anti-aging &amp; Firming</a></li>
+                            <li><a href="#">Acne &amp; Blemish</a></li>
+                            <li><a href="#">Sensitive Skin</a></li>
+                            <li><a href="#">Eye Treatment</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h3 class="dropdown-title">Masks</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Whitening &amp; Brightening</a></li>
+                            <li><a href="#">Sheet Masks</a></li>
+                            <li><a href="#">Eye Masks</a></li>
+                            <li><a href="#">Wash-off Masks</a></li>
+                            <li><a href="#">Overnight Masks</a></li>
+                            <li><a href="#">Nose Strips</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Suncare</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Sunscreen</a></li>
+                            <li><a href="#">After-Sun Care</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Shaving Products</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Shaving</a></li>
+                            <li><a href="#">Shaving Tools</a></li>
+                            <li><a href="#">After Shave</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h3 class="dropdown-title">Beauty Tools</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Cleansing</a></li>
+                            <li><a href="#">Face Slimming</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Special Needs</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Oil Control &amp; Blot</a></li>
+                            <li><a href="#">Teeth Whitening</a></li>
+                            <li><a href="#">Other</a></li>
+                          </ul>
+                          <h3><a href="#">Best Moisturizer</a></h3>
+                          <h3><a href="#">Best Shaver</a></h3>
+                          <figure>
+                            <img src="imgs/SkincareMenuBar-min.jpg" alt="">
+                            <figcaption>
+                              <a href="#">Check out our best skincare</a>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </figcaption>
+                          </figure>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownHair" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">HAIR <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownHair">
+
+
+
+                    <li>
+                      <a href="">Shampoo <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Shampoo</li></a>
+                        <a href="#"><li>Dry Shampoo</li></a>
+                        <a href="#"><li>Scalp Cleansing</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Conditioners <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Conditioner</li></a>
+                        <a href="#"><li>Leave-in Conditioner</li></a>
+                        <a href="#"><li>Scalp Conditioning</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Treatments <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Hair Oil &amp; Treatments</li></a>
+                        <a href="#"><li>Hair Thinning &amp; Hair Loss</li></a>
+                        <a href="#"><li>Scalp Treatments</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Styling <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Hairspray &amp; Styling Products</li></a>
+                        <a href="#"><li>Brushes &amp; Combs</li></a>
+                        <a href="#"><li>Electronic Tools</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Special Needs <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Hair Dye</li></a>
+                        <a href="#"><li>Hair Pieces</li></a>
+                        <a href="#"><li>Other</li></a>
+                      </ul>
+                    </li>
+
+
+                    <div class="dropdown-container two">  <!-- desktop nav -->
+                      <ul>
+                        <li>
+                          <h3 class="dropdown-title">Shampoo</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Shampoo</a></li>
+                            <li><a href="#">Dry Shampoo</a></li>
+                            <li><a href="#">Scalp Cleansing</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Conditioners</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Conditioner</a></li>
+                            <li><a href="#">Leave-in Conditioner</a></li>
+                            <li><a href="#">Scalp Conditioning</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Treatments</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Hair Oil &amp; Treatments</a></li>
+                            <li><a href="#">Hair Thinning &amp; Hair Loss</a></li>
+                            <li><a href="#">Scalp Treatments</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Styling</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Hairspray &amp; Styling Products</a></li>
+                            <li><a href="#">Brushes &amp; Combs</a></li>
+                            <li><a href="#">Electronic Tools</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h3 class="dropdown-title">Special Needs</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Hair Dye</a></li>
+                            <li><a href="#">Hair Pieces</a></li>
+                            <li><a href="#">Other</a></li>
+                          </ul>
+                          <h3><a href="#">Best Shampoo</a></h3>
+                          <h3><a href="#">Best Hair Conditioner</a></h3>
+                          <h3><a href="#">Best Hair Oil</a></h3>
+                          <h3><a href="#">Best Hair Wax</a></h3>
+                          <figure>
+                            <img src="imgs/HairMenuBarPhoto-min.jpg" alt="">
+                            <figcaption>
+                              <a href="#">Check out our best hair products</a>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </figcaption>
+                          </figure>
+                        </li>
+                      </ul>
+                    </div>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownMakeup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">MAKEUP <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu pull-center" aria-labelledby="dropdownMakeup">
+
+                    <li>
+                      <a href="">Face <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Base &amp; Primer</li></a>
+                        <a href="#"><li>Foundation</li></a>
+                        <a href="#"><li>BB CC &amp; DD cream</li></a>
+                        <a href="#"><li>Tinted Moisturizer</li></a>
+                        <a href="#"><li>Concealer</li></a>
+                        <a href="#"><li>Powder</li></a>
+                        <a href="#"><li>Blush</li></a>
+                        <a href="#"><li>Bronzer &amp; Contouring</li></a>
+                        <a href="#"><li>Finishing Spray</li></a>
+                        <a href="#"><li>Oil Control &amp; Blot</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Lips <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Lipstick</li></a>
+                        <a href="#"><li>Lip Liner</li></a>
+                        <a href="#"><li>Lip Gloss</li></a>
+                        <a href="#"><li>Lip Care &amp; Treatment</li></a>
+                        <a href="#"><li>Lip Brushes</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Eyes <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Eye Concealer</li></a>
+                        <a href="#"><li>Eyebrows</li></a>
+                        <a href="#"><li>Eyeliner</li></a>
+                        <a href="#"><li>Eye Primer</li></a>
+                        <a href="#"><li>Eyeshadow</li></a>
+                        <a href="#"><li>Double Eyelid Enhancers</li></a>
+                        <a href="#"><li>Eyelash Primers &amp; Enhancers</li></a>
+                        <a href="#"><li>Eyelash Curlers</li></a>
+                        <a href="#"><li>Mascara</li></a>
+                        <a href="#"><li>False Eyelash &amp; Glue</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Tools <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Brushes</li></a>
+                        <a href="#"><li>Brush Cleaning</li></a>
+                        <a href="#"><li>Sponges &amp; Puffs</li></a>
+                        <a href="#"><li>Eyelash Curlers</li></a>
+                        <a href="#"><li>Pencil Sharpeners</li></a>
+                        <a href="#"><li>Bags &amp; Cases</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Makeup Remover <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Face</li></a>
+                        <a href="#"><li>Eye &amp; Lips</li></a>
+                      </ul>
+                    </li>
+
+
+                    <div class="dropdown-container three"> <!-- desktop nav -->
+                      <ul>
+                        <li>
+                          <h3 class="dropdown-title">Face</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Base &amp; Primer</a></li>
+                            <li><a href="#">Foundation</a></li>
+                            <li><a href="#">BB CC &amp; DD cream</a></li>
+                            <li><a href="#">Tinted Moisturizer</a></li>
+                            <li><a href="#">Concealer</a></li>
+                            <li><a href="#">Powder</a></li>
+                            <li><a href="#">Blush</a></li>
+                            <li><a href="#">Bronzer &amp; Contouring</a></li>
+                            <li><a href="#">Finishing Spray</a></li>
+                            <li><a href="#">Oil Control &amp; Blot</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Lips</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Lipstick</a></li>
+                            <li><a href="#">Lip Liner</a></li>
+                            <li><a href="#">Lip Gloss</a></li>
+                            <li><a href="#">Lip Care &amp; Treatment</a></li>
+                            <li><a href="#">Lip Brushes</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h3 class="dropdown-title">Eyes</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Eye Concealer</a></li>
+                            <li><a href="#">Eyebrows</a></li>
+                            <li><a href="#">Eyeliner</a></li>
+                            <li><a href="#">Eye Primer</a></li>
+                            <li><a href="#">Eyeshadow</a></li>
+                            <li><a href="#">Double Eyelid Enhancers</a></li>
+                            <li><a href="#">Eyelash Primers &amp; Enhancers</a></li>
+                            <li><a href="#">Eyelash Curlers</a></li>
+                            <li><a href="#">Mascara</a></li>
+                            <li><a href="#">False Eyelash &amp; Glue</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Tools</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Brushes</a></li>
+                            <li><a href="#">Brush Cleaning</a></li>
+                            <li><a href="#">Sponges &amp; Puffs</a></li>
+                            <li><a href="#">Eyelash Curlers</a></li>
+                            <li><a href="#">Pencil Sharpeners</a></li>
+                            <li><a href="#">Bags &amp; Cases</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h3 class="dropdown-title">Makeup Removers</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Face</a></li>
+                            <li><a href="#">Eye &amp; Lips</a></li>
+                          </ul>
+                          <h3><a href="#">Best Makeup</a></h3>
+                          <h3><a href="#">Best Foundation</a></h3>
+                          <h3><a href="#">Best Lipstick</a></h3>
+                          <h3><a href="#">Best Mascara</a></h3>
+                          <figure>
+                            <img src="imgs/MakeupMenuBar-min.jpg" alt="">
+                            <figcaption>
+                              <a href="#">Check out our best makeup</a>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </figcaption>
+                          </figure>
+                        </li>
+                      </ul>
+                    </div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownBody" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">BODY <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu pull-center" aria-labelledby="dropdownBody">
+                    <li>
+                      <a href="">Body Cleanse <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Body Wash &amp; Soaps</li></a>
+                        <a href="#"><li>Body &amp; Foot Scrubs</li></a>
+                        <a href="#"><li>Bath Extras</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Body Moisturizer <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Lotions</li></a>
+                        <a href="#"><li>Butters &amp; Creams</li></a>
+                        <a href="#"><li>Oils</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Body Care <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Stretch Marks &amp; Firming</li></a>
+                        <a href="#"><li>Hair Removal</li></a>
+                        <a href="#"><li>Powder &amp; Deodorant</li></a>
+                        <a href="#"><li>Feminine Wash</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Sun Care <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Sunscreen</li></a>
+                        <a href="#"><li>After-Sun Care</li></a>
+                        <a href="#"><li>Tanning</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Mother &amp; Baby <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Expecting</li></a>
+                        <a href="#"><li>Baby</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Fragrance <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Cologne</li></a>
+                        <a href="#"><li>Perfume</li></a>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Special Needs <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                      <ul class="dropdown-submenu">
+                        <a href="#"><li>Body Slimming Tools</li></a>
+                        <a href="#"><li>Other</li></a>
+                      </ul>
+                    </li>
+
+
+                    <div class="dropdown-container two"> <!-- desktop nav -->
+                      <ul>
+                        <li>
+                          <h3 class="dropdown-title">Body Cleanse</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Body Wash &amp; Soaps</a></li>
+                            <li><a href="#">Body &amp; Foot Scrubs</a></li>
+                            <li><a href="#">Bath Extras</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Body Moisturize</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Lotions</a></li>
+                            <li><a href="#">Butters &amp; Creams</a></li>
+                            <li><a href="#">Oils</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Body Care</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Stretch Marks &amp; Firming</a></li>
+                            <li><a href="#">Hair Removal</a></li>
+                            <li><a href="#">Powder &amp; Deodorant</a></li>
+                            <li><a href="#">Feminine Wash</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Suncare</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Sunscreen</a></li>
+                            <li><a href="#">After-Sun Care</a></li>
+                            <li><a href="#">Tanning</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h3 class="dropdown-title">Mother &amp; Baby</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Expecting</a></li>
+                            <li><a href="#">Baby</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Fragrance</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Cologne</a></li>
+                            <li><a href="#">Perfume</a></li>
+                          </ul>
+                          <h3 class="dropdown-title">Special Needs</h3>
+                          <ul class="dropdown-link">
+                            <li><a href="#">Body Slimming Tools</a></li>
+                            <li><a href="#">Other</a></li>
+                          </ul>
+                          <figure>
+                            <img src="imgs/BodyMenuBar-min.jpg" alt="">
+                            <figcaption>
+                              <a href="#">Check out our best body products</a>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </figcaption>
+                          </figure>
+                        </li>
+                      </ul>
+                    </div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownNails" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">NAILS <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu pull-center" aria-labelledby="dropdownNails">
+
+                    <li><a href="#">Nail Base &amp; Top Coats</a></li>
+                    <li><a href="#">Nail Polish</a></li>
+                    <li><a href="#">Nail Art</a></li>
+                    <li><a href="#">Nail Care</a></li>
+                    <li><a href="#">Nail Kits</a></li>
+                    <li><a href="#">Nail Polish Remover</a></li>
+                    <li><a href="#">Nail Tools</a></li>
+                    <li><a href="#">Best Nail Polish</a></li>
+                    <li><a href="#">Best Nail Treatment</a></li>
+                    <li><a href="#">Best Nail Polish Remover</a></li>
+
+
+                    <div class="dropdown-container two"> <!-- desktop nav -->
+                      <ul>
+                        <li>
+                          <h3><a href="#">Nail Base &amp; Top Coats</a></h3>
+                          <h3><a href="#">Nail Polish</a></h3>
+                          <h3><a href="#">Nail Art</a></h3>
+                          <h3><a href="#">Nail Care</a></h3>
+                          <h3><a href="#">Nail Kits</a></h3>
+                          <h3><a href="#">Nail Polish Remover</a></h3>
+                          <h3><a href="#">Nail Tools</a></h3>
+                        </li>
+                        <li>
+                          <h3><a href="#">Best Nail Polish</a></h3>
+                          <h3><a href="#">Best Nail Treatment</a></h3>
+                          <h3><a href="#">Best Nail Polish Remover</a></h3>
+                          <figure>
+                            <img src="imgs/NailsMenuBar-min.jpg" alt="">
+                            <figcaption>
+                              <a href="#">Check out our best nail products</a>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </figcaption>
+                          </figure>
+                        </li>
+                      </ul>
+                    </div>
+                  </ul>
+                </li>
+                <li class="mobile-hide"><a href="#">WRITE A REVIEW <i class="fa fa-pencil-square" aria-hidden="true"></i></a></li>
+                <li><a href="#">FORUM</a></li>
+              </ul>
+            </div>
+
+            <div class="nav-right-wrapper">
+              <div class="navbar pull-right navbar-second">
+                <ul class="nav navbar-nav">
+                  <li><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                  <li><a href="">LOGIN</a></li>
+                  <li><a href="">REGISTER</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-globe" aria-hidden="true"></i> ENG <i class="caret"></i></a>
+                    <ul class="dropdown-menu dropdown-language" aria-labelledby="dropdownLanguage">
+                      <li>
+                        <a href="">ENGLISH</a>
+                      </li>
+                      <li>
+                        <a href="">MANDARIN</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="navbar pull-right navbar-social">
+                <ul class="nav navbar-nav">
+                  <li><a href=""><i class="sm-sprite fb-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite ig-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite pin-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite tumb-grey"></i></a></li>
+                  <li><a href=""><i class="sm-sprite twit-grey"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
     <section class="home-wrapper" id="home-wrapper" data-type="background" data-speed="7">
 
       <div class="product-shop-options">
