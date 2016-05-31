@@ -28,11 +28,9 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 #wrapper {
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   height: 100%;
 }
@@ -41,6 +39,7 @@ html, body {
   position: relative;
   height: auto;
   width: 100%;
+  padding-top: 100px;
 }
 
 #home-wrapper::before {
@@ -409,8 +408,8 @@ i.sm-sprite-color {
 
 .sm-sprite-color.fb-color    { background-position: 0 0; }
 .sm-sprite-color.ig-color    { background-position: -50px 0; }
-.sm-sprite-color.pin-color   { background-position: -100px 0; }
-.sm-sprite-color.tumb-color  { background-position: -150px 0; }
+.sm-sprite-color.pin-color   { background-position: -150px 0; }
+.sm-sprite-color.tumb-color  { background-position: -100px 0; }
 .sm-sprite-color.twit-color  { background-position: -200px 0; }
 
 .sm-sprite-color.fb-color,
@@ -430,12 +429,19 @@ i.sm-sprite-color {
 /*                  NAVIGATION                   */
 /* ============================================= */
 
+.site-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
 .navbar {
   position: relative;
-  background-color: #f8f8f8;
+  background-color: rgb(248,248,248);
   padding: 0;
   margin: 0;
   height: 100px;
+  width: 100%;
   border: none;
   font-family: ralewaySemiBold;
 }
@@ -642,7 +648,7 @@ i.sm-sprite-color {
 }
 
 .dropdown-container h3.dropdown-title {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .dropdown-contiainer h3 {
@@ -762,10 +768,12 @@ li.mobile-loggedIn {
   .flexBox .g { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
   .flexBox .i { -webkit-box-ordinal-group: 10; -ms-flex-order: 9; order: 9; }
 
-  .flexBox > [class*='col-'] {
+  .flexBox > [class*='col-'],
+    footer > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
   }
+
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1420px) {
@@ -810,6 +818,10 @@ li.mobile-loggedIn {
   font-weight: normal;
   line-height: 2em;
   padding: 10px 20px;
+}
+
+.intro-box .btn-green {
+  font-size: 1.4em;
 }
 
 .content-box h2 {
@@ -2557,7 +2569,7 @@ input[type='checkbox']:checked + label:before {
 
 @media only screen and (max-width: 913px) {
   .navbar-main ul li a {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .navbar-second ul.navbar-nav li a {
@@ -2580,8 +2592,17 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media only screen and (max-width: 768px) {
+  #home-wrapper {
+    padding-top: 69px;
+  }
+
   .container-fluid {
     padding: 0 20px;
+  }
+
+  #home-wrapper .container {
+    max-width: 100%;
+    padding: 0;
   }
 
   .navbar {
@@ -2623,8 +2644,15 @@ input[type='checkbox']:checked + label:before {
     text-transform: uppercase;
   }
 
-  .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
-    padding: 15px;
+  .navbar-nav .open .dropdown-menu .dropdown-header,
+  .navbar-nav .open .dropdown-menu>li>a,
+  .dropdown-submenu-show a > li {
+    padding: 10px;
+    font-size: .9em;
+  }
+
+  .navbar-main ul li a {
+    font-size: .9em;
   }
 
   .dropdown-toggle {
@@ -2634,6 +2662,8 @@ input[type='checkbox']:checked + label:before {
   .navbar-default .navbar-nav>li>a {
     font-family: ralewayExtraBold;
     border-bottom: 1px solid #3e3a39;
+    color: #3e3a39;
+    font-size: .9em;
   }
 
   .dropdown-submenu {
@@ -2647,10 +2677,6 @@ input[type='checkbox']:checked + label:before {
     opacity: 1;
   }
 
-  .dropdown-submenu-show a > li {
-    padding: 15px;
-  }
-
   .dropdown-submenu-show a > li:before {
     content: '- ';
   }
@@ -2659,16 +2685,16 @@ input[type='checkbox']:checked + label:before {
     padding: 0;
   }
 
-  .mobile-loggedIn i.fa.fa-chevron-down,
-  .mobile-loggedIn i.fa.fa-chevron-up,
-  .dropdown-toggle i:not(i.fa.fa-user),
-  .dropdown-menu li a i {
+  .navbar-default .navbar-nav>li>a i.fa.fa-chevron-down,
+  .navbar-default .navbar-nav>li>a i.fa.fa-chevron-up,
+  .navbar-default .navbar-nav>li>a not:(i.fa.fa-wrench),
+  .dropdown-menu i.fa {
     float: right;
   }
 
   .navbar-main ul li a,
   .dropdown li a {
-    padding: 15px;
+    padding: 10px;
   }
 
   .dropdown-toggle,
@@ -2730,6 +2756,9 @@ input[type='checkbox']:checked + label:before {
     font-size: 1em;
   }
 
+  .slick-dots li button:before {
+    font-size: 30px;
+  }
 
 
 
@@ -2854,11 +2883,15 @@ only screen and (max-width: 760px),
   }
 
   .intro-box p {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .reviewers-style ul li p {
     font-size: .85em;
+  }
+
+  .insta-image img {
+    height: 90px;
   }
 
   .reviewed-wrapper {
@@ -2871,9 +2904,14 @@ only screen and (max-width: 760px),
 
   .reviewed-photo,
   .index-page .reviewed-photo img,
-  .best-highlight figure img {
+  .best-highlight.makeup-product figure img {
     height: 100px;
     width: 100px;
+  }
+
+  .best-highlight figure img {
+    height: 120px;
+    width: 120px;
   }
 
   .trending-topics ul {
@@ -2882,13 +2920,16 @@ only screen and (max-width: 760px),
 
   .best-showcase {
     display: -webkit-box;
-    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
+            justify-content: space-between;
   }
 
   .best-showcase li {
@@ -2905,16 +2946,16 @@ only screen and (max-width: 760px),
     right: 5%;
     width: 90%;
   }
+
+  .content-box.small {
+    height: 280px;
+  }
+
 }
 
 @media only screen and (max-width: 398px) {
   .trending-topics ul li {
     padding: 10px 0;
-    line-height: 1.5em;
-  }
-
-  .trending-topics ul {
-    padding-bottom: 0;
   }
 
   .intro-box h1 {
@@ -2922,16 +2963,12 @@ only screen and (max-width: 760px),
     padding: 0 5px;
   }
 
-  .intro-box p {
-    font-size: .9em;
-  }
-
   .home-button-wrapper button {
     font-size: .8em;
   }
 
   .navbar-default .navbar-toggle {
-    margin-right: 0;
+    margin-right: 5px;
   }
 
   .best-highlight figure img,
@@ -2941,6 +2978,14 @@ only screen and (max-width: 760px),
 
   .best-highlight ul {
     padding-right: 0;
+  }
+
+  .insta-showcase {
+    padding: 15px 0 0;
+  }
+
+  .insta-image img {
+    height: 70px;
   }
 
 }
@@ -2959,8 +3004,8 @@ only screen and (max-width: 760px),
 
   .sm-sprite-color.fb-color    { background-position: 0 0; }
   .sm-sprite-color.ig-color    { background-position: -30px 0; }
-  .sm-sprite-color.pin-color   { background-position: -60px 0; }
-  .sm-sprite-color.tumb-color  { background-position: -90px 0; }
+  .sm-sprite-color.pin-color   { background-position: -90px 0; }
+  .sm-sprite-color.tumb-color  { background-position: -60px 0; }
   .sm-sprite-color.twit-color  { background-position: -120px 0; }
 
   .footer-social ul li {
@@ -2970,7 +3015,7 @@ only screen and (max-width: 760px),
 
 @media only screen and (max-width: 510px) {
   .navbar {
-    height: 50px;
+    height: 69px;
   }
 
   .row-spacing-top {
@@ -2978,11 +3023,11 @@ only screen and (max-width: 760px),
   }
 
   button.navbar-toggle {
-    top: 0;
+    top: 10px;
   }
 
   .mobile-navbar-search {
-    left: 147px;
+    left: 140px;
     width: 130px;
   }
 
@@ -3024,16 +3069,12 @@ only screen and (max-width: 760px),
     padding: 10px 0 0 0;
   }
 
-  .intro-box .btn-green {
-    font-size: .9em;
-  }
-
   .content-box h2 {
     font-size: 1.3em;
   }
 
   .daily-container {
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .fa.fa-heart {
