@@ -2761,8 +2761,14 @@ input[type='checkbox']:checked + label:before {
     font-size: 30px;
   }
 
+  .best-showcase li {
+    width: 50%;
+  }
 
-
+  .best-showcase li .best-photo {
+    width: 65px;
+    margin: 0 auto;
+  }
 
 
 
