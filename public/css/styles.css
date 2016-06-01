@@ -371,10 +371,6 @@ div.content-box {
   transition: .3s all;
 }
 
-.fa.fa-heart:hover {
-  color: #3dbbcb;
-}
-
 .fa.fa-heart.liked {
   color: #3dbbcb;
 }
@@ -3137,6 +3133,6 @@ only screen and (max-width: 760px),
   }
 
   .trending-topics ul {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 }

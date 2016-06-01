@@ -96,20 +96,20 @@ $(function(){
     $(this).next().toggleClass('show');
   })
 
-  // Rating hearts handler, properly displays the # of hearts that should light up
-  $('.fa.fa-heart').on('click', function() {
-    var self = $(this);
-    self.toggleClass('liked');
+  // // Rating hearts handler, properly displays the # of hearts that should light up
+  // $('.fa.fa-heart').on('click', function() {
+  //   var self = $(this);
+  //   self.toggleClass('liked');
 
-    if ( self.next().hasClass('liked') ) {
-      self.nextAll().removeClass('liked');
-      self.addClass('liked');
-    } else {
-      $(this).prevAll().each(function() {
-        self.hasClass('liked') ? $(this).addClass('liked') : $(this).removeClass('liked');
-      })
-    }
-  })
+  //   if ( self.next().hasClass('liked') ) {
+  //     self.nextAll().removeClass('liked');
+  //     self.addClass('liked');
+  //   } else {
+  //     $(this).prevAll().each(function() {
+  //       self.hasClass('liked') ? $(this).addClass('liked') : $(this).removeClass('liked');
+  //     })
+  //   }
+  // })
 
   // Only 1 checkbox with similar value allowed to be checked
   $('.product-filter input[type="checkbox"]').on('change', function() {
