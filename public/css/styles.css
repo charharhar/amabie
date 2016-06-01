@@ -345,6 +345,10 @@ div.content-box {
   float: right;
 }
 
+.slick-dots li button:before {
+  font-size: 30px;
+}
+
 /* ============================================= */
 /*               ICONS & SPRITES                 */
 /* ============================================= */
@@ -416,7 +420,12 @@ i.sm-sprite-color {
 .sm-sprite-color.ig-color,
 .sm-sprite-color.pin-color,
 .sm-sprite-color.tumb-color,
-.sm-sprite-color.twit-color {
+.sm-sprite-color.twit-color,
+.sm-sprite.fb-grey,
+.sm-sprite.ig-grey,
+.sm-sprite.pin-grey,
+.sm-sprite.tumb-grey,
+.sm-sprite.twit-grey {
   background-size: 500%;
 }
 
@@ -444,6 +453,7 @@ i.sm-sprite-color {
   width: 100%;
   border: none;
   font-family: ralewaySemiBold;
+  color: #3e3a39;
 }
 
 .container-fluid {
@@ -485,10 +495,6 @@ i.sm-sprite-color {
   padding: 0;
 }
 
-.navbar-collapse {
-
-}
-
 .nav-right-wrapper {
   position: absolute;
   height: 50px;
@@ -506,17 +512,21 @@ i.sm-sprite-color {
 
 .navbar-main .navbar-form {
   margin: 0;
-  padding: 16px 15px;
+  padding: 20px 8px;
 }
 
 .navbar-main ul li a {
-  font-size: 18px;
+  font-size: 1em;
   color: #3E3A39;
-  padding: 15px;
+  padding: 15px 8px;
 }
 
 .navbar-form {
   padding-top: 8px;
+}
+
+.navbar-form .btn-green {
+  font-size: 1em;
 }
 
 .navbar-form .form-group {
@@ -524,8 +534,11 @@ i.sm-sprite-color {
 }
 
 .form-control {
-  border-radius: 0;
+  border-radius: 5px;
   width: 100% !important;
+  font-size: 1em;
+  line-height: 1em;
+  height: auto;
 }
 
 .navbar-second,
@@ -545,8 +558,8 @@ i.sm-sprite-color {
 }
 
 .navbar-second ul.navbar-nav li a {
-  font-size: 18px;
-  padding: 20px 15px;
+  font-size: 1em;
+  padding: 20px 8px;
   color: #3dbbcb;
   font-family: ralewayBold;
 }
@@ -592,7 +605,7 @@ i.sm-sprite-color {
 }
 
 .navbar-nav>li>.dropdown-menu.dropdown-language {
-  margin-top: -15px;
+  margin-top: -25px;
 }
 
 .dropdown-language > li {
@@ -813,7 +826,7 @@ li.mobile-loggedIn {
 }
 
 .intro-box p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #3e3a39;
   font-weight: normal;
   line-height: 2em;
@@ -2493,7 +2506,7 @@ input[type='checkbox']:checked + label:before {
 /*                RESPONSIVE QUERIES             */
 /* ============================================= */
 
-@media only screen and (max-width: 1415px) {
+@media only screen and (max-width: 1000px) {
   .navbar-social {
     display: none;
   }
@@ -2503,14 +2516,33 @@ input[type='checkbox']:checked + label:before {
   .best-highlight ul {
     padding-right: 0;
   }
-
 }
 
-@media only screen and (max-width: 1176px) {
+@media only screen and (max-width: 1200px) {
   .navbar-main ul li a {
-    font-size: 14px;
-    padding: 15px 10px;
+    font-size: .9em;
+    padding: 15px 5px;
   }
+
+  .navbar-second ul.navbar-nav li a {
+    padding: 25px 8px;
+  }
+
+  .navbar-social .navbar-nav>li>a {
+    line-height: 0;
+  }
+
+  i.sm-sprite {
+    height: 30px;
+    width: 30px;
+    margin: 10px 0;
+  }
+
+  .sm-sprite.fb-grey    { background-position: 0 0; }
+  .sm-sprite.ig-grey    { background-position: -30px 0; }
+  .sm-sprite.pin-grey   { background-position: -90px 0; }
+  .sm-sprite.tumb-grey  { background-position: -60px 0; }
+  .sm-sprite.twit-grey  { background-position: -120px 0;
 }
 
 @media only screen and (max-width: 1108px) {
@@ -2550,23 +2582,6 @@ input[type='checkbox']:checked + label:before {
   }
 }
 
-@media only screen and (max-width: 983px) {
-  .navbar-main ul li a {
-    padding: 15px 10px;
-  }
-
-  .navbar-second ul.navbar-nav li a {
-    padding: 20px 10px;
-  }
-}
-
-@media only screen and (max-width: 955px) {
-  .navbar-main ul li a {
-    font-size: 12px;
-    padding: 15px 6px;
-  }
-}
-
 @media only screen and (max-width: 913px) {
   .navbar-main ul li a {
     font-size: 10px;
@@ -2574,7 +2589,7 @@ input[type='checkbox']:checked + label:before {
 
   .navbar-second ul.navbar-nav li a {
     font-size: 12px;
-    padding: 25px 5px;
+    padding: 28px 5px;
   }
 }
 
@@ -2593,7 +2608,7 @@ input[type='checkbox']:checked + label:before {
 
 @media only screen and (max-width: 768px) {
   #home-wrapper {
-    padding-top: 69px;
+    padding-top: 59px;
   }
 
   .container-fluid {
@@ -2620,7 +2635,7 @@ input[type='checkbox']:checked + label:before {
   .collapsing {
     position: absolute;
     right: 5%;
-    width: 50%;
+    width: 55%;
   }
 
   .navbar-nav {
@@ -2640,19 +2655,10 @@ input[type='checkbox']:checked + label:before {
     display: block;
   }
 
-  .navbar-main ul li a {
-    font-size: 1.2em;
-    text-transform: uppercase;
-  }
-
   .navbar-nav .open .dropdown-menu .dropdown-header,
   .navbar-nav .open .dropdown-menu>li>a,
   .dropdown-submenu-show a > li {
     padding: 10px;
-    font-size: .9em;
-  }
-
-  .navbar-main ul li a {
     font-size: .9em;
   }
 
@@ -2757,17 +2763,13 @@ input[type='checkbox']:checked + label:before {
     font-size: 1em;
   }
 
-  .slick-dots li button:before {
-    font-size: 30px;
-  }
-
-  .best-showcase li {
-    width: 50%;
-  }
-
   .best-showcase li .best-photo {
     width: 65px;
     margin: 0 auto;
+  }
+
+  .content-box.content-footer h2 {
+    font-size: 105%;
   }
 
 
@@ -2951,11 +2953,14 @@ only screen and (max-width: 760px),
   .collapse.in,
   .collapsing {
     right: 5%;
-    width: 90%;
   }
 
   .content-box.small {
     height: 280px;
+  }
+
+  .best-showcase li {
+    width: 50%;
   }
 
 }
@@ -3022,7 +3027,7 @@ only screen and (max-width: 760px),
 
 @media only screen and (max-width: 510px) {
   .navbar {
-    height: 69px;
+    height: 59px;
   }
 
   .row-spacing-top {
@@ -3030,11 +3035,11 @@ only screen and (max-width: 760px),
   }
 
   button.navbar-toggle {
-    top: 10px;
+    top: 5px;
   }
 
   .mobile-navbar-search {
-    left: 140px;
+    left: 115px;
     width: 130px;
   }
 
@@ -3043,7 +3048,7 @@ only screen and (max-width: 760px),
   }
 
   .navbar-brand {
-    width: 147px;
+    width: 117px;
     margin-top: 0;
     padding: 10px 0;
   }
@@ -3072,6 +3077,20 @@ only screen and (max-width: 760px),
     top: 6px;
   }
 
+  .navbar-toggle .icon-bar {
+    height: 1px;
+    width: 15px;
+  }
+
+  .navbar-toggle {
+    margin-right: 5px;
+  }
+
+  .collapse.in,
+  .collapsing {
+    right: 7%;
+  }
+
   .content-box.small .reviewers-container {
     padding: 10px 0 0 0;
   }
@@ -3087,7 +3106,6 @@ only screen and (max-width: 760px),
   .fa.fa-heart {
     font-size: 1em;
   }
-
 
   .best-products ul li a {
     font-size: 1.5em;
@@ -3115,7 +3133,6 @@ only screen and (max-width: 760px),
 @media only screen and (max-width: 350px) {
 
   .mobile-navbar-search {
-    left: 145px;
     width: 100px;
   }
 
