@@ -278,6 +278,16 @@ div.content-box {
 }
 
 /*
+  BOOTSTRAP GRID WIDTH ADJUSTMENTS
+*/
+@media (min-width: 1200px) {
+  .col-lg-8 { width: 68.749166%; }
+  .col-lg-4 { width: 37.498333%; }
+  .col-lg-3 { width: 27.0825%; }
+  .col-lg-offset-1 { margin-left: 4.165%; }
+}
+
+/*
   ADVERTS
 */
 
@@ -332,6 +342,14 @@ div.content-box {
   background: #3dbbcb;
   opacity: .7;
   display: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width: 768px) {
+  select,
+  textarea,
+  input {
+    font-size: 16px !important;
+  }
 }
 
 /*
@@ -450,6 +468,7 @@ i.sm-sprite-color {
   border: none;
   font-family: ralewaySemiBold;
   color: #3e3a39;
+  border-radius: 0;
 }
 
 .container-fluid {
@@ -489,6 +508,11 @@ i.sm-sprite-color {
 .navbar-collapse {
   background-color: #f8f8f8;
   padding: 0;
+}
+
+.navbar-collapse.in .navbar-nav {
+  max-height: 495px;
+  height: 33%;
 }
 
 .nav-right-wrapper {
@@ -678,6 +702,7 @@ i.sm-sprite-color {
 }
 
 .dropdown-container ul li a {
+  font-size: 12px !important;
   padding: 0 !important;
 }
 
@@ -982,9 +1007,11 @@ li.mobile-loggedIn {
 }
 
 .best-photo img {
-  width: 65px;
+  width: 100%;
   height: auto;
 }
+
+
 
 .daily-photo {
   height: 110px;
@@ -2745,7 +2772,7 @@ input[type='checkbox']:checked + label:before {
   .mobile-navbar-search .fa-search {
     position: absolute;
     right: 10px;
-    top: 8px;
+    top: 9px;
     font-size: 1.1em;
     color: #3dbbcb;
     cursor: pointer;
@@ -2821,6 +2848,12 @@ input[type='checkbox']:checked + label:before {
     width: 100%; /* 100% for smaller screens */
   }
 }
+
+@media (max-width: 1200px) and (min-width:768px) {
+  .best-photo img {
+    width: 65px;
+  }
+}​
 
 @media
 only screen and (max-width: 760px),
@@ -2975,10 +3008,6 @@ only screen and (max-width: 760px),
     font-size: .8em;
   }
 
-  .navbar-default .navbar-toggle {
-    margin-right: 5px;
-  }
-
   .best-highlight figure img,
   .reviewers-wrapper .best-highlight img {
     width: 100%;
@@ -3070,7 +3099,7 @@ only screen and (max-width: 760px),
   }
 
   .mobile-navbar-search .fa-search {
-    top: 6px;
+    top: 8px;
   }
 
   .navbar-toggle .icon-bar {
@@ -3079,7 +3108,7 @@ only screen and (max-width: 760px),
   }
 
   .navbar-toggle {
-    margin-right: 5px;
+    margin-right: 10px;
   }
 
   .collapse.in,

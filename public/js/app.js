@@ -150,16 +150,23 @@ $(function(){
 
     if ($(window).width() <= 768) {
 
-      if ($(this).children().hasClass('fa-chevron-down')) {
-        $(this).children().removeClass('fa-chevron-down');
-        $(this).children().addClass('fa-chevron-up')
-      } else {
-        $(this).children().removeClass('fa-chevron-up');
+      if ($(this).hasClass('dropdownActive')) {
+        $(this).removeClass('dropdownActive')
         $(this).children().addClass('fa-chevron-down')
+        $(this).children().removeClass('fa-chevron-up');
+      } else {
+        $dropdownToggle.removeClass('dropdownActive');
+        $(this).addClass('dropdownActive');
+        $(this).children().addClass('fa-chevron-up');
+        $(this).children().removeClass('fa-chevron-down');
       }
 
-      $(this).toggleClass('dropdownActive');
-
+      $dropdownToggle.children('.fa-chevron-up').each(function() {
+        if ( !$(this).parent().hasClass('dropdownActive') ) {
+          $(this).removeClass('fa-chevron-up');
+          $(this).addClass('fa-chevron-down');
+        }
+      })
     }
   })
 
