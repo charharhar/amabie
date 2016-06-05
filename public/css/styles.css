@@ -46,7 +46,11 @@ html, body {
   height: 100%;
   width: 100%;
   background: url(../imgs/bg-img-min.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   content: ' ';
   position: fixed;
   z-index: -1;
@@ -600,6 +604,13 @@ i.sm-sprite-color {
 /*                  DROP DOWN                    */
 /* ============================================= */
 
+
+@media only screen and (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
 .navbar-default .navbar-nav > li > a:hover  {
   color: #3dbbcb;
 }
@@ -703,6 +714,7 @@ i.sm-sprite-color {
 .dropdown-container ul li a {
   font-size: 12px !important;
   padding: 0 !important;
+  color: #3e3a39;
 }
 
 .dropdown-link li a:hover {
@@ -2605,13 +2617,15 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media only screen and (max-width: 913px) {
-  .navbar-default .navbar-nav>li>a {
-    font-size: 10px;
-  }
-
   .navbar-second ul.navbar-nav li a {
-    font-size: 12px;
+    font-size: .9em;
     padding: 28px 5px;
+  }
+}
+
+@media only screen and (max-width: 829px) {
+  .navbar-default .navbar-nav>li>a {
+    font-size: .75em;
   }
 }
 
@@ -2660,8 +2674,8 @@ input[type='checkbox']:checked + label:before {
   .collapse.in,
   .collapsing {
     position: absolute;
-    right: 5%;
     width: 55%;
+    right: 0;
   }
 
   .navbar-nav {
@@ -2686,6 +2700,7 @@ input[type='checkbox']:checked + label:before {
   .dropdown-submenu-show a > li {
     padding: 10px;
     font-size: .9em;
+    color: #3e3a39;
   }
 
   .dropdown-toggle {
@@ -2694,7 +2709,7 @@ input[type='checkbox']:checked + label:before {
 
   .navbar-default .navbar-nav>li>a {
     font-family: ralewayExtraBold;
-    border-bottom: 1px solid #3e3a39;
+    border-bottom: 1px solid #ababab;
     color: #3e3a39;
     font-size: .9em;
     padding: 15px 10px;
@@ -2924,6 +2939,7 @@ only screen and (max-width: 760px),
 }
 
 @media only screen and (max-width: 479px) {
+
   .intro-box h1 {
     font-size: 1.8em;
   }
@@ -2956,8 +2972,8 @@ only screen and (max-width: 760px),
   }
 
   .best-highlight figure img {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
   }
 
   .trending-topics ul {
@@ -2982,7 +2998,6 @@ only screen and (max-width: 760px),
     float: none;
   }
 
-  .best-showcase li:nth-of-type(3),
   .best-showcase li:nth-of-type(4) {
     display: none;
   }
@@ -3016,11 +3031,6 @@ only screen and (max-width: 760px),
     font-size: .8em;
   }
 
-  .best-highlight figure img,
-  .reviewers-wrapper .best-highlight img {
-    width: 100%;
-  }
-
   .best-highlight ul {
     padding-right: 0;
   }
@@ -3031,6 +3041,10 @@ only screen and (max-width: 760px),
 
   .insta-image img {
     height: 70px;
+  }
+
+  .best-showcase li:nth-of-type(3) {
+    display: none;
   }
 
 }
@@ -3059,6 +3073,11 @@ only screen and (max-width: 760px),
 }
 
 @media only screen and (max-width: 510px) {
+  #wrapper {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .navbar {
     height: 59px;
   }
@@ -3073,7 +3092,6 @@ only screen and (max-width: 760px),
 
   .mobile-navbar-search {
     left: 115px;
-    width: 130px;
   }
 
   .mobile-navbar-search input[type="text"] {
@@ -3119,11 +3137,6 @@ only screen and (max-width: 760px),
     margin-right: 10px;
   }
 
-  .collapse.in,
-  .collapsing {
-    right: 7%;
-  }
-
   .content-box.small .reviewers-container {
     padding: 10px 0 0 0;
   }
@@ -3161,6 +3174,12 @@ only screen and (max-width: 760px),
     display: none;
   }
 
+}
+
+@media only screen and (max-width: 390px) {
+  .mobile-navbar-search {
+    width: 150px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
