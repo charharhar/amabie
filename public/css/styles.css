@@ -43,20 +43,18 @@ html, body {
 }
 
 #home-wrapper::before {
+  position: fixed;
+  content: ' ';
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
-  background: url(../imgs/bg-img-min.jpg);
+  z-index: -1;
+  background: url(../imgs/bg-img-min.png);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
-  content: ' ';
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  will-change: transform;
 }
 
 /* ============================================= */
@@ -996,6 +994,10 @@ li.mobile-loggedIn {
   margin: 20px 5%;
   padding-right: 15px;
   width: 40%;
+}
+
+.best-highlight.makeup-product ul {
+  text-align: left;
 }
 
 .best-showcase {
@@ -2550,6 +2552,7 @@ input[type='checkbox']:checked + label:before {
   .best-highlight ul {
     padding-right: 0;
   }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -2565,6 +2568,21 @@ input[type='checkbox']:checked + label:before {
   .navbar-social .navbar-nav>li>a {
     line-height: 0;
   }
+
+  .best-highlight.makeup-product {
+    font-size: 14px;
+  }
+
+  .best-highlight.makeup-product figure {
+
+  }
+
+  .best-highlight.makeup-product ul {
+    margin-left: 0px;
+  }
+
+
+
 
   i.sm-sprite {
     height: 30px;
@@ -2623,7 +2641,7 @@ input[type='checkbox']:checked + label:before {
   }
 }
 
-@media only screen and (max-width: 829px) {
+@media only screen and (max-width: 847px) {
   .navbar-default .navbar-nav>li>a {
     font-size: .75em;
   }
@@ -2667,8 +2685,12 @@ input[type='checkbox']:checked + label:before {
   }
 
   .navbar-main.navbar-collapse {
-    border-left: 1px solid #3E3A39;
-    border-bottom: 1px solid #3E3A39;
+    border-left: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
+  }
+
+  .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    border-color: #ababab;
   }
 
   .collapse.in,
@@ -2712,7 +2734,7 @@ input[type='checkbox']:checked + label:before {
     border-bottom: 1px solid #ababab;
     color: #3e3a39;
     font-size: .9em;
-    padding: 15px 10px;
+    padding: 10px;
   }
 
   .dropdown-submenu {
@@ -2749,7 +2771,7 @@ input[type='checkbox']:checked + label:before {
   .dropdown-toggle,
   .dropdown-menu > li {
     display: block;
-    border-bottom: 1px solid #3e3a39;
+    border-bottom: 1px solid #ababab;
   }
 
   .dropdown-submenu-show a {
@@ -2948,6 +2970,14 @@ only screen and (max-width: 760px),
     font-size: 1.1em;
   }
 
+  .best-highlight.makeup-product {
+    font-size: .9em;
+  }
+
+  .best-highlight.makeup-product ul {
+    padding-left: 5%;
+  }
+
   .reviewers-style ul li p {
     font-size: .85em;
   }
@@ -3000,11 +3030,6 @@ only screen and (max-width: 760px),
 
   .best-showcase li:nth-of-type(4) {
     display: none;
-  }
-
-  .collapse.in,
-  .collapsing {
-    right: 5%;
   }
 
   .content-box.small {
@@ -3185,10 +3210,17 @@ only screen and (max-width: 760px),
 @media only screen and (max-width: 350px) {
 
   .mobile-navbar-search {
-    width: 100px;
+    width: 130px;
   }
 
   .trending-topics ul {
     padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 315px) {
+
+  .trending-topics ul li {
+    line-height: 1.5em;
   }
 }
