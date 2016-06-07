@@ -152,12 +152,12 @@ $(function(){
 
       if ($(this).hasClass('dropdownActive')) {
         $(this).removeClass('dropdownActive')
-        $(this).children().addClass('fa-chevron-down')
+        $(this).children().not('.fa-wrench').addClass('fa-chevron-down')
         $(this).children().removeClass('fa-chevron-up');
       } else if (!$(this).hasClass('dropdownActive')) {
         $dropdownToggle.removeClass('dropdownActive');
         $(this).addClass('dropdownActive');
-        $(this).children().addClass('fa-chevron-up');
+        $(this).children().not('.fa-wrench').addClass('fa-chevron-up');
         $(this).children().removeClass('fa-chevron-down');
       }
 
