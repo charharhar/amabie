@@ -31,7 +31,7 @@ html, body {
 }
 
 #wrapper {
-  -webkit-overflow-scrolling: touch;
+  /*-webkit-overflow-scrolling: touch;*/
   height: 100%;
 }
 
