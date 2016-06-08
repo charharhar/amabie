@@ -148,7 +148,7 @@ $(function(){
 
   $dropdownToggle.on('click', function(e) {
 
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 769) {
 
       if ($(this).hasClass('dropdownActive')) {
         $(this).removeClass('dropdownActive')
@@ -171,7 +171,7 @@ $(function(){
   })
 
   $('#home-wrapper').on('click', function() {
-    if ( $(window).width() <= 768 ) {
+    if ( $(window).width() <= 769 ) {
       $('.navbar-collapse.collapse').removeClass('in');
       $dropdownToggle.removeClass('dropdownActive');
       $dropdownToggle.children().removeClass('fa-chevron-up');
@@ -179,14 +179,14 @@ $(function(){
     }
   })
 
-  if ( $(window).width() > 768 ) {
+  if ( $(window).width() > 769 ) {
     $dropdownToggle.addClass('disabled');
   }
 
   $(window).on('resize', function() {
-    if ( $(window).width() > 768 && !$dropdownToggle.hasClass('disabled') ) {
+    if ( $(window).width() > 769 && !$dropdownToggle.hasClass('disabled') ) {
       $dropdownToggle.addClass('disabled');
-    } else if ( $(window).width() <= 768 && $dropdownToggle.hasClass('disabled') ) {
+    } else if ( $(window).width() <= 769 && $dropdownToggle.hasClass('disabled') ) {
       $dropdownToggle.removeClass('disabled');
     }
   })
