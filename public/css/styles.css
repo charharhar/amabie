@@ -52,9 +52,9 @@ html, body {
   z-index: -1;
   background-image: url(../imgs/bg-img-min.png);
   background-repeat: no-repeat;
-  background-size: 100%;
-  -moz-background-size: 100%;
-  -webkit-background-size: 100%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 /* ============================================= */
@@ -609,13 +609,6 @@ i.sm-sprite-color {
 /*                  DROP DOWN                    */
 /* ============================================= */
 
-
-@media only screen and (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
 .navbar-default .navbar-nav > li > a:hover  {
   color: #3dbbcb;
 }
@@ -768,7 +761,6 @@ li.mobile-loggedIn {
   }
 }
 
-
 /* ============================================= */
 /*                  HOME PAGE                    */
 /* ============================================= */
@@ -795,7 +787,7 @@ li.mobile-loggedIn {
   }
 }
 
-@media only screen and ( min-width: 768px ) {
+@media only screen and ( min-width: 769px ) {
   .flexBox .a { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; -webkit-order: 1; order: 1; }
   .flexBox .b { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; -webkit-order: 2; order: 2; }
   .flexBox .c { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; -webkit-order: 3; order: 3; }
@@ -2580,10 +2572,6 @@ input[type='checkbox']:checked + label:before {
     font-size: 14px;
   }
 
-  .best-highlight.makeup-product figure {
-
-  }
-
   .best-highlight.makeup-product ul {
     margin-left: 0px;
   }
@@ -2667,7 +2655,11 @@ input[type='checkbox']:checked + label:before {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
+  #wrapper {
+    overflow-x: hidden;
+  }
+
   #home-wrapper {
     padding-top: 59px;
   }
@@ -2846,6 +2838,10 @@ input[type='checkbox']:checked + label:before {
 
   .navbar-default .navbar-nav > li > a:hover {
     color: #3e3a39;
+  }
+
+  .best-highlight.makeup-product figure {
+    margin-right: 0px;
   }
 
 
@@ -3106,11 +3102,6 @@ only screen and (max-width: 760px),
 }
 
 @media only screen and (max-width: 510px) {
-  #wrapper {
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
   .navbar {
     height: 59px;
   }
@@ -3242,9 +3233,3 @@ only screen and (max-width: 760px),
     line-height: 1.5em;
   }
 }
-
-@media (max-width: 768px) and (min-width: 510px) {
-  .best-highlight.makeup-product figure {
-    margin-right: 0px;
-  }
-}​
