@@ -15,12 +15,19 @@
 
 @font-face {
   src: url(../fonts/ntailu.ttf);
+  src: url(../fonts/ntailu.woff) format('woff');
   font-family: ntailu;
 }
 
 @font-face {
   src: url(../fonts/ntailub.ttf);
+  src: url(../fonts/ntailub.woff) format('woff');
   font-family: ntailub;
+}
+
+@font-face {
+  src: url(../fonts/Raleway-Bold.ttf);
+  font-family: ralewayBold;
 }
 
 html, body {
@@ -237,7 +244,7 @@ div.content-box {
   position: relative;
   background-color: #fefefe;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
-  font-family: ntailu;
+  font-family: ntailu, Sans-Serif;
 }
 
 .content-box.small,
@@ -283,6 +290,7 @@ div.content-box {
   .col-lg-3 { width: 27.0825%; }
   .col-lg-offset-1 { margin-left: 4.165%; }
 }
+
 
 /*
   ADVERTS
@@ -575,16 +583,16 @@ i.sm-sprite-color {
   display: none;
 }
 
-@font-face {
-  src: url(../fonts/Raleway-Bold.ttf);
+
+.navbar-second ul.navbar-nav li a {
+  font-size: .9em;
+  padding: 28px 5px;
+  color: #3dbbcb;
   font-family: ralewayBold;
 }
 
-.navbar-second ul.navbar-nav li a {
-  font-size: 1em;
-  padding: 20px 8px;
-  color: #3dbbcb;
-  font-family: ralewayBold;
+.nav.navbar-nav {
+  float: right;
 }
 
 .navbar-second ul.navbar-nav li:first-of-type a,
@@ -759,11 +767,259 @@ li.mobile-loggedIn {
 /* ============================================= */
 /*                  HOME PAGE                    */
 /* ============================================= */
+/* IE FIX */
+@media only screen and (max-width: 768px) {
+  #wrapper {
+    overflow-x: hidden;
+  }
+
+  #home-wrapper {
+    padding-top: 59px;
+  }
+
+  .container-fluid {
+    padding: 0 20px;
+  }
+
+  #home-wrapper .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .navbar {
+    z-index: 10;
+  }
+
+  .dropdownActive {
+    color: #3dbbcb !important;
+    background-color: #e7e7e7 !important;
+  }
+
+  .navbar-brand p {
+    display: none;
+  }
+
+  .navbar-main .navbar-nav {
+    height: auto;
+    width: 100%;
+    border-top: none;
+  }
+
+  .navbar-main.navbar-collapse {
+    border-left: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
+  }
+
+  .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    border-color: #ababab;
+  }
+
+  .collapse.in,
+  .collapsing {
+    position: absolute;
+    width: 55%;
+    right: 0;
+  }
+
+  .navbar-nav {
+    margin: 0;
+    float: right;
+  }
+
+  .navbar-collapse .dropdown {
+    padding: 0!important;
+  }
+
+  .dropdown-container {
+    display: none;
+  }
+
+  .mobile-dropdown-container {
+    display: block;
+  }
+
+  .navbar-nav .open .dropdown-menu .dropdown-header,
+  .navbar-nav .open .dropdown-menu>li>a,
+  .dropdown-submenu-show a > li {
+    padding: 10px;
+    font-size: .9em;
+    color: #3e3a39;
+  }
+
+  .dropdown-toggle {
+    padding: 15px;
+  }
+
+  .navbar-default .navbar-nav>li>a {
+    font-family: ralewayExtraBold;
+    border-bottom: 1px solid #ababab;
+    color: #3e3a39;
+    font-size: .9em;
+    padding: 10px;
+  }
+
+  .dropdown-submenu {
+    display: none;
+    opacity: 0;
+  }
+
+  li.mobile-loggedIn,
+  .dropdown-submenu-show {
+    display: block;
+    opacity: 1;
+  }
+
+  .dropdown-submenu-show a > li:before {
+    content: '- ';
+  }
+
+  .dropdown-menu {
+    padding: 0;
+  }
+
+  .navbar .fa.fa-chevron-down,
+  .navbar .fa.fa-chevron-up {
+    position: absolute;
+    right: 20px;
+    font-size: .7em;
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+
+  .navbar .fa.fa-user,
+  .navbar .fa.fa-bell,
+  .navbar .fa.fa-users,
+  .navbar .fa.fa-wrench {
+    float: left;
+    margin-right: 3px;
+    margin-top: 3px;
+  }
+
+  .navbar-main ul li a,
+  .dropdown li a {
+    padding: 10px;
+  }
+
+  .dropdown-toggle,
+  .dropdown-menu > li {
+    display: block;
+    border-bottom: 1px solid #ababab;
+  }
+
+  .dropdown-submenu-show a {
+    padding: 0 !important;
+  }
+
+  .mobile-navbar-search {
+    position: absolute;
+
+    display: inline-block;
+    margin: 0 auto;
+    top: 50%;
+    left: 215px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 300px;
+  }
+
+  .mobile-navbar-search input[type="text"]{
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 5px 26px 5px 8px;
+    width: 100%;
+  }
+
+  .mobile-navbar-search input[type="text"]:focus {
+    outline: none;
+  }
+
+  .mobile-navbar-search .fa-search {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    font-size: 1.1em;
+    color: #3dbbcb;
+    cursor: pointer;
+  }
+
+  .nav > li.mobile-hide {
+    display: none !important;
+  }
+
+  .dropdown-menu i.fa {
+    font-size: 1em;
+  }
+
+  .best-showcase li .best-photo {
+    width: 65px;
+    margin: 0 auto;
+  }
+
+  .content-box.content-footer h2 {
+    font-size: 105%;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #3e3a39;
+  }
+
+  .best-highlight.makeup-product figure {
+    margin-right: 0px;
+  }
+
+  .navbar {
+    height: 59px;
+  }
+
+  .navbar-brand {
+    width: 117px;
+    margin-top: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-brand img {
+    width: 100%;
+  }
+
+  button.navbar-toggle {
+    top: 5px;
+  }
+
+  .row-spacing-top {
+    margin-top: 25px;
+  }
+
+  .reviewers-wrapper {
+    width: 100%;
+  }
+
+  .reviewers-wrapper:nth-of-type(2n) {
+    display: none;
+  }
+
+  .reviewed-wrapper {
+    width: 50%;
+  }
+
+  .product-styles > .reviewed-wrapper:nth-of-type(3n),
+  .product-styles > .reviewed-wrapper:nth-of-type(4n) {
+    display:none;
+  }
+
+  .navbar-mobileSearch {
+    display: block !important;
+  }
+
+  .nav-right-wrapper,
+  .navbar-form {
+    display: none;
+  }
 
 /*
   BOOTSTRAP COLUMN ADJUST
 */
-@media (max-width: 768px) {
+
   .col-sm-offset-half {
     margin-left: 4.166666666%
   }
@@ -780,6 +1036,7 @@ li.mobile-loggedIn {
   .mobile-advert {
     display: block !important;
   }
+
 }
 
 @media only screen and ( min-width: 769px ) {
@@ -901,8 +1158,6 @@ li.mobile-loggedIn {
   padding: 10px 0;
   float: left;
   font-size: 1em;
-
-  /* breaks at max-width: 360px */
 }
 
 .home-button-wrapper button:nth-child(2n) {
@@ -2559,10 +2814,6 @@ input[type='checkbox']:checked + label:before {
     padding: 15px 5px;
   }
 
-  .navbar-second ul.navbar-nav li a {
-    padding: 25px 8px;
-  }
-
   .navbar-social .navbar-nav>li>a {
     line-height: 0;
   }
@@ -2592,10 +2843,6 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media only screen and (max-width: 1108px) {
-  .navbar-second ul.navbar-nav li a {
-    font-size: 14px;
-  }
-
   .form-control {
     height: 28px;
   }
@@ -2625,13 +2872,6 @@ input[type='checkbox']:checked + label:before {
 
   .edit-profile-sidebar-content {
     text-align: center;
-  }
-}
-
-@media only screen and (max-width: 913px) {
-  .navbar-second ul.navbar-nav li a {
-    font-size: .9em;
-    padding: 28px 5px;
   }
 }
 
@@ -2761,12 +3001,11 @@ input[type='checkbox']:checked + label:before {
 
   .navbar .fa.fa-chevron-down,
   .navbar .fa.fa-chevron-up {
+    position: absolute;
+    right: 20px;
     font-size: .7em;
-    float: right;
-    margin-right: 10px;
     margin-top: 3px;
     margin-bottom: 0;
-    vertical-align: baseline;
   }
 
   .navbar .fa.fa-user,
@@ -2791,14 +3030,6 @@ input[type='checkbox']:checked + label:before {
 
   .dropdown-submenu-show a {
     padding: 0 !important;
-  }
-
-  li.mobile-loggedIn:nth-of-type(7) a {
-    border-bottom: none;
-  }
-
-  .navbar-default .navbar-nav > li:nth-of-type(8) > a {
-    border-top: 5px solid #ababab;
   }
 
   .mobile-navbar-search {
@@ -2880,12 +3111,6 @@ input[type='checkbox']:checked + label:before {
   .row-spacing-top {
     margin-top: 25px;
   }
-
-
-
-
-
-
 
   .reviewers-wrapper {
     width: 100%;
@@ -3241,7 +3466,7 @@ only screen and (max-width: 760px),
   }
 }
 
-@media only screen and (max-height: 555px) {
+@media only screen and (max-height: 555px) and (min-width: 510px) {
   .navbar-collapse.in .navbar-nav {
     max-height: 280px;
   }
@@ -3249,13 +3474,6 @@ only screen and (max-width: 760px),
 
 @media only screen
   and (max-device-width: 667px)
-  and (orientation: landscape) {
-  .navbar-collapse.in .navbar-nav {
-    max-height: 280px;
-  }
-}
-@media only screen
-  and (max-device-width: 568px)
   and (orientation: landscape) {
   .navbar-collapse.in .navbar-nav {
     max-height: 200px;
