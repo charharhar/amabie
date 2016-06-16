@@ -265,6 +265,16 @@ div.content-box {
   width: 100%;
 }
 
+.bottom-align {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+}
+
 .content-box.content-footer {
   min-height: 170px;
 }
@@ -485,7 +495,7 @@ i.sm-sprite-color {
 
 .container-fluid {
   position: relative;
-  padding: 0 30px;
+  padding: 0 10px;
 }
 
 .navbar-brand {
@@ -529,7 +539,7 @@ i.sm-sprite-color {
 .nav-right-wrapper {
   position: absolute;
   height: 50px;
-  right: 30px;
+  right: 10px;
 }
 
 .nav-right-wrapper .navbar {
@@ -1040,6 +1050,113 @@ li.mobile-loggedIn {
 
 }
 
+@media only screen and (max-width: 605px) {
+  .mobile-navbar-search {
+    left: 115px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+
+  .navbar-collapse.in .navbar-nav {
+    max-height: 372px;
+  }
+
+  .mobile-navbar-search {
+    width: 200px;
+  }
+
+  .mobile-navbar-search input[type="text"] {
+    font-size: .8em;
+  }
+
+  .copyright p {
+    padding-top: 10px;
+  }
+
+  .footer-nav ul li {
+    padding: 5px;
+  }
+
+  .footer-nav ul li a {
+    font-size: .9em;
+  }
+
+  .mobile-navbar-search .fa-search {
+    top: 8px;
+  }
+
+  .dropdown-submenu-show a > li,
+  .navbar-nav .open .dropdown-menu>li>a,
+  .navbar-default .navbar-nav>li>a {
+    padding: 5px 10px;
+  }
+
+  .navbar-toggle .icon-bar {
+    height: 1px;
+    width: 15px;
+  }
+
+  .navbar-toggle {
+    margin-right: 10px;
+  }
+
+  .content-box.small .reviewers-container {
+    padding: 10px 0 0 0;
+  }
+
+  .content-box h2 {
+    font-size: 1.3em;
+  }
+
+  .daily-container {
+    padding-bottom: 0;
+  }
+
+  .fa.fa-heart {
+    font-size: 1em;
+  }
+
+  .best-products ul li a {
+    font-size: 1.5em;
+  }
+
+  .best-highlight ul {
+    margin: 20px 0;
+    width: 50%;
+  }
+
+  .footer-nav ul li {
+    line-height: 1.1em;
+  }
+
+  .copyright p {
+    font-weight: 700;
+  }
+
+  .copyright span {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 390px) {
+  .mobile-navbar-search {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+  .mobile-navbar-search {
+    width: 130px;
+  }
+
+  .trending-topics ul {
+    padding: 0 15px;
+  }
+}
+
 @media only screen and (max-width: 847px) {
   .navbar-default .navbar-nav>li>a {
     font-size: .65em !important;
@@ -1426,7 +1543,7 @@ li.mobile-loggedIn {
    */
 
 .trending-topics ul {
-  padding: 0 30px;
+  padding: 5px 30px;
   margin-bottom: 0;
 }
 
