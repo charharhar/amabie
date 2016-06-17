@@ -498,6 +498,10 @@ i.sm-sprite-color {
   padding: 0 10px;
 }
 
+.navbar-default .navbar-collapse {
+  margin-left: -12px;
+}
+
 .navbar-brand {
   margin-top: -10px;
   padding: 15px 6px;
@@ -795,6 +799,10 @@ li.mobile-loggedIn {
   #home-wrapper .container {
     max-width: 100%;
     padding: 0;
+  }
+
+  .navbar-default .navbar-collapse {
+    margin-left: 0;
   }
 
   .navbar {
