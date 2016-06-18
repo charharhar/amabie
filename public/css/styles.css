@@ -499,7 +499,7 @@ i.sm-sprite-color {
 }
 
 .navbar-default .navbar-collapse {
-  margin-left: -12px;
+  margin-left: -14px;
 }
 
 .navbar-brand {
@@ -518,6 +518,7 @@ i.sm-sprite-color {
 .navbar-brand,
 .navbar-brand img {
   height: 100%;
+  width: auto;
 }
 
 .navbar-brand p {
@@ -999,6 +1000,7 @@ li.mobile-loggedIn {
 
   .navbar-brand img {
     width: 100%;
+    height: auto;
   }
 
   button.navbar-toggle {
@@ -1162,12 +1164,6 @@ li.mobile-loggedIn {
 
   .trending-topics ul {
     padding: 0 15px;
-  }
-}
-
-@media only screen and (max-width: 847px) {
-  .navbar-default .navbar-nav>li>a {
-    font-size: .65em !important;
   }
 }
 
@@ -2927,7 +2923,7 @@ input[type='checkbox']:checked + label:before {
 /*                RESPONSIVE QUERIES             */
 /* ============================================= */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 850px) {
   .navbar-social {
     display: none;
   }
@@ -2942,12 +2938,23 @@ input[type='checkbox']:checked + label:before {
 
 @media only screen and (max-width: 1200px) {
   .navbar-default .navbar-nav>li>a {
-    font-size: .85em;
+    font-size: 12px;
     padding: 15px 5px;
   }
 
   .navbar-social .navbar-nav>li>a {
     line-height: 0;
+  }
+
+
+  .container-fluid, .navbar-header, .navbar-brand, .navbar-brand img {
+    height: 56px;
+    margin: 0 auto;
+    margin-bottom: 3px;
+  }
+
+  .navbar-brand p {
+    font-size: 12px;
   }
 
 
@@ -2971,16 +2978,6 @@ input[type='checkbox']:checked + label:before {
 
   .best-highlight.makeup-product ul {
     margin-left: 0px;
-  }
-}
-
-@media only screen and (max-width: 1108px) {
-  .form-control {
-    height: 28px;
-  }
-
-  .navbar-form .form-group {
-    width: 35%;
   }
 }
 
@@ -3129,7 +3126,7 @@ input[type='checkbox']:checked + label:before {
   .navbar .fa.fa-chevron-up {
     position: absolute;
     right: 20px;
-    font-size: .7em !important;
+    font-size: .9em !important;
     margin-top: 3px;
     margin-bottom: 0;
   }
@@ -3228,6 +3225,7 @@ input[type='checkbox']:checked + label:before {
 
   .navbar-brand img {
     width: 100%;
+    height: auto;
   }
 
   button.navbar-toggle {
