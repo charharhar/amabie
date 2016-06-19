@@ -37,6 +37,8 @@ html, body {
   padding: 0;
 }
 
+@-ms-viewport{ width: auto !important; }
+
 #wrapper {
   /*-webkit-overflow-scrolling: touch;*/
   height: 100%;
@@ -47,6 +49,7 @@ html, body {
   height: auto;
   width: 100%;
   padding-top: 100px;
+  overflow-x: hidden;
 }
 
 #home-wrapper::before {
@@ -58,10 +61,12 @@ html, body {
   width: 100%;
   z-index: -1;
   background-image: url(../imgs/bg-img-min.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  -moz-background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* ============================================= */
@@ -789,10 +794,6 @@ li.mobile-loggedIn {
   textarea,
   input {
     font-size: 16px !important;
-  }
-
-  #wrapper {
-    overflow-x: hidden;
   }
 
   #home-wrapper {
@@ -3156,10 +3157,6 @@ input[type='checkbox']:checked + label:before {
 
 
 @media only screen and (max-width: 768px) {
-  #wrapper {
-    overflow-x: hidden;
-  }
-
   #home-wrapper {
     padding-top: 59px;
   }
