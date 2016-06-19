@@ -785,6 +785,12 @@ li.mobile-loggedIn {
 /* IE FIX */
 
 @media only screen and (max-width: 768px) {
+  select,
+  textarea,
+  input {
+    font-size: 16px !important;
+  }
+
   #wrapper {
     overflow-x: hidden;
   }
@@ -1000,7 +1006,7 @@ li.mobile-loggedIn {
 
   .navbar-brand img {
     width: 100%;
-    height: auto;
+    height: auto !important;
   }
 
   button.navbar-toggle {
@@ -1012,7 +1018,7 @@ li.mobile-loggedIn {
   }
 
   .reviewers-wrapper {
-    width: 100%;
+    width: 100% !important;
   }
 
   .reviewers-wrapper:nth-of-type(2n) {
@@ -1020,7 +1026,7 @@ li.mobile-loggedIn {
   }
 
   .reviewed-wrapper {
-    width: 50%;
+    width: 50% !important;
   }
 
   .product-styles > .reviewed-wrapper:nth-of-type(3n),
@@ -1147,6 +1153,121 @@ li.mobile-loggedIn {
   .copyright span {
     display: none;
   }
+}
+
+@media only screen and (max-width: 479px) {
+
+  .intro-box h1 {
+    font-size: 1.8em !important;
+  }
+
+  .intro-box p {
+    font-size: 1.1em !important;
+    line-height: 1.6em !important;
+  }
+
+  .best-highlight.makeup-product {
+    font-size: .9em !important;
+  }
+
+  .best-highlight.makeup-product ul {
+    padding-left: 5% !important;
+  }
+
+  .reviewers-style ul li p {
+    font-size: .85em !important;
+  }
+
+  .insta-image img {
+    height: 90px !important;
+  }
+
+  .reviewed-wrapper {
+    width: 100% !important;
+  }
+
+  .product-styles > .reviewed-wrapper:nth-of-type(2n) {
+    display:none !important;
+  }
+
+  .reviewed-photo,
+  .index-page .reviewed-photo img,
+  .best-highlight.makeup-product figure img {
+    height: 100px !important;
+    width: 100px !important;
+  }
+
+  .best-highlight figure img {
+    height: 100px !important;
+    width: 100px !important;
+  }
+
+  .trending-topics ul {
+    margin-bottom: 0 !important;
+  }
+
+  .best-showcase {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+  }
+
+  .best-showcase li {
+    float: none !important;
+  }
+
+  .best-showcase li:nth-of-type(4) {
+    display: none !important;
+  }
+
+  .content-box.small {
+    height: 280px !important;
+  }
+
+  .best-showcase li {
+    width: 50% !important;
+  }
+
+}
+
+
+@media only screen and (max-width: 398px) {
+  .trending-topics ul li {
+    padding: 10px 0;
+  }
+
+  .intro-box h1 {
+    font-size: 1.5em;
+    padding: 0 5px;
+  }
+
+  .home-button-wrapper button {
+    font-size: .8em !important;
+  }
+
+  .best-highlight ul {
+    padding-right: 0;
+  }
+
+  .insta-showcase {
+    padding: 15px 0 0 !important;
+  }
+
+  .insta-image img {
+    height: 70px !important;
+  }
+
+  .best-showcase li:nth-of-type(3) {
+    display: none;
+  }
 
 }
 
@@ -1205,6 +1326,27 @@ li.mobile-loggedIn {
 @media only screen and (min-width: 1201px) and (max-width: 1420px) {
   .insta-image img {
     height: 75px !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+
+  .content-box.content-footer {
+    height: auto;
+  }
+
+  .footer-nav {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .footer-nav ul {
+    text-align: center;
+  }
+
+  .footer-nav ul li {
+    text-align: center;
+    padding: 10px;
   }
 }
 
@@ -3356,7 +3498,8 @@ only screen and (max-width: 760px),
   }
 
   .intro-box p {
-    font-size: 1.1em;
+      font-size: 1.1em;
+      line-height: 1.6em !important;
   }
 
   .best-highlight.makeup-product {
