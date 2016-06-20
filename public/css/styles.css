@@ -929,7 +929,7 @@ li.mobile-loggedIn {
 
   .dropdown-toggle,
   .dropdown-menu > li {
-    display: block;
+    display: block !important;
     border-bottom: 1px solid #ababab;
   }
 
@@ -1489,7 +1489,7 @@ li.mobile-loggedIn {
 }
 
 .product-styles ul li:nth-of-type(2) {
-  color: #3dbbcb;
+  color: #3dbbcb !important;
 }
 
   /*
