@@ -286,7 +286,7 @@ div.content-box {
 
 .content-box.misc-pages {
   height: auto;
-  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
   text-align: left;
   font-size: 16px;
 }
@@ -483,6 +483,8 @@ i.sm-sprite-color {
   position: fixed;
   width: 100%;
   z-index: 1000;
+  top: 0;
+  left: 0;
 }
 
 .navbar {
@@ -1064,6 +1066,62 @@ li.mobile-loggedIn {
   .mobile-advert {
     display: block !important;
   }
+
+  table.responsive-table,
+  table.responsive-table thead,
+  table.responsive-table tbody,
+  table.responsive-table th,
+  table.responsive-table td,
+  table.responsive-table tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  table.responsive-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  table.responsive-table tr { border: 1px solid #ccc; }
+
+  table.responsive-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50% !important;
+    word-wrap: break-word
+  }
+
+  table.responsive-table td:before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+   RESPONSIVE TABLE LABELS
+  */
+  table.write-review td:before { font-weight: 700; }
+  table.write-review td:nth-of-type(1):before { content: "Preview"; }
+  table.write-review td:nth-of-type(2):before { content: "Filename"; }
+  table.write-review td:nth-of-type(3):before { content: "Filesize"; }
+  table.write-review td:nth-of-type(4):before { content: "Date"; }
+  table.write-review td:nth-of-type(5):before { content: "Actions"; }
+
+  table.shop-options-table td:before { font-weight: 700; }
+  table.shop-options-table td:nth-of-type(1):before:not(.shop-options-table td table td) { content: "Seller"; }
+  table.shop-options-table td:nth-of-type(2):before { content: "Seller Ratings"; }
+  table.shop-options-table td:nth-of-type(3):before { content: "Price"; }
+  table.shop-options-table td:nth-of-type(4):before { content: "Details"; }
+  table.shop-options-table td:nth-of-type(5):before { content: "Promo Code"; }
+  table.shop-options-table td:nth-of-type(6):before { content: " "; }
 
 }
 
@@ -2055,6 +2113,7 @@ li.mobile-loggedIn {
   line-height: 1.5em;
 }
 
+.privacy-options select,
 .three-column-form select,
 .two-column-form input[type="text"],
 .two-column-form input[type="email"],
@@ -2248,27 +2307,28 @@ table.write-review td {
   width: 100%;
 }
 
-.privacy-options-form table {
+.privacy-options-form {
+  padding-top: 0;
+}
+
+.privacy-options-wrapper p {
+  margin: 10px 0;
+}
+
+.privacy-form-container {
   width: 100%;
+  margin: 35px 0 5px 0;
 }
 
-.privacy-options-form table .major-rows .major-cells{
-  vertical-align: top;
-  padding: 20px 0;
+.privacy-form-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #3dbbcb;
 }
 
-.privacy-options-form table .major-rows td {
-  width: 50%;
-}
-
-.table-border {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border: 1px solid rgba(238, 238, 238, 0.7);
-  width: 95%;
+#select-all {
+  width: 49%;
+  margin-left: 20px;
 }
 
   /*
@@ -2287,7 +2347,7 @@ table.write-review td {
 }
 
 .wishlist-wrapper ol li {
-  border-bottom: 2px solid #aaa;
+  border-bottom: 1px solid #aaa;
   padding: 20px 0;
   margin-left: 20px;
 }
@@ -2329,6 +2389,23 @@ table.write-review td {
   padding: 5px 10px;
 }
 
+.wishlist-img,
+.wishlist-content,
+.wishlist-buttons {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.wishlist-img {
+  margin-right 40px;
+}
+
+.wishlist-content {
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
   /*
    * ALERT OPTIONS & WISHLIST
    */
@@ -2349,17 +2426,13 @@ table.write-review td {
 .profile-reviews-buttons,
 .profile-reviews-content,
 .my-alerts-img,
-.my-alerts-content,
-.wishlist-img,
-.wishlist-content,
-.wishlist-buttons {
+.my-alerts-content {
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px;
 }
 
-.my-alerts-content,
-.wishlist-content {
+.my-alerts-content {
   margin-left: 40px;
 }
 
@@ -2372,6 +2445,7 @@ table.write-review td {
 .search-result-details a,
 .search-heading a,
 .search-body a,
+.privacy-options-wrapper a,
 .my-community-content a,
 .about-us-content a,
 .two-column-form a,
@@ -2382,12 +2456,22 @@ table.write-review td {
   letter-spacing: 1px;
 }
 
+.my-alerts-wrapper {
+  position: relative;
+}
+
+.my-alerts-content {
+  display: block;
+}
+
 .my-alerts-remove {
-  position: absolute;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.my-alerts-remove a {
   color: #3dbbcb;
-  display: inline-block;
-  bottom: 60px;
-  right: 20px;
+  float: right;
 }
 
   /*
@@ -2866,6 +2950,8 @@ input[type='checkbox']:checked + label:before {
 
 .product-navigate {
   padding: 10px 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .product-navigate a {
@@ -2890,6 +2976,7 @@ input[type='checkbox']:checked + label:before {
   height: 80%;
   padding: 10px;
   border: 1px solid rgba(62,58,57,0.5);
+  margin-top: 10px;
 
   display: none;
 }
@@ -3427,66 +3514,6 @@ input[type='checkbox']:checked + label:before {
     width: 65px;
   }
 }​
-
-@media
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-  table.responsive-table,
-  table.responsive-table thead,
-  table.responsive-table tbody,
-  table.responsive-table th,
-  table.responsive-table td,
-  table.responsive-table tr {
-    display: block;
-  }
-
-  /* Hide table headers (but not display: none;, for accessibility) */
-  table.responsive-table thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  table.responsive-table tr { border: 1px solid #ccc; }
-
-  table.responsive-table td {
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-  }
-
-  table.responsive-table td:before {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 10px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-  }
-
-  /*
-   RESPONSIVE TABLE LABELS
-  */
-  table.write-review td:before { font-weight: 700; }
-  table.write-review td:nth-of-type(1):before { content: "Preview"; }
-  table.write-review td:nth-of-type(2):before { content: "Filename"; }
-  table.write-review td:nth-of-type(3):before { content: "Filesize"; }
-  table.write-review td:nth-of-type(4):before { content: "Date"; }
-  table.write-review td:nth-of-type(5):before { content: "Actions"; }
-
-  table.shop-options-table td:before { font-weight: 700; }
-  table.shop-options-table td:nth-of-type(1):before:not(.shop-options-table td table td) { content: "Seller"; }
-  table.shop-options-table td:nth-of-type(2):before { content: "Seller Ratings"; }
-  table.shop-options-table td:nth-of-type(3):before { content: "Price"; }
-  table.shop-options-table td:nth-of-type(4):before { content: "Details"; }
-  table.shop-options-table td:nth-of-type(5):before { content: "Promo Code"; }
-  table.shop-options-table td:nth-of-type(6):before { content: " "; }
-}
 
 @media only screen and (max-width: 479px) {
 
