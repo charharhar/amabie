@@ -769,14 +769,14 @@ li.mobile-loggedIn {
 
 @media only screen and (min-width: 769px) and (max-width: 1075px) {
   .dropdown:nth-of-type(9) .dropdown-menu,
-  .dropdown:nth-of-type(10) .dropdown-menu {
+  .dropdown:nth-of-type(10) .dropdown-menu,
+  .dropdown:nth-of-type(11) .dropdown-menu {
     left: 25%;
     -webkit-transform: translateX(-25%);
         -ms-transform: translateX(-25%);
             transform: translateX(-25%);
   }
 
-  .dropdown:nth-of-type(11) .dropdown-menu,
   .dropdown:nth-of-type(12) .dropdown-menu,
   .dropdown:nth-of-type(13) .dropdown-menu {
     left: 50%;
@@ -919,9 +919,9 @@ li.mobile-loggedIn {
   .navbar .fa.fa-bell,
   .navbar .fa.fa-users,
   .navbar .fa.fa-wrench {
-    float: left;
-    margin-right: 3px;
-    margin-top: 3px;
+    float: left !important;
+    margin-right: 3px !important;
+    margin-top: 4px !important;
   }
 
   .navbar-main ul li a,
@@ -1235,6 +1235,10 @@ li.mobile-loggedIn {
 
   .reviewers-style ul li p {
     font-size: .85em !important;
+  }
+
+  .reviewers-container {
+    margin-bottom: 25px !important;
   }
 
   .insta-image img {
@@ -1657,6 +1661,7 @@ li.mobile-loggedIn {
 .reviewers-container {
   padding: 10px 0;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .reviewers-wrapper {
@@ -3153,7 +3158,7 @@ input[type='checkbox']:checked + label:before {
 /*                RESPONSIVE QUERIES             */
 /* ============================================= */
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
   .navbar-social {
     display: none;
   }
@@ -3361,9 +3366,9 @@ input[type='checkbox']:checked + label:before {
   .navbar .fa.fa-bell,
   .navbar .fa.fa-users,
   .navbar .fa.fa-wrench {
-    float: left;
+    float: left !important;
     margin-right: 3px;
-    margin-top: 3px;
+    margin-top: 4px;
   }
 
   .navbar-main ul li a,
