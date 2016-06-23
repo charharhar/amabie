@@ -221,7 +221,7 @@ ol {
 .heading-left {
   text-align: left;
   border-bottom: 1px solid #ccc;
-  padding: 20px 0;
+  padding: 20px 0 10px;
   margin: 0 20px;
 }
 
@@ -1046,6 +1046,10 @@ li.mobile-loggedIn {
     display: none;
   }
 
+  .register-form.two-column-form {
+    font-size: .85em;
+  }
+
 /*
   BOOTSTRAP COLUMN ADJUST
 */
@@ -1211,6 +1215,17 @@ li.mobile-loggedIn {
 
   .copyright span {
     display: none;
+  }
+
+  .my-alerts-content {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .my-alerts-img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
   }
 }
 
@@ -2053,7 +2068,7 @@ li.mobile-loggedIn {
 
 .two-column-form {
   width: 100%;
-  padding: 30px 0;
+  // padding: 30px 0;
 }
 
 .write-review-form.three-column-form,
@@ -2065,21 +2080,6 @@ li.mobile-loggedIn {
 .write-review-form p,
 .contact-us-form p {
   margin: 10px 0;
-}
-
-.register-form .register-img {
-  margin: 0 auto;
-}
-
-.register-form .btn-green.btn-center {
-  margin-top: 10px;
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.register-form .register-img figcaption {
-  text-align: center;
 }
 
 .register-form.two-column-form {
@@ -2135,7 +2135,7 @@ li.mobile-loggedIn {
 .two-column-form #days,
 .two-column-form #months,
 .two-column-form #years {
-  width: auto;
+  width: 32%;
 }
 
 .three-column-form label,
@@ -2165,9 +2165,10 @@ li.mobile-loggedIn {
   width: 100%;
 }
 
+.top-form label,
 .bottom-form label {
   font-size: .9em;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .contact-us-form p#character_count {
@@ -2198,7 +2199,7 @@ table.write-review td {
    * EDIT MY PROFILE
    */
 .heading-box {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .edit-profile-sidebar {
@@ -2415,14 +2416,12 @@ table.write-review td {
    * ALERT OPTIONS & WISHLIST
    */
 
-.register-img,
 .my-alerts-img,
 .wishlist-img {
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 
-.register-img figure img,
 .my-alerts-img figure img,
 .wishlist-img figure img {
   width: 100%;
@@ -2465,10 +2464,6 @@ table.write-review td {
   position: relative;
 }
 
-.my-alerts-content {
-  display: block;
-}
-
 .my-alerts-remove {
   width: 100%;
   padding-bottom: 20px;
@@ -2497,7 +2492,7 @@ table.write-review td {
    */
 
 .login {
-  padding: 40px;
+  padding: 10px 20px;
 }
 
 .search-content,
@@ -3493,6 +3488,10 @@ input[type='checkbox']:checked + label:before {
     display: none;
   }
 
+  .register-form.two-column-form {
+    font-size: .85em;
+  }
+
 }
 
 /*  */
@@ -3740,6 +3739,16 @@ input[type='checkbox']:checked + label:before {
     display: none;
   }
 
+  .my-alerts-content {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .my-alerts-img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (max-width: 390px) {
