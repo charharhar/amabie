@@ -792,18 +792,18 @@
               <div class="profile-page-content misc-content">
 
                 <div class="profile-review-header">
-                  <a href="">Reviews (<span id="profile-reviews-number">2</span>)</a>
-                  <a href="">Q&amp;A (<span id="profile-reviews-number">7</span>)</a>
+                  <ul class="tabs-navbar">
+                    <li><a class="tablink" data-tabName="followers">Reviews (<span id="profile-reviews-number">2</span>)</a></li>
+                    <li><a class="tablink" data-tabName="following">Q&amp;A (<span id="profile-reviews-number">7</span>)</a></li>
+                  </ul>
 
-                  <div class="sortby-options">
-                    <label>Sort by:</label>
-                    <select name="about-me" id="about-me">
-                      <option value="" selected>Select One</option>
-                      <option value="reviews">Reviews</option>
-                      <option value="sort">Sort</option>
-                      <option value="title">Title</option>
-                      <option value="helpful">Helpful</option>
-                      <option value="newest">Newest</option>
+                  <div class="sorting-wrapper">
+                    <label for="sort-by">Sort by: </label>
+                    <select name="sort-by">
+                      <option value="">Select one</option>
+                      <option value="sort-reviews">Number of Reviews</option>
+                      <option value="sort-followers">Number of followers</option>
+                      <option value="sort-following">Number of following</option>
                     </select>
                   </div>
                 </div>

@@ -73,8 +73,15 @@ $(function(){
     $("#mceu_2-body").append('<div id="mceu_charCount"></div>');
   })
 
-  // Tab handler in my-community.js
-  $('a[data-tabName]').on('click', function() {
+  // Tab handler in my-community
+  $(window).on('load', function() {
+    $('a[data-tabName="followers"').addClass('tabActive');
+    var tabId = '#followers';
+    $(tabId).css('display', 'block');
+  })
+
+  $('a[data-tabName]').on('click', function(e) {
+    e.preventDefault();
     var tabId = '#' + $(this).attr('data-tabName');
 
     $('.community').css('display', 'none');
