@@ -338,7 +338,7 @@ div.content-box {
 
 .eighty-three.aspect-ratio { padding-bottom: 83%; }
 
-.advert > .ad-content {
+.advert .ad-content {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -403,7 +403,7 @@ div.content-box {
 
 .fa.fa-heart {
   color: #bbb;
-  font-size: 1.5em;
+  font-size: 1.2em;
   cursor: pointer;
   -webkit-transition: .3s all;
   transition: .3s all;
@@ -1062,7 +1062,7 @@ li.mobile-loggedIn {
 
   .wishlist-content p,
   .fa.fa-heart {
-    font-size: 1em
+    font-size: .9em
   }
 
   .profile-reviews-review-detail .review-images-wrapper {
@@ -2516,6 +2516,7 @@ table.product-table td {
 }
 
 /* anchor global light blue styles */
+.search-navigate a,
 .shop-options-table a,
 .product-navigate a,
 .product-heading a,
@@ -2588,6 +2589,7 @@ input[type=radio] {
   padding: 30px 20px;
 }
 
+.search-content,
 .login-form {
   padding: 15px 20px;
 }
@@ -2678,11 +2680,8 @@ input[type=radio] {
   line-height: 1.5em;
 }
 
-.search-result-details p:last-of-type {
-  margin-top: 10px;
-}
-
-button.accordion {
+button.accordion,
+button.accordion-refine {
   background-color: #fff;
   border: none;
   border-top: 1px solid #3E3A39;
@@ -2697,7 +2696,10 @@ button.accordion {
   transition: 0.4s;
 }
 
-button.accordion.active, button.accordion:hover {
+button.accordion.active,
+button.accordion:hover,
+button.accordion-refine.active,
+button.accordion-refine:hover  {
   background-color: rgba(238, 238, 238, 0.5);
 }
 
@@ -2716,7 +2718,12 @@ div.search-panel.show {
   max-height: 400px;
 }
 
-button.accordion:after {
+div.accordion-search {
+  padding: 0 2px;
+}
+
+button.accordion:after,
+button.accordion-refine:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 1em;
   color: #777;
@@ -2725,8 +2732,24 @@ button.accordion:after {
   color: #3dbbcb;
 }
 
-button.accordion.active:after {
+button.accordion.active:after,
+button.accordion-refine.active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+button.accordion-refine {
+  width: 50%;
+  float: left;
+  border-right: 1px solid #3e3a39;
+  padding: 20px 0px 20px 10px;
+}
+
+button.accordion-refine:last-of-type {
+  display: none;
+}
+
+button.accordion-refine:nth-of-type(2) {
+  border-right: none;
 }
 
 .search-selection {
@@ -2764,6 +2787,23 @@ button.accordion.active:after {
   cursor: pointer;
 }
 
+.search-accordion-dropdown .btn.btn-green {
+  display: none;
+  opacity: 0;
+  max-width: 150px;
+  max-height: 0;
+  margin: 0 auto;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.search-accordion-dropdown .btn.btn-green.showBtn {
+  display: block;
+  opacity: 1;
+  max-height: 35px;
+  margin-bottom: 10px;
+}
+
 /* ============================================= */
 /*                PRODUCT PAGE                   */
 /* ============================================= */
@@ -2797,14 +2837,16 @@ button.accordion.active:after {
   margin-top: 10px;
 }
 
+.product-gallery img,
 .product-gallery .review-img {
   float: left;
   width: 33.33333%;
 }
 
-.product-gallery img {
+.product-gallery .review-img img {
   width: 100%;
 }
+
 
 .product-gallery img:nth-of-type(3n+1) { padding-right: 1%; }
 .product-gallery img:nth-of-type(3n+2) { padding: 0 .5%; }
@@ -3310,6 +3352,28 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media only screen and (max-width: 991px) {
+
+  .row-margin-bottom {
+    margin-bottom: 40px;
+  }
+
+  button.accordion-refine {
+    width: 33.33333%;
+  }
+
+  button.accordion-refine:last-of-type {
+    display: block;
+    border-right: none;
+  }
+
+  button.accordion-refine:nth-of-type(2) {
+    border-right: 1px solid #3E3A39;
+  }
+
+  .content-box.search {
+    display: none;
+  }
+
   .desktop-product-hero {
     display: none;
   }
@@ -3591,6 +3655,10 @@ input[type='checkbox']:checked + label:before {
 
   .row-spacing-top {
     margin-top: 25px;
+  }
+
+  .row-margin-bottom {
+    margin-bottom: 25px;
   }
 
   .reviewers-wrapper {

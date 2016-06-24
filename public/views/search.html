@@ -691,7 +691,7 @@
         </div>
 
         <div class="row row-spacing-top no-gutter">
-          <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-3 row-fix">
+          <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-3">
 
             <div class="content-box misc-pages search row-fix">
               <ul>
@@ -876,19 +876,95 @@
               </div>
 
             </div>
+          </article>
 
+          <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-1 row-margin-bottom">
+            <div class="content-box search-accordion-dropdown">
+              <button class="accordion-refine" data-accordionName="view">View</button>
+              <button class="accordion-refine" data-accordionName="sort">Sort</button>
+              <button class="accordion-refine" data-accordionName="filter">Filter</button>
+
+              <div class="search-panel accordion-search" id="view">
+                <div class="search-selection">
+                  <ul class="search-selection-list">
+                    <div class="product-filter">
+                      <span>
+                        <input type="checkbox" id="thirty-six" value="view">
+                        <label for="thirty-six">36 items</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="seventy-two" value="view">
+                        <label for="seventy-two">72 items</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="all" value="view">
+                        <label for="all">All</label>
+                      </span>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="search-panel accordion-search" id="sort">
+                <div class="search-selection">
+                  <ul class="search-selection-list">
+                    <div class="product-filter">
+                      <span>
+                        <input type="checkbox" id="most-reviews" value="sort">
+                        <label for="most-reviews">Most Reviews</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="highest-rated" value="sort">
+                        <label for="highest-rated">Highest Rated</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="lowest-rated" value="sort">
+                        <label for="lowest-rated">Lowest Rated</label>
+                      </span>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="search-panel accordion-search" id="filter">
+                <div class="search-selection">
+                  <ul class="search-selection-list">
+                    <div class="product-filter">
+                      <span>
+                        <input type="checkbox" id="brand" value="filter">
+                        <label for="brand">Brand</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="product-type" value="filter">
+                        <label for="product-type">Product Type</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="texture" value="filter">
+                        <label for="texture">Texture</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="rating" value="filter">
+                        <label for="rating">Rating</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="age-group" value="filter">
+                        <label for="age-group">Age Group</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="country" value="filter">
+                        <label for="country">Country</label>
+                      </span>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+
+              <a class="btn btn-green">Apply</a>
+            </div>
           </article>
 
           <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-1 row-fix">
-
             <div class="content-box misc-pages search-content">
-              <div class="sorting-wrapper">
-                <a href="">View <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                <a href="">Sort by <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-              </div>
-
-              <div class="clearfix"></div>
-
               <div class="search-results-wrapper">
 
                 <div class="search-result">
@@ -1088,6 +1164,16 @@
           </article>
         </div>
 
+        <div class="row no-gutter row-spacing-top">
+          <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
+            <div class="content-box misc-pages search-navigate">
+              <p class="pull-left"><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i> lips</a></p>
+              <p class="pull-right">More reviews: <a href="">1</a> <a href="">2</a> <a href="">3</a> <a href="">4</a> </p>
+              <div class="clearfix"></div>
+            </div>
+          </article>
+        </div>
+
         <div class="row no-gutter row-spacing-top hidden-phone">
           <div class="small-ad-wrapper">
             <div class="advert small-ad">
@@ -1113,16 +1199,6 @@
           </div>
 
           <div class="clearfix"></div>
-        </div>
-
-        <div class="row no-gutter row-spacing-top">
-          <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
-            <div class="content-box misc-pages search-navigate">
-              <p class="pull-left"><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i> back to lips</a></p>
-              <p class="pull-right">Read more reviews: <a href="">1</a> <a href="">2</a> <a href="">3</a> <a href="">4</a> </p>
-              <div class="clearfix"></div>
-            </div>
-          </article>
         </div>
 
         <!-- footer -->

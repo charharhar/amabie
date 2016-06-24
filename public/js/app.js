@@ -78,6 +78,27 @@ $(function(){
     $(this).next().toggleClass('show');
   })
 
+  $('.accordion-refine').on('click', function() {
+    // restrict only ONE tab open, remove this f(n) to allow multiple tabs open
+
+    if ($(this).hasClass('active')) {
+      $('.search-accordion-dropdown .btn.btn-green').removeClass('showBtn');
+    } else {
+      $('.search-accordion-dropdown .btn.btn-green').addClass('showBtn');
+    }
+
+    $('.accordion-refine').not(this).each(function() {
+      $(this).removeClass('active');
+      var tempId = '#' + $(this).attr('data-accordionName')
+      $(tempId).removeClass('show');
+    })
+
+    var accordionId = '#' + $(this).attr('data-accordionName');
+
+    $(this).toggleClass('active');
+    $(accordionId).toggleClass('show');
+  })
+
   // // Rating hearts handler, properly displays the # of hearts that should light up
   // $('.fa.fa-heart').on('click', function() {
   //   var self = $(this);
