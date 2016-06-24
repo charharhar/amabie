@@ -705,7 +705,7 @@
               </td>
               <td>$50.00 USD</td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td>Free Shipping</td>
                   </tr>
@@ -715,7 +715,7 @@
                 </table>
               </td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td><a href="">0dmrgr</a></td>
                   </tr>
@@ -779,7 +779,7 @@
               </td>
               <td>$50.00 USD</td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td>Free Shipping</td>
                   </tr>
@@ -789,7 +789,7 @@
                 </table>
               </td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td><a href="">0dmrgr</a></td>
                   </tr>
@@ -816,7 +816,7 @@
               </td>
               <td>$50.00 USD</td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td>Free Shipping</td>
                   </tr>
@@ -826,7 +826,7 @@
                 </table>
               </td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td><a href="">0dmrgr</a></td>
                   </tr>
@@ -853,7 +853,7 @@
               </td>
               <td>$50.00 USD</td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td>Free Shipping</td>
                   </tr>
@@ -863,7 +863,7 @@
                 </table>
               </td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td><a href="">0dmrgr</a></td>
                   </tr>
@@ -890,7 +890,7 @@
               </td>
               <td>$50.00 USD</td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td>Free Shipping</td>
                   </tr>
@@ -900,7 +900,7 @@
                 </table>
               </td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td><a href="">0dmrgr</a></td>
                   </tr>
@@ -927,14 +927,14 @@
               </td>
               <td>$50.00 USD</td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td>Free Shipping</td>
                   </tr>
                 </table>
               </td>
               <td>
-                <table>
+                <table class="inner-table">
                   <tr>
                     <td><a href="">0dmrgr</a></td>
                   </tr>
@@ -1060,17 +1060,23 @@
                         </div>
                         <div class="product-content">
                           <div class="product-description">
-                            <a href="">Description</a> <a href="">Ratings Breakdown</a>
+                            <ul class="tabs-navbar">
+                              <li><a class="tablink tabActive" data-tabName="description">Description</a></li>
+                              <li><a class="tablink" data-tabName="ratings">Ratings</a></li>
+                            </ul>
                           </div>
                           <p>Lancome Bi-Facil makeup remover is super organic, Lancome is the world's number one best seller brand, so is Everyone should buy Lancome, Bi Facil makeup remover makes.</p>
                         </div>
-                        <div class="product-table">
-                          <table>
+
+                        <table class="product-table responsive-table">
+                          <thead>
                             <tr>
                               <th>Seller</th>
                               <th>Price &#42;</th>
                               <th>&nbsp;</th>
                             </tr>
+                          </thead>
+                          <tbody>
                             <tr>
                               <td>Ebay-MirandaBeauty</td>
                               <td>$50.00 USD</td>
@@ -1082,15 +1088,14 @@
                               <td><button class="btn-green">Shop</button></td>
                             </tr>
                             <tr>
-                              <td>&#42;Does not include possibile shipping fees</td>
-                              <td>&nbsp;</td>
-                              <td><a href="">See more options...</a></td>
+                              <td>Ebay-MirandaBeauty</td>
+                              <td>$50.00 USD</td>
+                              <td><button class="btn-green">Shop</button></td>
                             </tr>
-                          </table>
-
-
-                        </div>
-
+                          </tbody>
+                        </table>
+                        <p class="table-hints">&#42;Does not include possibile shipping fees</p>
+                        <p class="table-hints"><a href="">See more options...</a></p>
                       </div>
                     </article>
 
@@ -1114,23 +1119,21 @@
           <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-8">
             <div class="content-box misc-pages heading-box product-heading">
               <div class="profile-review-header">
-                <a href="">Reviews (<span id="profile-reviews-number">2</span>)</a>
-                <a href="">Q&amp;A (<span id="profile-reviews-number">7</span>)</a>
-
-                <div class="sortby-options">
-                  <label>Sort by:</label>
-                  <select name="about-me" id="about-me">
-                    <option value="" selected>Select One</option>
-                    <option value="reviews">Reviews</option>
-                    <option value="sort">Sort</option>
-                    <option value="title">Title</option>
-                    <option value="helpful">Helpful</option>
-                    <option value="newest">Newest</option>
+                <div class="sorting-wrapper">
+                  <label for="sort-by">Sort by: </label>
+                  <select name="sort-by">
+                    <option value="">Select one</option>
+                    <option value="sort-reviews">Number of Reviews</option>
+                    <option value="sort-followers">Number of followers</option>
+                    <option value="sort-following">Number of following</option>
                   </select>
                 </div>
-
-                <hr class="blue">
-            </div>
+                <div class="clearfix"></div>
+                <ul class="tabs-navbar">
+                  <li><a class="tablink tabActive" data-tabName="reviews">Reviews (<span id="profile-reviews-number">2</span>)</a></li>
+                  <li><a class="tablink" data-tabName="qanda">Q&amp;A (<span id="profile-reviews-number">7</span>)</a></li>
+                </ul>
+              </div>
 
             <div class="product-filter-wrapper">
               <p>Filter People From People With...</p>
@@ -1299,8 +1302,8 @@
                     <i class="fa fa-heart" aria-hidden="true"></i>
                     <i class="fa fa-heart" aria-hidden="true"></i>
                     <i class="fa fa-heart" aria-hidden="true"></i>
-                    <span> 04/08/2016</span>
                   </p>
+                  <p> 04/08/2016</p>
                   <div class="profile-reviews-review-detail">
                     <p>Lancome Bi-Facil makeup remover is super organic, Lancome is the world's number one best seller brand, so is Everyone should buy Lancome, Bi Facil makeup remover makes.</p>
 
@@ -1322,10 +1325,10 @@
                           <img src="../imgs/product-default.jpg" alt="">
                         </figure>
                       </div>
-
+                      <div class="clearfix"></div>
+                    </div>
                       <button class="btn-green">Helpful</button>
                       <p class="bottom-right"><a href=""><i class="fa fa-flag" aria-hidden="true"></i> Flag as inappropriate</a></p>
-                    </div>
                   </div>
                 </div>
 
@@ -1361,8 +1364,8 @@
                     <i class="fa fa-heart" aria-hidden="true"></i>
                     <i class="fa fa-heart" aria-hidden="true"></i>
                     <i class="fa fa-heart" aria-hidden="true"></i>
-                    <span> 04/08/2016</span>
                   </p>
+                  <p> 04/08/2016</p>
                   <div class="profile-reviews-review-detail">
                     <p>Lancome Bi-Facil makeup remover is super organic, Lancome is the world's number one best seller brand, so is Everyone should buy Lancome, Bi Facil makeup remover makes.</p>
 
@@ -1410,8 +1413,8 @@
         <div class="row no-gutter">
           <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
             <div class="content-box misc-pages product-navigate">
-              <p class="pull-left"><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i> back to lips</a></p>
-              <p class="pull-right">Read more reviews: <a href="">1</a> <a href="">2</a> <a href="">3</a> <a href="">4</a> </p>
+              <p class="pull-left"><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i> lips</a></p>
+              <p class="pull-right">More reviews: <a href="">1</a> <a href="">2</a> <a href="">3</a> <a href="">4</a> </p>
               <div class="clearfix"></div>
             </div>
           </article>
@@ -1712,7 +1715,7 @@
         <div class="row no-gutter">
           <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
             <div class="content-box large">
-              <h2>See More Products From This Brand</h2>
+              <h2>See More From This Brand</h2>
 
               <div class="slider-carousel">
                 <div class="reviewed-container product-styles">

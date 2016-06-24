@@ -1,23 +1,3 @@
-// // Causes parallax scrolling to be more dramatic and noticable
-// // Need to readjust CSS properties =>
-// (remove html/body overflow: hidden and #wrapper overflow: auto)
-// // NOT AN IDEAL SOLUTION WOULD NOT RECOMMEND
-// $(function() {
-
-//   var $window = $(window);
-//   var $wrapper = $('#home-wrapper');
-//   $wrapper.css({'height': ($wrapper.height() - 458.857) + 'px'});
-
-//   $('section[data-type="background"]').each(function() {
-//     var $bgobj = $(this);
-
-//     $window.scroll(function() {
-//       var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-//       var coords = yPos + 'px';
-//       $('#home-wrapper .container').css({ transform: 'translateY(' + yPos*4 + 'px)' });
-//     }) // end window scroll
-//   })
-// })
 
 $(function(){
 
@@ -64,6 +44,7 @@ $(function(){
     updateNumberOfDays();
   });
 
+  // all options in privacy settings
   $selectAll.on('change', function() {
     changeSelected($selectBox, $selectAll);
   })
@@ -74,12 +55,6 @@ $(function(){
   })
 
   // Tab handler in my-community
-  $(window).on('load', function() {
-    $('a[data-tabName="followers"').addClass('tabActive');
-    var tabId = '#followers';
-    $(tabId).css('display', 'block');
-  })
-
   $('a[data-tabName]').on('click', function(e) {
     e.preventDefault();
     var tabId = '#' + $(this).attr('data-tabName');
