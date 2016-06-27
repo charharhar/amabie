@@ -126,12 +126,25 @@ $(function(){
   });
 
   // Shop option button listener
-  $('#shop-option-button').on('click', function() {
+  $('.shop-option-button').on('click', function() {
     $('.product-shop-options').toggleClass('shop-show');
+    $('body').addClass('overflow-hidden');
   })
 
   $('#shop-close').on('click', function() {
     $('.product-shop-options').removeClass('shop-show');
+    $('body').removeClass('overflow-hidden');
+  })
+
+  // $(document).on('click', function(event) {
+  //   if ('body').hasClass('overflow-hidden')) {}
+
+  //   $('.product-shop-options').removeClass('shop-show');
+  //   $('body').removeClass('overflow-hidden');
+  // })
+
+  $('.checkbox-button').on('click', function() {
+    $(this).next().toggleClass('checkbox-expand');
   })
 
   // Mobile Navigation Menu listener
