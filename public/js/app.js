@@ -99,20 +99,26 @@ $(function(){
     $(accordionId).toggleClass('show');
   })
 
-  // // Rating hearts handler, properly displays the # of hearts that should light up
-  // $('.fa.fa-heart').on('click', function() {
-  //   var self = $(this);
-  //   self.toggleClass('liked');
+  // Rating hearts handler, properly displays the # of hearts that should light up
+  $('.fa.fa-heart.review-heart').on('click', function() {
+    var self = $(this);
+    var className = self.attr('data-number');
+    var all = 'one-like two-like three-like four-like five-like';
+    self.toggleClass(className);
+    self.addClass('heart-active');
 
-  //   if ( self.next().hasClass('liked') ) {
-  //     self.nextAll().removeClass('liked');
-  //     self.addClass('liked');
-  //   } else {
-  //     $(this).prevAll().each(function() {
-  //       self.hasClass('liked') ? $(this).addClass('liked') : $(this).removeClass('liked');
-  //     })
-  //   }
-  // })
+    if ( self.next().hasClass('heart-active') ) {
+      self.nextAll().removeClass('heart-active ' + all);
+      self.prevAll().removeClass(all);
+      self.prevAll().addClass(className)
+      self.removeClass(all);
+      self.addClass(className);
+    } else {
+      $(this).prevAll().each(function() {
+        self.hasClass('heart-active') ? $(this).addClass('heart-active ' + className) : $(this).removeClass('heart-active ' + all);
+      })
+    }
+  })
 
   // Only 1 checkbox with similar value allowed to be checked
   $('.product-filter input[type="checkbox"]').on('change', function() {

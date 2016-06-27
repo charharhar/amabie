@@ -313,12 +313,11 @@ div.content-box {
   max-width: 970px;
   margin: 40px auto 0;
   width: 80%;
-
 }
 
 .small-ad-wrapper {
-  width:100%;
-  text-align:justify;
+  width: 100%;
+  text-align: justify;
 }
 
 .small-ad-wrapper::after{
@@ -412,6 +411,12 @@ div.content-box {
 .fa.fa-heart.liked {
   color: #3dbbcb;
 }
+
+.fa.fa-heart.one-like { color: #29367E; }
+.fa.fa-heart.two-like { color: #366999; }
+.fa.fa-heart.three-like { color: #0087AF; }
+.fa.fa-heart.four-like { color: #3C95D1; }
+.fa.fa-heart.five-like { color: #3dbbcb; }
 
 .fa.fa-pencil {
   font-size: 1.4em;
@@ -2324,7 +2329,10 @@ table.product-table td {
   font-size: .9em;
 }
 
-.profile-two-columns
+.concerns-wrapper {
+  border: 1px solid #3e3a39;
+  padding: 5px 15px;
+}
 
   /* COL-MD-8 */
 .content-box.edit-profile h1 {
@@ -2358,7 +2366,7 @@ table.product-table td {
 .edit-profile-form select {
   margin: 0 0 10px 0;
   width: 100%;
-  padding: 8px;
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -2366,6 +2374,15 @@ table.product-table td {
 .edit-profile-form label {
   margin: 0 !important;
 }
+
+.edit-personal-info {
+  margin: 20px 0;
+}
+
+.edit-profile-form .form-column {
+  margin-bottom: 0 !important;
+}
+
 
   /*
    * PRIVACY OPTIONS
@@ -2414,12 +2431,12 @@ table.product-table td {
   font-size: .9em;
 }
 
-.wishlist-wrapper ul li {
+.wishlist-wrapper ol li {
   border-bottom: 1px solid #aaa;
   padding: 20px 0;
 }
 
-.wishlist-wrapper ul li:last-of-type {
+.wishlist-wrapper ol li:last-of-type {
   border: none;
 }
 
@@ -2787,6 +2804,10 @@ button.accordion-refine:nth-of-type(2) {
   cursor: pointer;
 }
 
+.search-panel.accordion-search {
+  overflow: hidden;
+}
+
 .search-accordion-dropdown .btn.btn-green {
   display: none;
   opacity: 0;
@@ -2801,7 +2822,6 @@ button.accordion-refine:nth-of-type(2) {
   display: block;
   opacity: 1;
   max-height: 35px;
-  margin-bottom: 10px;
 }
 
 /* ============================================= */
@@ -3352,7 +3372,6 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media only screen and (max-width: 991px) {
-
   .row-margin-bottom {
     margin-bottom: 40px;
   }
