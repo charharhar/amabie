@@ -136,6 +136,35 @@ $(function(){
     $('body').removeClass('overflow-hidden');
   })
 
+  $('.photo-gallery-button').on('click', function() {
+    $('.product-photo-gallery').toggleClass('shop-show');
+    $('body').addClass('overflow-hidden');
+  })
+
+  $('#gallery-close').on('click', function() {
+    $('.product-photo-gallery').removeClass('shop-show');
+    $('body').removeClass('overflow-hidden');
+  })
+
+  // profile reviews trimming
+  // profilePara variable is dummy variable to replicate data being requested from an API
+  var profilePara = "Lancome Bi-Facil makeup remover is super organic, Lancome is the world's number one best seller brand, so is Everyone should buy Lancome, Bi Facil makeup remover makes.Lancome Bi-Facil makeup remover is super organic, Lancome is the world's number one best seller brand, so is Everyone should buy Lancome, Bi Facil makeup remover makes.Lancome Bi-Facil makeup remover is super organic, Lancome is the world's number one best seller brand, so is Everyone should buy Lancome, Bi Facil makeup remover makes.";
+  $('.profile-reviews-para').html(profilePara.substring(0, 125) + '...');
+
+  $('.read-more-collapse').on('click', function() {
+    if ($(this).hasClass('more')) {
+      $(this).removeClass('more');
+      $(this).addClass('less');
+      $(this).prev().html(profilePara);
+      $(this).html('Collapse');
+    } else {
+      $(this).removeClass('less');
+      $(this).addClass('more');
+      $(this).prev().html(profilePara.substring(0, 125) + '...');
+      $(this).html('Read More');
+    }
+  })
+
   // $(document).on('click', function(event) {
   //   if ('body').hasClass('overflow-hidden')) {}
 
@@ -145,6 +174,7 @@ $(function(){
 
   $('.checkbox-button').on('click', function() {
     $(this).next().toggleClass('checkbox-expand');
+    $(this).toggleClass('active');
   })
 
   // Mobile Navigation Menu listener
