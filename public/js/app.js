@@ -128,11 +128,13 @@ $(function(){
   // Shop option button listener
   $('.shop-option-button').on('click', function() {
     $('.product-shop-options').toggleClass('shop-show');
+    $('.product-shop-options-close').toggleClass('shop-show');
     $('body').addClass('overflow-hidden');
   })
 
   $('#shop-close').on('click', function() {
     $('.product-shop-options').removeClass('shop-show');
+    $('.product-shop-options-close').removeClass('shop-show');
     $('body').removeClass('overflow-hidden');
   })
 
