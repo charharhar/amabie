@@ -185,6 +185,10 @@ ol {
   margin-top: 40px;
 }
 
+.row-margin-bottom {
+  margin-bottom: 40px;
+}
+
 .footer-fix {
   margin-bottom: 60px;
 }
@@ -1158,6 +1162,11 @@ li.mobile-loggedIn {
 
   table.product-table td {
     font-size: .85em;
+  }
+
+  table.product-table button {
+    width: 100%;
+    margin-left: -50%;
   }
 
   /*
@@ -2731,6 +2740,22 @@ input[type=radio] {
   line-height: 1.5em;
 }
 
+.refine-search-container {
+  position: relative;
+  width: 50%;
+  float: left;
+}
+
+.refine-search-container i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #3dbbcb !important;
+}
+
 button.accordion,
 select.refine-search,
 button.accordion-refine {
@@ -2743,10 +2768,12 @@ button.accordion-refine {
   width: 100%;
   text-align: left;
   outline: none;
-  font-size: 1em;
+  font-size: 14px !important;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
+select.refine-search { -webkit-appearance:none; }
 
 button.accordion.active,
 button.accordion:hover,
@@ -2763,6 +2790,7 @@ div.search-panel {
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
   opacity: 0;
+  width: 100%;
 }
 
 div.search-panel.show {
@@ -2771,37 +2799,47 @@ div.search-panel.show {
 }
 
 div.accordion-search {
+  display: none !important;
+  width: 100%;
+}
+
+div.accordion-search button.accordion {
+  padding: 20px 20px;
+}
+
+div.accordion-search {
   padding: 0 2px;
 }
 
-button.accordion:after,
-button.accordion-refine:after {
+div.accordion-search .search-selection {
+  margin-top: 0 !important;
+}
+
+button.accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 1em;
   float: right;
   margin-right: 5px;
-  color: #3dbbcb;
+  color: #3dbbcb !important;
 }
 
-h4.checkbox-button.active:after,
-button.accordion.active:after,
-button.accordion-refine.active:after {
+h4.checkbox-button.active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 button.accordion-refine,
 select.refine-search {
-  width: 50%;
+  width: 100%;
   float: left;
   border-right: 1px solid #3e3a39;
-  padding: 20px 0px 20px 10px;
+  padding: 20px;
 }
 
-button.accordion-refine {
+.refine-search-container:nth-of-type(3) {
   display: none;
 }
 
-select.refine-search:nth-of-type(2) {
+.refine-search-container:nth-of-type(2) select.refine-search {
   border-right: none;
 }
 
@@ -2870,9 +2908,9 @@ select.refine-search:nth-of-type(2) {
 /* ============================================= */
 
 @media (min-width: 992px) {
-  .product-page .col-md-8 { width: 68.66666667%; }
-  .product-page .col-md-offset-1 { margin-left: 4.33333333%; }
-  .product-page .col-md-3 { width: 27%; }
+  .adjust-columns .col-md-8 { width: 68.66666667%; }
+  .adjust-columns .col-md-offset-1 { margin-left: 4.33333333%; }
+  .adjust-columns .col-md-3 { width: 27%; }
 }
 
 .product-left .edit-profile-img {
@@ -2895,7 +2933,7 @@ select.refine-search:nth-of-type(2) {
 }
 
 .product-page button {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .product-gallery {
@@ -3020,12 +3058,39 @@ p.table-hints:last-of-type {
   font-weight: 600;
 }
 
+.product-filter-wrapper {
+  margin-left: 16px;
+}
+
 .product-filter {
   margin: 10px 0 0;
 }
 
-.checkbox-wrapper {
+.product-filter span:first-of-type {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+h4.checkbox-button:after {
+  content: '\02795';
+  font-size: 1em;
+  color: #3dbbcb;
   margin-left: 10px;
+}
+
+.filter-checkbox-wrapper {
+  position: relative;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: height 0.3s ease-out .5s, opacity 0.3s ease;
+  -webkit-transition: height 0.3s ease-out .5s, opacity 0.3s ease;
+}
+
+.checkbox-expand {
+  height: auto;
+  opacity: 1;
+  z-index: 1;
 }
 
 .product-filter [type="checkbox"]:not(:checked),
@@ -3040,8 +3105,9 @@ p.table-hints:last-of-type {
   padding-right: 25px;
   cursor: pointer;
   font-weight: 300;
-  line-height: 2.7em;
+  line-height: 2.5em;
   margin-bottom: 0;
+  font-size: 14px;
 }
 
 input[type='checkbox']:not(:checked) + label:before,
@@ -3169,7 +3235,7 @@ input[type='checkbox']:checked + label:before {
   background-color: white;
   overflow-y: auto;
   width: 95%;
-  height: 50%;
+  height: 450px;
   padding: 10px;
   border: 10px solid #ccc;
   margin-top: 10px;
@@ -3216,7 +3282,7 @@ input[type='checkbox']:checked + label:before {
    */
 
 .overflow-hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .product-shop-options {
@@ -3242,7 +3308,7 @@ input[type='checkbox']:checked + label:before {
 .product-shop-options-close .btn-red {
   position: fixed;
   top: 5px;
-  right: 5px;
+  right: 25px;
   padding: 3px 8px;
 }
 
@@ -3510,25 +3576,27 @@ select.mobile-shop-option-filter {
 }
 
 @media only screen and (max-width: 991px) {
+  div.accordion-search {
+    display: block !important;
+  }
+
   .product-gallery {
     padding: 0;
   }
 
-  .row-margin-bottom {
-    margin-bottom: 40px;
-  }
-
-  select.refine-search,
-  button.accordion-refine {
+  .refine-search-container {
     width: 33.33333%;
   }
 
-  button.accordion-refine:last-of-type {
+  .refine-search-container:nth-of-type(3) {
     display: block;
+  }
+
+  .refine-search-container:nth-of-type(3) button.accordion-refine {
     border-right: none;
   }
 
-  select.refine-search:nth-of-type(2) {
+  .refine-search-container:nth-of-type(2) select.refine-search {
     border-right: 1px solid #3E3A39;
   }
 
@@ -3873,30 +3941,17 @@ select.mobile-shop-option-filter {
     font-size: .8em;
   }
 
-  h4.checkbox-button:after {
-    content: '\02795';
-    font-size: 1em;
-    color: #3dbbcb;
-    margin-left: 10px;
-  }
-
-  .filter-checkbox-wrapper {
-    position: relative;
-    height: 0;
-    opacity: 0;
-    z-index: -1;
-    transition: height 0.3s ease-out .5s, opacity 0.3s ease;
-    -webkit-transition: height 0.3s ease-out .5s, opacity 0.3s ease;
-  }
-
-  .checkbox-expand {
-    height: auto;
-    opacity: 1;
-    z-index: 1;
-  }
-
   select.mobile-shop-option-filter {
     display: block;
+  }
+
+  table.product-table button {
+    width: 100%;
+    margin-left: -50%;
+  }
+
+  h4.checkbox-button {
+    font-size: 14px;
   }
 
 }

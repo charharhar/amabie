@@ -843,20 +843,29 @@
 
           <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-1 row-margin-bottom">
             <div class="content-box search-accordion-dropdown">
-              <select class="refine-search">
-                <option value="">View</option>
-                <option value="thirty-six">36 items</option>
-                <option value="seventy-two">72 items</option>
-                <option value="all-items">All</option>
-              </select>
-              <select class="refine-search">
-                <option value="sort">Sort</option>
-                <option value="most-reviews">Most Reviews</option>
-                <option value="highest-rated">Highest Rated</option>
-                <option value="lowest-rated">Lowest Rated</option>
-              </select>
+              <div class="refine-search-container">
+                <select class="refine-search">
+                  <option value="">View</option>
+                  <option value="thirty-six">View - 36 items</option>
+                  <option value="seventy-two">View - 72 items</option>
+                  <option value="all-items">View - All</option>
+                </select>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </div>
+              <div class="refine-search-container">
+                <select class="refine-search"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                  <option value="sort">Sort</option>
+                  <option value="most-reviews">Sort - Most Reviews</option>
+                  <option value="highest-rated">Sort - Highest Rated</option>
+                  <option value="lowest-rated">Sort - Lowest Rated</option>
+                </select>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </div>
 
-              <button class="accordion-refine" data-accordionName="filter">Filter</button>
+              <div class="refine-search-container">
+                <button class="accordion-refine" data-accordionName="filter">Filter</button>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </div>
 
               <div class="search-panel accordion-search" id="filter">
                 <div class="search-selection">
@@ -962,7 +971,7 @@
                     </div>
                   </div>
 
-                  <a class="btn btn-green">Apply</a>
+                  <a class="btn btn-green filter-apply">Apply</a>
                 </div>
               </div>
 
@@ -981,8 +990,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1002,8 +1010,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1023,8 +1030,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1044,8 +1050,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1065,8 +1070,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1086,8 +1090,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1107,8 +1110,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1128,8 +1130,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>
@@ -1149,8 +1150,7 @@
                   </div>
                   <div class="search-result-details">
                     <p>Kate Somerville</p>
-                    <p><a href="">ExfoilKate Cleanser</a></p>
-                    <p><a href="">Daily Foaming Wash</a></p>
+                    <p><a href="">ExfoilKate Cleanser Daily Foaming Wash</a></p>
                     <p>Reviews: 29</p>
                     <p>
                       <i class="fa fa-heart liked" aria-hidden="true"></i>

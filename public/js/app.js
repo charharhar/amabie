@@ -99,6 +99,12 @@ $(function(){
     $(accordionId).toggleClass('show');
   })
 
+  $('.filter-apply').on('click', function() {
+    $('.search-accordion-dropdown .btn.btn-green').removeClass('showBtn');
+    $('.accordion-refine').removeClass('active');
+    $('#filter').removeClass('show');
+  })
+
   // Rating hearts handler, properly displays the # of hearts that should light up
   $('.fa.fa-heart.review-heart').on('click', function() {
     var self = $(this);
