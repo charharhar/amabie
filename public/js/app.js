@@ -126,10 +126,10 @@ $(function(){
     }
   })
 
-  // Only 1 checkbox with similar value allowed to be checked
-  $('.product-filter input[type="checkbox"]').on('change', function() {
-    $('.product-filter input[type="checkbox"][value=' + $(this).val() + ']').not(this).prop('checked', false);
-  });
+  // // Only 1 checkbox with similar value allowed to be checked
+  // $('.product-filter input[type="checkbox"]').on('change', function() {
+  //   $('.product-filter input[type="checkbox"][value=' + $(this).val() + ']').not(this).prop('checked', false);
+  // });
 
   // Shop option button listener
   $('.shop-option-button').on('click', function() {

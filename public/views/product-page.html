@@ -673,6 +673,11 @@
 
     <section class="home-wrapper" id="home-wrapper" data-type="background" data-speed="7">
 
+    <div class="review-popup-image">
+      <button class="btn-red" id="popup-close"> X </button>
+      <figure></figure>
+    </div>
+
     <div class="product-shop-options-close">
       <button class="btn-red" id="shop-close"> X </button>
     </div>
@@ -967,51 +972,51 @@
             <div class="user-photo-container">
               <div class="user-photo-img">
                 <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
+                  <img src="../imgs/product-default-min.jpg" alt="">
                 </figure>
               </div>
               <div class="user-photo-img">
                 <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
+                  <img src="../imgs/product-default-min.jpg" alt="">
                 </figure>
               </div>
               <div class="user-photo-img">
                 <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
-                </figure>
-              </div>
-            </div>
-            <div class="user-photo-container">
-              <div class="user-photo-img">
-                <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
-                </figure>
-              </div>
-              <div class="user-photo-img">
-                <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
-                </figure>
-              </div>
-              <div class="user-photo-img">
-                <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
+                  <img src="../imgs/product-default-min.jpg" alt="">
                 </figure>
               </div>
             </div>
             <div class="user-photo-container">
               <div class="user-photo-img">
                 <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
+                  <img src="../imgs/product-default-min.jpg" alt="">
                 </figure>
               </div>
               <div class="user-photo-img">
                 <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
+                  <img src="../imgs/product-default-min.jpg" alt="">
                 </figure>
               </div>
               <div class="user-photo-img">
                 <figure>
-                  <img src="../imgs/SheSilhouette-min.jpg" alt="">
+                  <img src="../imgs/product-default-min.jpg" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="user-photo-container">
+              <div class="user-photo-img">
+                <figure>
+                  <img src="../imgs/product-default-min.jpg" alt="">
+                </figure>
+              </div>
+              <div class="user-photo-img">
+                <figure>
+                  <img src="../imgs/product-default-min.jpg" alt="">
+                </figure>
+              </div>
+              <div class="user-photo-img">
+                <figure>
+                  <img src="../imgs/product-default-min.jpg" alt="">
                 </figure>
               </div>
             </div>
@@ -1191,6 +1196,7 @@
         <div class="row row-spacing-top no-gutter"> <!-- second row -->
 
           <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-8">
+
             <div class="content-box misc-pages heading-box product-heading">
               <div class="profile-review-header">
                 <div class="sorting-wrapper">
@@ -1209,140 +1215,148 @@
                 </ul>
               </div>
 
-            <div class="product-filter-wrapper">
-              <h4 class="checkbox-button">Filter Reviews From People With...</h4>
+              <div class="product-filter-wrapper">
+                <h4 class="checkbox-button">Filter Reviews From People With...</h4>
 
-              <div class="filter-checkbox-wrapper">
-                <div class="product-filter">
-                  <span>Skin Type: </span>
-                  <span>
-                    <input type="checkbox" id="sensitive" value="skin-type">
-                    <label for="sensitive">Sensitive</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="dry" value="skin-type">
-                    <label for="dry">Dry</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="normal" value="skin-type">
-                    <label for="normal">Normal</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="oily" value="skin-type">
-                    <label for="oily">Oily</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="combination" value="skin-type">
-                    <label for="combination">Combination</label>
-                  </span>
+                <div class="filter-checkbox-wrapper">
+                  <div class="product-filter product-filter-fixed-width">
+                    <div class="filter-title">
+                      <span>Skin Type: </span>
+                    </div>
+                    <div class="filter-choices">
+                      <span>
+                        <input type="checkbox" id="sensitive" value="skin-type">
+                        <label for="sensitive">Sensitive</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="dry-skin" value="skin-type">
+                        <label for="dry-skin">Dry</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="normal" value="skin-type">
+                        <label for="normal">Normal</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="oily" value="skin-type">
+                        <label for="oily">Oily</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="combination" value="skin-type">
+                        <label for="combination">Combination</label>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="product-filter product-filter-fixed-width">
+                    <div class="filter-title">
+                      <span>Skin Tone: </span>
+                    </div>
+                    <div class="filter-choices">
+                      <span>
+                        <input type="checkbox" id="fair" value="skin-tone">
+                        <label for="fair">Fair</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="medium" value="skin-tone">
+                        <label for="medium">Medium</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="dark" value="skin-tone">
+                        <label for="dark">Dark</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="tan" value="skin-tone">
+                        <label for="tan">Tan</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="very-dark" value="skin-tone">
+                        <label for="very-dark">Very Dark</label>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="product-filter product-filter-fixed-width">
+                    <div class="filter-title">
+                      <span>Hair Type: </span>
+                    </div>
+                    <div class="filter-choices">
+                      <span>
+                        <input type="checkbox" id="dry-hair" value="hair-type">
+                        <label for="dry-hair">Dry</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="frizzy" value="hair-type">
+                        <label for="frizzy">Frizzy</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="curly" value="hair-type">
+                        <label for="curly">Curly</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="afro" value="hair-type">
+                        <label for="afro">Afro</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="straight" value="hair-type">
+                        <label for="straight">Straight</label>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="product-filter product-filter-fixed-width">
+                    <div class="filter-title">
+                      <span>Age Range: </span>
+                    </div>
+                    <div class="filter-choices">
+                      <span>
+                        <input type="checkbox" id="below-eighteen" value="age-range">
+                        <label for="below-eighteen">&lt;18</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="teen-twenty" value="age-range">
+                        <label for="teen-twenty">18-24</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="twenty-thirty" value="age-range">
+                        <label for="twenty-thirty">25-34</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="thirty-fourty" value="age-range">
+                        <label for="thirty-fourty">35-44</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="fourty-fifty" value="age-range">
+                        <label for="fourty-fifty">45-54</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="fifty-sixty" value="age-range">
+                        <label for="fifty-sixty">55&plus;</label>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="product-filter product-filter-fixed-width">
+                    <div class="filter-title">
+                      <span>With Photo: </span>
+                    </div>
+                    <div class="filter-choices">
+                      <span>
+                        <input type="checkbox" id="with-photo" value="with-photo">
+                        <label for="with-photo">Yes</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" id="without-photo" value="with-photo">
+                        <label for="without-photo">No</label>
+                      </span>
+                    </div>
+                  </div>
+
+                  <small><strong>Keywords:</strong> Long-Lasting (3), Bold (4), Full Lips (8), Creamy (12), Matte (18), Smooth (20)</small>
                 </div>
-
-                <div class="product-filter">
-                  <span>Skin Tone: </span>
-                  <span>
-                    <input type="checkbox" id="fair" value="skin-tone">
-                    <label for="fair">Fair</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="medium" value="skin-tone">
-                    <label for="medium">Medium</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="dark" value="skin-tone">
-                    <label for="dark">Dark</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="tan" value="skin-tone">
-                    <label for="tan">Tan</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="very-dark" value="skin-tone">
-                    <label for="very-dark">Very Dark</label>
-                  </span>
-                </div>
-
-                <div class="product-filter">
-                  <span>Hair Type: </span>
-                  <span>
-                    <input type="checkbox" id="dry" value="hair-type">
-                    <label for="dry">Dry</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="frizzy" value="hair-type">
-                    <label for="frizzy">Frizzy</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="curly" value="hair-type">
-                    <label for="curly">Curly</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="afro" value="hair-type">
-                    <label for="afro">Afro</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="straight" value="hair-type">
-                    <label for="straight">Straight</label>
-                  </span>
-                </div>
-
-                <div class="product-filter">
-                  <span>Age Range: </span>
-                  <span>
-                    <input type="checkbox" id="below-eighteen" value="age-range">
-                    <label for="below-eighteen">&lt;18</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="teen-twenty" value="age-range">
-                    <label for="teen-twenty">18-24</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="twenty-thirty" value="age-range">
-                    <label for="twenty-thirty">25-34</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="thirty-fourty" value="age-range">
-                    <label for="thirty-fourty">35-44</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="fourty-fifty" value="age-range">
-                    <label for="fourty-fifty">45-54</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="fifty-sixty" value="age-range">
-                    <label for="fifty-sixty">55&plus;</label>
-                  </span>
-                </div>
-
-                <div class="product-filter">
-                  <span>With Photo: </span>
-                  <span>
-                    <input type="checkbox" id="with-photo" value="with-photo">
-                    <label for="with-photo">Yes</label>
-                  </span>
-                  <span>
-                    <input type="checkbox" id="without-photo" value="with-photo">
-                    <label for="without-photo">No</label>
-                  </span>
-                </div>
-
-                <small><strong>Keywords:</strong> Long-Lasting (3), Bold (4), Full Lips (8), Creamy (12), Matte (18), Smooth (20)</small>
               </div>
             </div>
-          </article>
 
-          <article class="col-md-3 col-md-offset-1">
-            <div class="content-box misc-pages">
-              <div class="long-advert"></div>
-            </div>
-          </article>
-
-
-        </div> <!-- end second row -->
-
-        <div class="row row-spacing-top no-gutter"> <!-- third row -->
-
-          <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-8">
-            <div class="content-box misc-pages heading-box product-body">
+            <div class="content-box misc-pages heading-box product-body row-spacing-top">
 
               <div class="product-review-wrapper"> <!-- product-review-wrapper -->
 
@@ -1380,19 +1394,19 @@
                     <a class="read-more-collapse more">Read more</a>
 
                     <div class="product-gallery">
-                      <div class="review-img">
+                      <div class="review-img popup-img">
                         <figure>
                           <img src="../imgs/product-default.jpg" alt="">
                         </figure>
                       </div>
 
-                      <div class="review-img">
+                      <div class="review-img popup-img">
                         <figure>
                           <img src="../imgs/product-default.jpg" alt="">
                         </figure>
                       </div>
 
-                      <div class="review-img">
+                      <div class="review-img popup-img">
                         <figure>
                           <img src="../imgs/product-default.jpg" alt="">
                         </figure>
@@ -1443,19 +1457,19 @@
                     <a class="read-more-collapse more">Read more</a>
 
                     <div class="product-gallery">
-                      <div class="review-img">
+                      <div class="review-img popup-img">
                         <figure>
                           <img src="../imgs/product-default.jpg" alt="">
                         </figure>
                       </div>
 
-                      <div class="review-img">
+                      <div class="review-img popup-img">
                         <figure>
                           <img src="../imgs/product-default.jpg" alt="">
                         </figure>
                       </div>
 
-                      <div class="review-img">
+                      <div class="review-img popup-img">
                         <figure>
                           <img src="../imgs/product-default.jpg" alt="">
                         </figure>
@@ -1470,7 +1484,6 @@
                 <div class="clearfix"></div>
               </div>  <!-- end product-review-wrapper -->
 
-
             </div>
           </article>
 
@@ -1478,10 +1491,14 @@
             <div class="content-box misc-pages">
               <div class="long-advert"></div>
             </div>
+
+            <div class="content-box misc-pages row-spacing-top">
+              <div class="long-advert"></div>
+            </div>
           </article>
 
 
-        </div> <!-- end third row -->
+        </div> <!-- end second row -->
 
         <div class="row no-gutter">
           <article class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0">
