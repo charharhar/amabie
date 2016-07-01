@@ -173,12 +173,14 @@ $(function(){
     }
   })
 
-  // $(document).on('click', function(event) {
-  //   if ('body').hasClass('overflow-hidden')) {}
+  $('.popup-img').on('click', function() {
+    $('.review-popup-image').addClass('review-popup-show');
+    $('.review-popup-image figure').html($(this).children().children()[0].outerHTML)
+  })
 
-  //   $('.product-shop-options').removeClass('shop-show');
-  //   $('body').removeClass('overflow-hidden');
-  // })
+  $('#popup-close').on('click', function() {
+    $('.review-popup-image').removeClass('review-popup-show');
+  })
 
   $('.checkbox-button').on('click', function() {
     $(this).next().toggleClass('checkbox-expand');
