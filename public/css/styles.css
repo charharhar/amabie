@@ -339,6 +339,11 @@ div.content-box {
   display: inline-block;
 }
 
+.aspect-ratio {
+  background: #3dbbcb;
+  opacity: .7;
+}
+
 .twenty-six.aspect-ratio { padding-bottom: 26%; }
 
 .eighty-three.aspect-ratio { padding-bottom: 83%; }
@@ -349,6 +354,8 @@ div.content-box {
   bottom: 0;
   left: 0;
   right: 0;
+  height: 100%;
+  width: 100%;
   background: #3dbbcb;
   opacity: .7;
 }
@@ -3098,15 +3105,26 @@ p.table-hints:last-of-type {
 }
 
 .product-filter-fixed-width .filter-title {
-  min-width: 100px;
-  width: 20%;
+  width: 100px;
   display: inline-block;
   line-height: 2.5em;
   vertical-align: top;
 }
 
 .product-filter-fixed-width .filter-choices {
-  width: 70%;
+  width: 79%;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 633px) {
+  .product-filter-fixed-width .filter-choices {
+    width: 100%;
+    margin-left: 25px;
+  }
+}
+
+h4.checkbox-button {
+  cursor: pointer;
   display: inline-block;
 }
 
