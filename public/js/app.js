@@ -74,7 +74,7 @@ $(function(){
       $(this).next().removeClass('show');
     })
 
-    $(this).toggleClass('active');
+    $(this).children().toggleClass('fa-plus fa-minus');
     $(this).next().toggleClass('show');
   })
 
@@ -135,23 +135,23 @@ $(function(){
   $('.shop-option-button').on('click', function() {
     $('.product-shop-options').toggleClass('shop-show');
     $('.product-shop-options-close').toggleClass('shop-show');
-    $('body').addClass('overflow-hidden');
+    $('html, body').addClass('overflow-hidden');
   })
 
   $('#shop-close').on('click', function() {
     $('.product-shop-options').removeClass('shop-show');
     $('.product-shop-options-close').removeClass('shop-show');
-    $('body').removeClass('overflow-hidden');
+    $('html, body').removeClass('overflow-hidden');
   })
 
   $('.photo-gallery-button').on('click', function() {
     $('.product-photo-gallery').toggleClass('shop-show');
-    $('body').addClass('overflow-hidden');
+    $('html, body').addClass('overflow-hidden');
   })
 
   $('#gallery-close').on('click', function() {
     $('.product-photo-gallery').removeClass('shop-show');
-    $('body').removeClass('overflow-hidden');
+    $('html, body').removeClass('overflow-hidden');
   })
 
   // profile reviews trimming
@@ -178,13 +178,23 @@ $(function(){
     $('.review-popup-image figure').html($(this).children().children()[0].outerHTML)
   })
 
+  $('#popup-open').on('click', function() {
+    $('.review-popup-image').addClass('review-popup-show');
+    $('.review-popup-image figure').html($(this).siblings().children()[0].outerHTML)
+  })
+
   $('#popup-close').on('click', function() {
     $('.review-popup-image').removeClass('review-popup-show');
   })
 
   $('.checkbox-button').on('click', function() {
     $(this).next().toggleClass('checkbox-expand');
-    $(this).toggleClass('active');
+    $(this).children().toggleClass('fa-plus fa-minus');
+  })
+
+  $('.product-filter-apply').on('click', function(){
+    $('.filter-checkbox-wrapper').removeClass('checkbox-expand');
+    $('.checkbox-button').children().toggleClass('fa-plus fa-minus');
   })
 
   // Mobile Navigation Menu listener

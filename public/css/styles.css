@@ -120,6 +120,7 @@ ol {
 }
 
 .btn-green {
+  color: #fefefe !important;
   border: 1px solid #3dbbcb;
 }
 
@@ -1176,7 +1177,6 @@ li.mobile-loggedIn {
     left: 10px;
     width: 45%;
     padding-right: 10px;
-    white-space: nowrap;
   }
 
   table.product-table td {
@@ -2844,17 +2844,11 @@ div.accordion-search .search-selection {
   margin-top: 0 !important;
 }
 
-button.accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 1em;
+button.accordion i {
+  color: #3e3a39 !important;
   float: right;
   margin-right: 5px;
-  color: #3e3a39 !important;
-}
-
-button.accordion.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-  color: #3e3a39 !important;
+  margin-top: 2px;
 }
 
 button.accordion-refine,
@@ -3129,29 +3123,17 @@ h4.checkbox-button {
   display: inline-block;
 }
 
-h4.checkbox-button:after {
-  content: '\02795';
-  font-size: 1em;
-  color: #3e3a39 !important;
-  margin-left: 10px;
-}
-
-h4.checkbox-button.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-  color: #3e3a39 !important;
-}
-
 .filter-checkbox-wrapper {
   position: relative;
-  height: 0;
+  max-height: 0;
   opacity: 0;
   z-index: -1;
-  transition: height 0.3s ease-out .5s, opacity 0.3s ease;
-  -webkit-transition: height 0.3s ease-out .5s, opacity 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 
 .checkbox-expand {
-  height: auto;
+  max-height: 500px;
   opacity: 1;
   z-index: 1;
 }
@@ -3286,6 +3268,10 @@ input[type='checkbox']:checked + label:before {
   text-transform: uppercase
 }
 
+.photo-gallery-button {
+  cursor: pointer;
+}
+
 .product-photo-gallery {
   position: fixed;
   z-index: -1;
@@ -3349,10 +3335,15 @@ input[type='checkbox']:checked + label:before {
   bottom: -75px !important;
 }
 
+.product-photo-gallery .slick-slider {
+  margin-top: 30px;
+}
+
   /*
    * REVIEW POPUP IMAGE
    */
 
+#popup-open,
 .popup-img {
   cursor: pointer;
 }
@@ -3442,7 +3433,7 @@ input[type='checkbox']:checked + label:before {
 .product-shop-options-close .btn-red {
   position: fixed;
   top: 5px;
-  right: 20px;
+  right: 15px;
   padding: 3px 8px;
 }
 
@@ -3494,8 +3485,8 @@ select.mobile-shop-option-filter {
 }
 
 .shop-options-table {
-  width: 90%;
-  margin: 20px 5%;
+  width: 80%;
+  margin: 20px 10%;
 }
 
 .shop-options-table thead tr {
@@ -3716,7 +3707,7 @@ select.mobile-shop-option-filter {
   }
 
   .product-photo-gallery {
-    height: 400px;
+    height: 370px;
   }
 
   .product-gallery {
