@@ -1119,7 +1119,16 @@ li.mobile-loggedIn {
   button.accordion,
   select.refine-search,
   button.accordion-refine {
-    font-size: 12px !important;
+    font-size: 10px !important;
+  }
+
+  .refine-search-container:nth-of-type(1),
+  .refine-search-container:nth-of-type(2) {
+    width: 40%;
+  }
+
+  .refine-search-container:nth-of-type(3) {
+    width: 20%;
   }
 
 /*
@@ -1228,32 +1237,6 @@ li.mobile-loggedIn {
 }
 
 @media only screen and (max-width: 510px) {
-  .refine-search-container {
-    width: 100%;
-  }
-
-  .refine-search-container:nth-of-type(3) button.accordion-refine {
-    border-right: 1px solid #3e3a39;
-  }
-
-  div.accordion-search {
-    border-right: 1px solid #3e3a39;
-    padding: 0 !important;
-  }
-
-  .refine-search-container i {
-    right: 20px;
-  }
-
-  button.accordion-refine,
-  select.refine-search {
-    padding: 20px;
-  }
-
-  div.accordion-search button.accordion {
-    padding: 20px;
-  }
-
   .navbar-collapse.in .navbar-nav {
     max-height: 372px;
   }
@@ -2804,6 +2787,8 @@ input[type=radio] {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #3dbbcb !important;
+  font-size: 10px !important;
+  padding-bottom: 4px;
 }
 
 button.accordion,
@@ -2868,7 +2853,7 @@ div.accordion-search button.accordion {
 }
 
 div.accordion-search {
-  padding: 0 2px;
+  padding: 0;
 }
 
 div.accordion-search .search-selection {
@@ -2888,7 +2873,6 @@ select.refine-search {
   float: left;
   border-right: 1px solid #3e3a39;
   padding: 20px 10px;
-  padding-right: 38px;
 }
 
 .refine-search-container:nth-of-type(3) {
@@ -4130,7 +4114,16 @@ select.mobile-shop-option-filter {
   button.accordion,
   select.refine-search,
   button.accordion-refine {
-    font-size: 12px !important;
+    font-size: 10px !important;
+  }
+
+  .refine-search-container:nth-of-type(1),
+  .refine-search-container:nth-of-type(2) {
+    width: 40%;
+  }
+
+  .refine-search-container:nth-of-type(3) {
+    width: 20%;
   }
 
 }
@@ -4292,33 +4285,6 @@ select.mobile-shop-option-filter {
 }
 
 @media only screen and (max-width: 510px) {
-
-  .refine-search-container {
-    width: 100%;
-    border-bottom: 1px solid #3E3A39;
-  }
-
-  .refine-search-container:nth-of-type(3) button.accordion-refine {
-    border-right: 1px solid #3e3a39;
-  }
-
-  div.accordion-search {
-    border-right: 1px solid #3e3a39;
-    padding: 0 !important;
-  }
-
-  .refine-search-container i {
-    right: 20px;
-  }
-
-  button.accordion-refine,
-  select.refine-search {
-    padding: 20px;
-  }
-
-  div.accordion-search button.accordion {
-    padding: 20px;
-  }
 
   p.table-hints {
     float: none !important;
