@@ -1116,15 +1116,17 @@ li.mobile-loggedIn {
     height: 450px;
   }
 
-  button.accordion,
   select.refine-search,
   button.accordion-refine {
     font-size: 10px !important;
   }
 
-  .refine-search-container:nth-of-type(1),
+  .refine-search-container:nth-of-type(1) {
+    width: 35%;
+  }
+
   .refine-search-container:nth-of-type(2) {
-    width: 40%;
+    width: 45%;
   }
 
   .refine-search-container:nth-of-type(3) {
@@ -3132,7 +3134,7 @@ p.table-hints:last-of-type {
 
 @media only screen and (max-width: 633px) {
   .product-filter-fixed-width .filter-choices {
-    width: 100%;
+    width: 110%;
     margin-left: 25px;
   }
 }
@@ -3152,7 +3154,7 @@ h4.checkbox-button {
 }
 
 .checkbox-expand {
-  max-height: 500px;
+  max-height: 1500px;
   opacity: 1;
   z-index: 1;
 }
@@ -3430,12 +3432,13 @@ input[type='checkbox']:checked + label:before {
 }
 
 .product-shop-options {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 
   background-color: white;
   overflow-y: auto;
@@ -3444,55 +3447,68 @@ input[type='checkbox']:checked + label:before {
   padding: 10px;
   border: 1px solid rgba(62,58,57,0.5);
   margin-top: 10px;
+  padding-top: 100px;
 
   display: none;
 }
 
 .product-photo-gallery .btn-red,
-.product-shop-options-close .btn-red {
+.product-shop-options-heading .btn-red {
   position: fixed;
   top: 5px;
   right: 15px;
   padding: 3px 8px;
 }
 
-.product-shop-options-close {
-  position: fixed;
-  z-index: 10000 !important;
-  width: 95%;
-  height: auto;
-  left: 50%;
-  margin-top: 10px;
-  padding: 10px;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-
-  display: none;
-}
-
 select.mobile-shop-option-filter {
   display: none;
   width: 33.3333%;
   border: 1px solid #ccc;
-  margin: 10px 0 0 5%;
+  margin: 10px 0 0 10%;
   border-radius: 5px;
   padding: 5px 10px;
   line-height: 1.5em;
 }
 
 .shop-show {
-  display: block;
-  opacity: 1;
+  display: block !important;
+  opacity: 1 !important;
   z-index: 1000;
 }
 
-.product-shop-options h1 {
+.product-shop-options-heading {
+  position: fixed;
+  z-index: 10000 !important;
+  width: 95%;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  margin-top: 120px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+
+  display:none;
+}
+
+.shop-options-heading-container {
+  width: 100%;
+  padding-top: 10px;
+  background: #fefefe;
+  border-top: 1px solid rgba(62,58,57,0.5);
+  border-left: 1px solid rgba(62,58,57,0.5);
+  border-right: 1px solid rgba(62,58,57,0.5);
+}
+
+.product-shop-options-heading h1 {
   font-size: 26px;
   font-weight: 400;
+  margin-left: 50%;
   text-align: center;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
   width: 65%;
-  margin: 0 auto;
 }
 
 .product-shop-options span {
@@ -3510,6 +3526,10 @@ select.mobile-shop-option-filter {
 
 .shop-options-table thead tr {
   background-color: rgba(238, 238, 238, 0.7);
+}
+
+.shop-options-table tbody tr td:nth-of-type(2) {
+  white-space: nowrap;
 }
 
 .shop-options-table th,
@@ -3721,6 +3741,11 @@ select.mobile-shop-option-filter {
 }
 
 @media only screen and (max-width: 991px) {
+
+  button.accordion:last-of-type {
+    border-bottom: 1px solid #3e3a39;
+  }
+
   div.accordion-search {
     display: block !important;
   }
@@ -4111,15 +4136,17 @@ select.mobile-shop-option-filter {
     height: 450px;
   }
 
-  button.accordion,
   select.refine-search,
   button.accordion-refine {
     font-size: 10px !important;
   }
 
-  .refine-search-container:nth-of-type(1),
+  .refine-search-container:nth-of-type(1) {
+    width: 35%;
+  }
+
   .refine-search-container:nth-of-type(2) {
-    width: 40%;
+    width: 45%;
   }
 
   .refine-search-container:nth-of-type(3) {
@@ -4285,6 +4312,16 @@ select.mobile-shop-option-filter {
 }
 
 @media only screen and (max-width: 510px) {
+  .product-filter-wrapper {
+    margin-left: 8px;
+  }
+  .product-filter-fixed-width .filter-choices {
+    margin-left: 8px;
+  }
+
+  select.mobile-shop-option-filter {
+    width: 80%;
+  }
 
   p.table-hints {
     float: none !important;

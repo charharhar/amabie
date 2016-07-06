@@ -74,7 +74,17 @@ $(function(){
       $(this).next().removeClass('show');
     })
 
-    $(this).children().toggleClass('fa-plus fa-minus');
+    $('.accordion').not($(this)).children().removeClass('fa-minus');
+    $('.accordion').not($(this)).children().addClass('fa-plus');
+
+    if ($(this).children().hasClass('fa-plus')) {
+      $(this).children().addClass('fa-minus');
+      $(this).children().removeClass('fa-plus');
+    } else {
+      $(this).children().addClass('fa-plus');
+      $(this).children().removeClass('fa-minus');
+    }
+
     $(this).next().toggleClass('show');
   })
 
@@ -94,9 +104,20 @@ $(function(){
     })
 
     var accordionId = '#' + $(this).attr('data-accordionName');
+    $(this).next().toggleClass('fa-chevron-down fa-chevron-up');
 
     $(this).toggleClass('active');
     $(accordionId).toggleClass('show');
+  })
+
+  $('.refine-search').on('focus', function() {
+      $(this).next().addClass('fa-chevron-up');
+      $(this).next().removeClass('fa-chevron-down');
+  })
+
+  $('.refine-search').on('focusout', function() {
+      $(this).next().addClass('fa-chevron-down');
+      $(this).next().removeClass('fa-chevron-up');
   })
 
   $('.filter-apply').on('click', function() {
@@ -134,13 +155,13 @@ $(function(){
   // Shop option button listener
   $('.shop-option-button').on('click', function() {
     $('.product-shop-options').toggleClass('shop-show');
-    $('.product-shop-options-close').toggleClass('shop-show');
+    $('.product-shop-options-heading').toggleClass('shop-show');
     $('html, body').addClass('overflow-hidden');
   })
 
   $('#shop-close').on('click', function() {
     $('.product-shop-options').removeClass('shop-show');
-    $('.product-shop-options-close').removeClass('shop-show');
+    $('.product-shop-options-heading').removeClass('shop-show');
     $('html, body').removeClass('overflow-hidden');
   })
 
@@ -176,11 +197,6 @@ $(function(){
   $('.popup-img').on('click', function() {
     $('.review-popup-image').addClass('review-popup-show');
     $('.review-popup-image figure').html($(this).children().children()[0].outerHTML)
-  })
-
-  $('#popup-open').on('click', function() {
-    $('.review-popup-image').addClass('review-popup-show');
-    $('.review-popup-image figure').html($(this).siblings().children()[0].outerHTML)
   })
 
   $('#popup-close').on('click', function() {
