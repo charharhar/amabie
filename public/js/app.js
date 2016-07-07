@@ -111,19 +111,25 @@ $(function(){
   })
 
   $('.refine-search').on('focus', function() {
-      $(this).next().addClass('fa-chevron-up');
-      $(this).next().removeClass('fa-chevron-down');
+    $(this).next().addClass('fa-chevron-up');
+    $(this).next().removeClass('fa-chevron-down');
   })
 
   $('.refine-search').on('focusout', function() {
-      $(this).next().addClass('fa-chevron-down');
-      $(this).next().removeClass('fa-chevron-up');
+    $(this).next().addClass('fa-chevron-down');
+    $(this).next().removeClass('fa-chevron-up');
   })
 
   $('.filter-apply').on('click', function() {
     $('.search-accordion-dropdown .btn.btn-green').removeClass('showBtn');
     $('.accordion-refine').removeClass('active');
     $('#filter').removeClass('show');
+    $('.accordion-refine').next().removeClass('fa-chevron-up');
+    $('.accordion-refine').next().addClass('fa-chevron-down')
+
+    $('html, body').animate({
+      scrollTop: ($('.search-accordion-dropdown').offset().top - $('.refine-search-container').height())
+    }, 500)
   })
 
   // Rating hearts handler, properly displays the # of hearts that should light up
@@ -211,6 +217,10 @@ $(function(){
   $('.product-filter-apply').on('click', function(){
     $('.filter-checkbox-wrapper').removeClass('checkbox-expand');
     $('.checkbox-button').children().toggleClass('fa-plus fa-minus');
+
+    $('html, body').animate({
+      scrollTop: $('.product-heading').offset().top + 100
+    }, 500)
   })
 
   // Mobile Navigation Menu listener
