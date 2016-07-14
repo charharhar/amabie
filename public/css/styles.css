@@ -63,7 +63,7 @@ html, body {
   z-index: -1;
   background-image: url(../imgs/bg-img-min.png);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 50% 50%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -323,23 +323,20 @@ div.content-box {
 }
 
 .small-ad-wrapper {
-  text-align: justify;
-}
-
-.small-ad-wrapper::after{
-  content: '';
-  display: inline-block;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .advert.small-ad {
   max-width: 300px;
-  width: 32.333333%;
-  display: inline-block;
+  width: 31.333333%;
+  float: left;
 }
 
-.advert.small-ad .ad-content {
-  width: 100%;
+.advert.small-ad:nth-of-type(2),
+.advert.small-ad:nth-of-type(3) {
+  margin-left: 3%;
 }
 
 .aspect-ratio {
