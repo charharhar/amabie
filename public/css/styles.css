@@ -329,7 +329,6 @@ div.content-box {
 }
 
 .advert.small-ad {
-  max-width: 300px;
   width: 31.333333%;
   float: left;
   /* shadow DOM weird */
