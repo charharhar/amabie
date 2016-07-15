@@ -166,6 +166,7 @@ ol {
 .btn-green.full-width {
   width: 100%;
   margin: 10px auto;
+  box-shadow: none !important;
 }
 
 .no-gutter > [class*='col-'] {
@@ -1991,6 +1992,9 @@ li.mobile-loggedIn {
   line-height: 1.2em;
   border-radius: 5px;
   border: 1px solid #ccc;
+  -webkit-box-shadow: 1px 1px 1px #666;
+     -moz-box-shadow: 1px 1px 1px #666;
+          box-shadow: 1px 1px 1px #666;
 }
 
 .my-community-left .btn-green {
@@ -2249,6 +2253,9 @@ li.mobile-loggedIn {
   margin-bottom: 10px;
   padding: 5px 10px;
   line-height: 1.5em;
+  -webkit-box-shadow: 1px 1px 1px #666;
+     -moz-box-shadow: 1px 1px 1px #666;
+          box-shadow: 1px 1px 1px #666;
 }
 
 .privacy-options select,
@@ -2263,6 +2270,9 @@ li.mobile-loggedIn {
   margin-bottom: 10px;
   padding: 5px 10px;
   line-height: 1.5em;
+  -webkit-box-shadow: 1px 1px 1px #666;
+     -moz-box-shadow: 1px 1px 1px #666;
+          box-shadow: 1px 1px 1px #666;
 }
 
 .two-column-form #days,
@@ -2453,6 +2463,9 @@ table.write-review td {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  -webkit-box-shadow: 1px 1px 1px #222;
+     -moz-box-shadow: 1px 1px 1px #222;
+          box-shadow: 1px 1px 1px #222;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2549,6 +2562,9 @@ table.write-review td {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
+  -webkit-box-shadow: 1px 1px 1px #666;
+     -moz-box-shadow: 1px 1px 1px #666;
+          box-shadow: 1px 1px 1px #666;
 }
 
 .wishlist-content p {
@@ -2716,10 +2732,16 @@ input[type=radio] {
   border: 1px solid #ccc;
   padding: 0 10px;
   border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px #666;
+     -moz-box-shadow: 1px 1px 1px #666;
+          box-shadow: 1px 1px 1px #666;
 }
 
 .change-password-form input {
   margin: 5px 0;
+  -webkit-box-shadow: 1px 1px 1px #666;
+     -moz-box-shadow: 1px 1px 1px #666;
+          box-shadow: 1px 1px 1px #666;
 }
 
 .change-password-form label {
