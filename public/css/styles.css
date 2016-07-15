@@ -816,7 +816,9 @@ li.mobile-loggedIn {
 
   .btn-wishlist {
     margin-left: 50% !important;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     min-width: 160px;
   }
 
@@ -2200,6 +2202,14 @@ li.mobile-loggedIn {
   padding: 0 15px 0;
 }
 
+.contact-us-form .form-fix .form-column {
+  margin-bottom: 0;
+}
+
+.contact-us-form .bottom-form {
+  margin-top: 20px;
+}
+
 .write-review-form p,
 .contact-us-form p {
   margin: 10px 0;
@@ -2405,6 +2415,7 @@ table.write-review td {
 .concerns-wrapper {
   border: 1px solid #3e3a39;
   padding: 5px 15px;
+  margin: 20px 0;
 }
 
   /* COL-MD-8 */
@@ -2442,18 +2453,24 @@ table.write-review td {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  background: url(../imgs/down-arrow.png) no-repeat right;
+  background-size: 20px;
 }
 
 .edit-profile-form label {
   margin: 0 !important;
 }
 
-.edit-personal-info {
-  margin: 20px 0;
-}
-
 .edit-profile-form .form-column {
   margin-bottom: 0 !important;
+}
+
+.edit-personal-info select {
+
 }
 
 
@@ -2832,7 +2849,7 @@ div.search-panel {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
   opacity: 0;
@@ -2849,7 +2866,7 @@ div.accordion-search {
   width: 100%;
   padding: 0;
   max-height: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
   opacity: 0;
