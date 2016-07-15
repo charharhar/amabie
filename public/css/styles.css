@@ -31,7 +31,6 @@
 }
 
 html, body {
-  position: relative;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -332,6 +331,8 @@ div.content-box {
   max-width: 300px;
   width: 31.333333%;
   float: left;
+  /* shadow DOM weird */
+  display: block !important;
 }
 
 .advert.small-ad:nth-of-type(2),
@@ -2986,7 +2987,7 @@ select.refine-search {
 }
 
 .product-page button {
-  font-size: 12px;
+  font-size: .85em;
 }
 
 .product-gallery {
