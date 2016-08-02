@@ -100,7 +100,7 @@ ol {
   color: #fefefe;
   font-weight: 400;
   background-color: #3dbbcb;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 3px 18px;
   margin: 5px 0;
   -webkit-transition: .3s all;
@@ -1705,6 +1705,40 @@ li.mobile-loggedIn {
   text-align: left;
 }
 
+.best-options-container {
+  position: relative;
+  width: 85%;
+  margin: 40px auto 0;
+  border: 1px solid #3e3a39;
+  border-radius: 4px;
+
+}
+
+select.refine-best {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  float: left;
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.best-options-container i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #3dbbcb !important;
+  font-size: 10px !important;
+  padding-bottom: 4px;
+}
+
 .best-showcase {
   clear: both;
   list-style: none;
@@ -2642,6 +2676,10 @@ table.write-review td {
 }
 
 /* anchor global light blue styles */
+.daily-container li a,
+.best-highlight li a,
+.reviewed-wrapper li a,
+.reviewers-wrapper li a,
 .search-navigate a,
 .shop-options-table a,
 .product-navigate a,

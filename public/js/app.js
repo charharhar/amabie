@@ -40,6 +40,10 @@ $(function(){
   //              EVENT LISTENERS
   // --------------------------------------------
 
+  $('.refine-best').on('change', function() {
+    updateBestOptions($("option:selected", this).text(), $(this).val());
+  })
+
   $('#years, #months').on('change', function(){
     updateNumberOfDays();
   });
@@ -108,6 +112,16 @@ $(function(){
 
     $(this).toggleClass('active');
     $(accordionId).toggleClass('show');
+  })
+
+  $('.refine-best').on('focus', function() {
+    $(this).next().addClass('fa-chevron-up');
+    $(this).next().removeClass('fa-chevron-down');
+  })
+
+  $('.refine-best').on('focusout', function() {
+    $(this).next().addClass('fa-chevron-down');
+    $(this).next().removeClass('fa-chevron-up');
   })
 
   $('.refine-search').on('focus', function() {
@@ -348,6 +362,20 @@ function updateNumberOfDays(){
   for(i=1; i < days+1 ; i++){
     $('#days').append($('<option />').val(i).html(i));
   }
+}
+
+function updateBestOptions(text, value) {
+  var bestValues = ['best-makeup', 'best-skin', 'best-hair', 'best-body', 'best-nail'];
+  var bestOptions = ['Best Makeup Products', 'Best Skincare Products', 'Best Hair Products', 'Best Body Products', 'Best Nail Products'];
+  $('.refine-best').html('<option value="">' + text + '</option>');
+  $('#best-heading').html(text);
+
+  for (i = 0; i <= 4; i++) {
+    if (!(bestValues[i] === value)) {
+      $('.refine-best').append($('<option />').val(bestValues[i]).html(bestOptions[i]));
+    }
+  }
+
 }
 
 // New date object with correct days in month
