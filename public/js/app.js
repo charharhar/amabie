@@ -42,6 +42,10 @@ $(function(){
 
   $('.refine-best').on('change', function() {
     updateBestOptions($("option:selected", this).text(), $(this).val());
+
+    $('html, body').animate({
+      scrollTop: $('#best-waypoint').offset().top - 100
+    }, 500)
   })
 
   $('#years, #months').on('change', function(){
@@ -365,8 +369,8 @@ function updateNumberOfDays(){
 }
 
 function updateBestOptions(text, value) {
-  var bestValues = ['best-makeup', 'best-skin', 'best-hair', 'best-body', 'best-nail'];
-  var bestOptions = ['Best Makeup Products', 'Best Skincare Products', 'Best Hair Products', 'Best Body Products', 'Best Nail Products'];
+  var bestValues = ['best-skin', 'best-hair', 'best-makeup', 'best-body', 'best-nail'];
+  var bestOptions = ['Best Skincare Products', 'Best Hair Products', 'Best Makeup Products', 'Best Body Products', 'Best Nail Products'];
   $('.refine-best').html('<option value="">' + text + '</option>');
   $('#best-heading').html(text);
 
