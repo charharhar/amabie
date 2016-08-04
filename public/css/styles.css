@@ -3796,7 +3796,7 @@ select.mobile-shop-option-filter {
 
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
   .reviewed-wrapper {
     width: 33.333%;
   }
@@ -3804,7 +3804,9 @@ select.mobile-shop-option-filter {
   .product-styles > .reviewed-wrapper:nth-of-type(3n) {
     display: none;
   }
+}
 
+@media only screen and (max-width: 1200px) {
   .navbar-default .navbar-nav>li>a {
     font-size: 12px;
     padding: 15px 5px;
