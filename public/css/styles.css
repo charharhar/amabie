@@ -1678,6 +1678,11 @@ li.mobile-loggedIn {
   width: 100%;
   height: auto;
   padding: 0 10px;
+  margin-top: 15px;
+}
+
+#best-waypoint .slick-arrow {
+  top: 75%;
 }
 
 .best-highlight figure {
@@ -1705,7 +1710,7 @@ li.mobile-loggedIn {
 .best-options-container {
   position: relative;
   width: 85%;
-  margin: 40px auto 0;
+  margin: 35px auto 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
