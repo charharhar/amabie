@@ -1678,7 +1678,6 @@ li.mobile-loggedIn {
   width: 100%;
   height: auto;
   padding: 0 10px;
-  margin-top: 15px;
 }
 
 #best-waypoint .slick-arrow {
@@ -1701,6 +1700,10 @@ li.mobile-loggedIn {
   margin: 20px 5%;
   padding-right: 15px;
   width: 40%;
+}
+
+.best-highlight.makeup-product {
+  margin-top: 15px;
 }
 
 .best-highlight.makeup-product ul {
