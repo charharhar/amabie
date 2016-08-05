@@ -1283,16 +1283,8 @@ li.mobile-loggedIn {
     margin-right: 10px;
   }
 
-  .content-box.small .reviewers-container {
-    padding: 10px 0 0 0;
-  }
-
   .content-box h2 {
     font-size: 1.3em;
-  }
-
-  .daily-container {
-    padding-bottom: 0;
   }
 
   .fa.fa-heart {
@@ -1345,10 +1337,6 @@ li.mobile-loggedIn {
     line-height: 1.6em !important;
   }
 
-  .best-highlight.makeup-product {
-    font-size: .9em !important;
-  }
-
   .best-highlight.makeup-product ul {
     padding-left: 5% !important;
   }
@@ -1374,8 +1362,6 @@ li.mobile-loggedIn {
     display:none !important;
   }
 
-  .reviewed-photo,
-  .index-page .reviewed-photo img,
   .best-highlight.makeup-product figure img {
     height: 100px !important;
     width: 100px !important;
@@ -1431,10 +1417,6 @@ li.mobile-loggedIn {
 
   .home-button-wrapper button {
     font-size: .8em !important;
-  }
-
-  .best-highlight ul {
-    padding-right: 0;
   }
 
   .insta-showcase {
@@ -1617,6 +1599,15 @@ li.mobile-loggedIn {
   border: 0px;
 }
 
+.long-username {
+  font-size: .9em !important;
+}
+
+.long-product-name {
+  font-size: .9em !important;
+  letter-spacing: 0 !important;
+}
+
   /*
    * CAROUSEL
    */
@@ -1677,7 +1668,7 @@ li.mobile-loggedIn {
 .best-highlight {
   width: 100%;
   height: auto;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 #best-waypoint .slick-arrow {
@@ -1770,7 +1761,11 @@ select.refine-best {
 }
 
 .daily-container {
-  padding: 0 10px 10px;
+  padding: 0 20px;
+}
+
+.daily-container ul {
+  padding-bottom: 15px;
 }
 
 .daily-photo {
@@ -1803,8 +1798,12 @@ select.refine-best {
   clear: both;
 }
 
+.reviewed-wrapper ul {
+  padding-bottom: 15px;
+}
+
 .reviewed-photo {
-  width: 130px;
+  width: 110px;
   margin: 20px auto 10px;
 }
 
@@ -1813,7 +1812,7 @@ select.refine-best {
 }
 
 .index-page .reviewed-photo img {
-  height: 130px;
+  height: 110px;
   width: auto !important;
 }
 
@@ -1822,7 +1821,7 @@ select.refine-best {
    */
 
 .reviewers-container {
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
 }
 
@@ -1850,7 +1849,7 @@ select.refine-best {
 
 .reviewers-style ul {
   margin: 20px 0;
-  padding: 0;
+  padding: 0 10px 0 0;
 }
 
   /*
@@ -3789,13 +3788,6 @@ select.mobile-shop-option-filter {
   }
 }
 
-@media only screen and (max-width: 1351px) {
-  .best-highlight ul {
-    padding-right: 0;
-  }
-
-}
-
 @media only screen and (max-width: 1250px) {
   .reviewed-wrapper {
     width: 33.333%;
@@ -4295,12 +4287,8 @@ select.mobile-shop-option-filter {
   }
 
   .intro-box p {
-      font-size: 1.1em;
-      line-height: 1.6em !important;
-  }
-
-  .best-highlight.makeup-product {
-    font-size: .9em;
+    font-size: 1.1em;
+    line-height: 1.6em !important;
   }
 
   .best-highlight.makeup-product ul {
@@ -4323,8 +4311,6 @@ select.mobile-shop-option-filter {
     display:none;
   }
 
-  .reviewed-photo,
-  .index-page .reviewed-photo img,
   .best-highlight.makeup-product figure img {
     height: 100px;
     width: 100px;
@@ -4379,10 +4365,6 @@ select.mobile-shop-option-filter {
 
   .home-button-wrapper button {
     font-size: .8em;
-  }
-
-  .best-highlight ul {
-    padding-right: 0;
   }
 
   .insta-showcase {
@@ -4499,16 +4481,8 @@ select.mobile-shop-option-filter {
     margin-right: 10px;
   }
 
-  .content-box.small .reviewers-container {
-    padding: 10px 0 0 0;
-  }
-
   .content-box h2 {
     font-size: 1.3em;
-  }
-
-  .daily-container {
-    padding-bottom: 0;
   }
 
   .fa.fa-heart {
@@ -4520,7 +4494,7 @@ select.mobile-shop-option-filter {
   }
 
   .best-highlight ul {
-    margin: 20px 0;
+    margin: 10px 0;
     width: 50%;
   }
 
