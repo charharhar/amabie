@@ -1599,12 +1599,12 @@ li.mobile-loggedIn {
   border: 0px;
 }
 
-.long-username {
-  font-size: .9em !important;
+.username-font {
+  font-size: .85em !important;
 }
 
 .long-product-name {
-  font-size: .9em !important;
+  font-size: .75em !important;
   letter-spacing: 0 !important;
 }
 
@@ -1844,7 +1844,7 @@ select.refine-best {
 }
 
 .reviewers-style ul li p {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .reviewers-style ul {
