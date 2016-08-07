@@ -1913,11 +1913,6 @@ select.refine-best {
    * TRENDING topics
    */
 
-.trending-topics {
-  height: auto !important;
-  max-height: 310px;
-}
-
 .trending-topics ul {
   padding: 5px 30px;
   margin-bottom: 0;
@@ -4410,6 +4405,12 @@ select.mobile-shop-option-filter {
 }
 
 @media only screen and (max-width: 510px) {
+
+  .trending-topics {
+    height: auto !important;
+    min-height: 310px;
+  }
+
   .shop-options-table tbody tr td:nth-of-type(2) {
     white-space: normal;
   }
