@@ -1690,6 +1690,15 @@ li.mobile-loggedIn {
   text-align: left;
 }
 
+.best-carousels {
+  width: 100%;
+}
+
+.hidden-carousel {
+  position: absolute;
+  top: -1000px;
+}
+
 .best-options-container {
   position: relative;
   width: 85%;
