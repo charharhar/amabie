@@ -372,7 +372,6 @@ function updateBestOptions(text, value) {
   var bestValues = ['best-skin', 'best-hair', 'best-makeup', 'best-body', 'best-nail'];
   var bestOptions = ['Best Skincare Products', 'Best Hair Products', 'Best Makeup Products', 'Best Body Products', 'Best Nail Products'];
   var activeCarousel = '.' + value + '-carousel';
-  console.log(activeCarousel);
   $('.refine-best').html('<option value="">' + text + '</option>');
   $('#best-heading').html(text);
   $('.best-carousels').addClass('hidden-carousel');
