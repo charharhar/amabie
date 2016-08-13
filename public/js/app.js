@@ -243,7 +243,7 @@ $(function(){
 
   // Mobile Navigation Menu listener
   $('.dropdown-menu li a').on('click', function(e) {
-    if (!$(this).parent().hasClass('dropdown-submenu')) {
+    if (!$(this).parent().hasClass('dropdown-submenu') && !$(this).parent().parent().hasClass('dropdown-language')) {
       e.preventDefault();
       e.stopPropagation();
     }
