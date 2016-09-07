@@ -379,6 +379,60 @@ div.content-box {
 }
 
 /*
+  Scroll To Top
+*/
+
+.scroll-top {
+  position: fixed;
+  right: 3%;
+  bottom: 33.333333%;
+  margin-right: -11px;
+  padding: 5px 12px;
+  background-color: #fefefe;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  text-align: center;
+  z-index: 999;
+}
+
+.scroll-top .fa.fa-caret-up {
+  font-size: 26px;
+  -webkit-transition: .3s all;
+          transition: .3s all;
+}
+
+.scroll-top-text {
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-transition: .3s all;
+          transition: .3s all;
+}
+
+.scroll-top:hover .fa.fa-caret-up,
+.scroll-top:hover .scroll-top-text {
+  color: #3dbbcb;
+}
+
+.adjust-scroll-top {
+  right: 2.5% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .scroll-top {
+    padding: 10px;
+    right: 3.5%;
+  }
+
+  .scroll-top .scroll-top-text {
+    display: none;
+  }
+
+  .scroll-top .fa.fa-caret-up {
+    font-size: 16px;
+  }
+}
+
+/*
   Hide that stupid little P in the bottom-left corner of the tinymce box
 */
 .mce-path-item.mce-last {
@@ -1512,7 +1566,7 @@ li.mobile-loggedIn {
 
 #home-wrapper .container {
   width: 1420px;
-  max-width: 94%;
+  max-width: 86%;
 }
 
 .box-container {
@@ -1677,9 +1731,9 @@ li.mobile-loggedIn {
 
 .best-highlight ul {
   float: left;
-  margin: 20px 5%;
-  padding-right: 15px;
-  width: 40%;
+  margin: 20px 4% 20px 1%;
+  padding-left: 15px;
+  width: 45%;
 }
 
 .best-highlight.makeup-product {

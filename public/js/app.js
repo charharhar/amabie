@@ -40,6 +40,12 @@ $(function(){
   //              EVENT LISTENERS
   // --------------------------------------------
 
+  $('#scroll-top').click(function(){
+    $('html, body').animate({
+        scrollTop: 0,
+    }, 1000);
+  });
+
   $('.refine-best').on('change', function() {
     updateBestOptions($("option:selected", this).text(), $(this).val());
 
