@@ -250,6 +250,7 @@ div.content-box {
   background-color: #fefefe;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
   font-family: ntailu, Sans-Serif;
+  overflow: hidden;
 }
 
 .content-box.small,
@@ -3048,6 +3049,12 @@ select.refine-search {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
+
+  text-align: left;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
 }
 
 .content-box.search .search-selection .search-selection-list li {
