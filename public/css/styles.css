@@ -850,6 +850,16 @@ li.mobile-loggedIn {
 /* ============================================= */
 /* IE FIX */
 
+.index-page {
+  opacity: 0;
+  transition: 2.5s all;
+  -webkit-transition: 2.5s all;
+}
+
+.index-loaded {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 768px) {
   select,
   textarea,
@@ -3047,6 +3057,18 @@ select.refine-search {
   text-align: left;
   margin: 0 auto;
   width: 75%;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-selection-list.mobile-search-select {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+    text-align: left;
+    margin: 0 auto;
+    width: 75%;
+  }
 }
 
 .content-box.search .search-selection .search-selection-list li {

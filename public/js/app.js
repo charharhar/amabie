@@ -320,6 +320,11 @@ $(function(){
   // 1. Slick.js
   // 2. TinyMCE
 
+
+  $('.slider-carousel').on('init.slick', function(event, slick) {
+    $('.index-page').addClass('index-loaded');
+  })
+
   // Used in home page -> index.html
   $('.slider-carousel').slick({
     prevArrow: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
