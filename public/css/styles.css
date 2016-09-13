@@ -250,7 +250,6 @@ div.content-box {
   background-color: #fefefe;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
   font-family: ntailu, Sans-Serif;
-  overflow: hidden;
 }
 
 .content-box.small,
@@ -1376,11 +1375,6 @@ li.mobile-loggedIn {
     font-size: 1.8em !important;
   }
 
-  .intro-box p {
-    font-size: 1.1em !important;
-    line-height: 1.6em !important;
-  }
-
   .best-highlight.makeup-product ul {
     padding-left: 5% !important;
   }
@@ -1586,10 +1580,10 @@ li.mobile-loggedIn {
 }
 
 .intro-box p {
-  font-size: 1.2em;
+  font-size: 16px;
   color: #3e3a39;
   font-weight: normal;
-  line-height: 2em;
+  line-height: 1.75em;
   padding: 10px 20px;
 }
 
@@ -3046,15 +3040,13 @@ select.refine-search {
 }
 
 .search-selection-list.mobile-search-select {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
 
   text-align: left;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
+  margin: 0 auto;
+  width: 75%;
 }
 
 .content-box.search .search-selection .search-selection-list li {
@@ -4338,11 +4330,6 @@ select.mobile-shop-option-filter {
 
   .intro-box h1 {
     font-size: 1.8em;
-  }
-
-  .intro-box p {
-    font-size: 1.1em;
-    line-height: 1.6em !important;
   }
 
   .best-highlight.makeup-product ul {
