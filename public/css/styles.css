@@ -3053,10 +3053,6 @@ select.refine-search {
   columns: 3;
   -webkit-columns: 3;
   -moz-columns: 3;
-  column-width: 33.3%;
-  -webkit-column-width: 33.3%;
-  -moz-column-width: 33.3%;
-
 
   text-align: left;
   margin: 0 auto;
